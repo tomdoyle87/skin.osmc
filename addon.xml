@@ -11,7 +11,7 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
-		<summary lang="en">The default skin for OSMC.</summary>
+		<summary lang="en">The Classic Kod18 skin for OSMC Kodi 19.</summary>
 		<description lang="en">Original skin: Andy Morton[CR]Original design: Simon Brunton[CR]Skinner: Julian Michel</description>
 		<assets>
 			<icon>resources/icon.png</icon>
