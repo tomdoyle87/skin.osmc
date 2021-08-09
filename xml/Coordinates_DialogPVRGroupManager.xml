@@ -2,9 +2,9 @@
 <includes>
 
 	<include name="DialogPVRGroupManager_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords1_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords1_16:9">
@@ -33,9 +33,9 @@
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords2_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords2_16:9">
@@ -64,16 +64,16 @@
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords3_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords3_16:9">
 		<itemlayout width="513" height="66">
 			<control type="label">
 				<width>513</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
@@ -82,7 +82,7 @@
 		<itemlayout width="727" height="66">
 			<control type="label">
 				<width>727</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
@@ -91,7 +91,7 @@
 		<itemlayout width="727" height="66">
 			<control type="label">
 				<width>727</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
@@ -100,16 +100,16 @@
 		<itemlayout width="353" height="66">
 			<control type="label">
 				<width>353</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 		</itemlayout>
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords4_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords4_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords4_16:9">
@@ -121,13 +121,13 @@
 				<control type="label">
 					<width>513</width>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>513</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -141,13 +141,13 @@
 				<control type="label">
 					<width>727</width>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>727</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -161,13 +161,13 @@
 				<control type="label">
 					<width>727</width>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>727</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -181,22 +181,22 @@
 				<control type="label">
 					<width>353</width>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>353</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords5">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords5_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords5_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords5_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords5_16:9">
@@ -225,9 +225,9 @@
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords6">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords6_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords6_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords6_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords6_16:9">
@@ -256,9 +256,9 @@
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords7">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords7_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords7_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords7_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords7_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords7_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords7_16:9">
@@ -287,16 +287,16 @@
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords8">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords8_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords8_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords8_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords8_16:9">
 		<itemlayout width="513" height="66">
 			<control type="label">
 				<width>513</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 			</control>
 		</itemlayout>
@@ -305,7 +305,7 @@
 		<itemlayout width="727" height="66">
 			<control type="label">
 				<width>727</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 			</control>
 		</itemlayout>
@@ -314,7 +314,7 @@
 		<itemlayout width="727" height="66">
 			<control type="label">
 				<width>727</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 			</control>
 		</itemlayout>
@@ -323,34 +323,34 @@
 		<itemlayout width="353" height="66">
 			<control type="label">
 				<width>353</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 			</control>
 		</itemlayout>
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords9">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords9_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords9_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords9_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords9_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords9_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords9_16:9">
 		<focusedlayout width="513" height="66">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
-					<param name="id">12</param>
+					<param name="id">11</param>
 				</include>
 				<control type="label">
 					<width>513</width>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>513</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -359,18 +359,18 @@
 		<focusedlayout width="727" height="66">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
-					<param name="id">12</param>
+					<param name="id">11</param>
 				</include>
 				<control type="label">
 					<width>727</width>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>727</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -379,18 +379,18 @@
 		<focusedlayout width="727" height="66">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
-					<param name="id">12</param>
+					<param name="id">11</param>
 				</include>
 				<control type="label">
 					<width>727</width>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>727</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -399,27 +399,27 @@
 		<focusedlayout width="353" height="66">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
-					<param name="id">12</param>
+					<param name="id">11</param>
 				</include>
 				<control type="label">
 					<width>353</width>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>353</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords10">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords10_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords10_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords10_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords10_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords10_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords10_16:9">
@@ -448,9 +448,9 @@
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords11">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords11_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords11_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords11_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords11_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords11_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords11_16:9">
@@ -479,9 +479,9 @@
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords12">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords12_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords12_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords12_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords12_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords12_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords12_16:9">
@@ -510,16 +510,16 @@
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords13">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords13_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords13_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords13_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords13_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords13_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords13_16:9">
 		<itemlayout width="514" height="66">
 			<control type="label">
 				<width>514</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 			</control>
 		</itemlayout>
@@ -528,7 +528,7 @@
 		<itemlayout width="726" height="66">
 			<control type="label">
 				<width>726</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 			</control>
 		</itemlayout>
@@ -537,7 +537,7 @@
 		<itemlayout width="726" height="66">
 			<control type="label">
 				<width>726</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 			</control>
 		</itemlayout>
@@ -546,34 +546,34 @@
 		<itemlayout width="354" height="66">
 			<control type="label">
 				<width>354</width>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
 			</control>
 		</itemlayout>
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords14">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords14_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords14_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords14_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords14_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords14_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords14_16:9">
 		<focusedlayout width="514" height="66">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
-					<param name="id">11</param>
+					<param name="id">12</param>
 				</include>
 				<control type="label">
 					<width>514</width>
 					<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>514</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -582,18 +582,18 @@
 		<focusedlayout width="726" height="66">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
-					<param name="id">11</param>
+					<param name="id">12</param>
 				</include>
 				<control type="label">
 					<width>726</width>
 					<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>726</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -602,18 +602,18 @@
 		<focusedlayout width="726" height="66">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
-					<param name="id">11</param>
+					<param name="id">12</param>
 				</include>
 				<control type="label">
 					<width>726</width>
 					<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>726</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
@@ -622,52 +622,52 @@
 		<focusedlayout width="354" height="66">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
-					<param name="id">11</param>
+					<param name="id">12</param>
 				</include>
 				<control type="label">
 					<width>354</width>
 					<label>$INFO[ListItem.ChannelNumberLabel,(,) ]$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<width>354</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	
 	<include name="DialogPVRGroupManager_coords15">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRGroupManager_coords15_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRGroupManager_coords15_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRGroupManager_coords15_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRGroupManager_coords15_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRGroupManager_coords15_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRGroupManager_coords15_4:3</include>
 	</include>
 	<include name="DialogPVRGroupManager_coords15_16:9">
 		<left>1226</left>
-		<top>304</top>
+		<top>284</top>
 		<width>20</width>
-		<height>554</height>
+		<height>594</height>
 	</include>
 	<include name="DialogPVRGroupManager_coords15_21:9">
 		<left>1654</left>
-		<top>304</top>
+		<top>284</top>
 		<width>20</width>
-		<height>554</height>
+		<height>594</height>
 	</include>
 	<include name="DialogPVRGroupManager_coords15_21:9_masked">
 		<left>1654</left>
-		<top>484</top>
+		<top>464</top>
 		<width>20</width>
-		<height>554</height>
+		<height>594</height>
 	</include>
 	<include name="DialogPVRGroupManager_coords15_4:3">
 		<left>906</left>
-		<top>304</top>
+		<top>284</top>
 		<width>20</width>
-		<height>554</height>
+		<height>594</height>
 	</include>
 
 </includes>

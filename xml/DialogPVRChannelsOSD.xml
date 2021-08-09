@@ -30,37 +30,34 @@
 			<control type="group">
 				<include>DialogPVRChannelsOSD_coords4</include>
 				<control type="textbox">
-					<include>DialogPVRChannelsOSD_coords5</include>
 					<align>left</align>
 					<font>Font27</font>
 					<label>$VAR[PVRDescriptionDialogGuide]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>
-					<visible>Skin.String(PlotFont,S)</visible>
+					<visible>Skin.String(PlotFont,S) | Skin.String(PlotFont,S light)</visible>
 				</control>
 				<control type="textbox">
-					<include>DialogPVRChannelsOSD_coords6</include>
 					<align>left</align>
 					<font>Font30</font>
 					<label>$VAR[PVRDescriptionDialogGuide]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<autoscroll delay="5000" time="1300" repeat="10000">true</autoscroll>
-					<visible>Skin.String(PlotFont,M)</visible>
+					<visible>Skin.String(PlotFont,M) | Skin.String(PlotFont,M light)</visible>
 				</control>
 				<control type="textbox">
-					<include>DialogPVRChannelsOSD_coords7</include>
 					<align>left</align>
 					<font>Font33</font>
 					<label>$VAR[PVRDescriptionDialogGuide]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
-					<visible>Skin.String(PlotFont,L)</visible>
+					<visible>Skin.String(PlotFont,L) | Skin.String(PlotFont,XL) | Skin.String(PlotFont,L light) | Skin.String(PlotFont,XL light)</visible>
 				</control>
 			</control>
 			
 			<!-- Channel group -->
 			<control type="fadelabel">
-				<include>DialogPVRChannelsOSD_coords8</include>
+				<include>DialogPVRChannelsOSD_coords5</include>
 				<align>center</align>
 				<aligny>top</aligny>
 				<label>$INFO[VideoPlayer.ChannelGroup,$LOCALIZE[19141]: ,]</label>
@@ -69,7 +66,7 @@
 
 			<!-- List -->
 			<control type="fixedlist" id="11">
-				<include>DialogPVRChannelsOSD_coords9</include>
+				<include>DialogPVRChannelsOSD_coords6</include>
 				<onleft>60</onleft>
 				<onright>NextChannelGroup</onright>
 				<pagecontrol>60</pagecontrol>
@@ -78,15 +75,15 @@
 				<viewtype label="535">list</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
 
-				<include>DialogPVRChannelsOSD_coords10</include>
+				<include>DialogPVRChannelsOSD_coords7</include>
 
-				<include>DialogPVRChannelsOSD_coords11</include>
+				<include>DialogPVRChannelsOSD_coords8</include>
 
 			</control>
 
 			<!-- Scrollbar (list) -->
 			<control type="scrollbar" id="60">
-				<include>DialogPVRChannelsOSD_coords12</include>
+				<include>DialogPVRChannelsOSD_coords9</include>
 				<onright>11</onright>
 				<onleft>PreviousChannelGroup</onleft>
 				<showonepage>false</showonepage>
@@ -94,7 +91,7 @@
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 				<texturesliderbackground border="11,1,1,1">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="11,1,1,1">common/ScrollbarGripNF.png</texturesliderbar>
-				<texturesliderbarfocus border="11,1,1,1" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="11,1,1,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
@@ -102,12 +99,18 @@
 			
 			<!-- Channel group button indicator -->
 			<control type="image">
-				<include>DialogPVRChannelsOSD_coords13</include>
-				<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
+				<left>10</left>
+				<centertop>50%</centertop>
+				<width>30</width>
+				<height>30</height>
+				<texture colordiffuse="$VAR[DialogColor2]">sub-menu-left.png</texture>
 			</control>
 			<control type="image">
-				<include>DialogPVRChannelsOSD_coords14</include>
-				<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-right.png</texture>
+				<right>10</right>
+				<centertop>50%</centertop>
+				<width>30</width>
+				<height>30</height>
+				<texture colordiffuse="$VAR[DialogColor2]">sub-menu-right.png</texture>
 			</control>
 
 		</control>

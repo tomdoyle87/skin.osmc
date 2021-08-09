@@ -13,10 +13,7 @@
 	<controls>
 
 		<!-- Background -->
-		<include>WindowBackgroundImageMultiView</include>
-		
-		<!-- Time -->
-		<include>Time</include>
+		<include>WindowBackgroundImage</include>
 
 		<!-- Main group -->
 		<control type="group">
@@ -37,8 +34,9 @@
 				<showonepage>false</showonepage>
 				<orientation>vertical</orientation>
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
-				<texturesliderbar border="8,1,6,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripFO.png</texturesliderbar>
-				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<texturesliderbackground border="9,1,6,1">common/ScrollBackground.png</texturesliderbackground>
+				<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
+				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
@@ -52,8 +50,9 @@
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
-				<texturesliderbar border="1,12,1,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripHorizontalFO.png</texturesliderbar>
-				<texturesliderbarfocus border="1,12,1,1" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripHorizontalFO.png</texturesliderbarfocus>
+				<texturesliderbackground border="1,12,1,1">common/ScrollBackgroundHorizontal.png</texturesliderbackground>
+				<texturesliderbar border="1,12,1,1">common/ScrollbarGripHorizontalNF.png</texturesliderbar>
+				<texturesliderbarfocus border="1,12,1,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripHorizontalFO.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars) + Control.IsVisible(523)</visible>
@@ -69,7 +68,7 @@
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 				<texturesliderbackground border="6,1,8,1">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
-				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(535) | Control.IsVisible(537)]</visible>
@@ -82,6 +81,9 @@
 			<include>SubmenuIndicator</include>
 
 		</control>
+
+		<!-- Time -->
+		<include>Time</include>
 
 		<!-- Options -->
 		<control type="group" id="9002">
@@ -126,7 +128,7 @@
 
 					<!-- View -->
 					<control type="button" id="99">
-						<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
+						<label>$LOCALIZE[31233]$INFO[Container.ViewMode]</label>
 						<height>52</height>
 						<onclick>Container.NextViewMode</onclick>
 						<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
@@ -151,8 +153,8 @@
 					</control>
 					<!-- Sort ascending/descending -->
 					<control type="togglebutton" id="4">
-						<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
-						<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
+						<label>$LOCALIZE[31234]$LOCALIZE[584]</label>
+						<altlabel>$LOCALIZE[31234]$LOCALIZE[585]</altlabel>
 						<height>52</height>
 						<usealttexture>Container.SortDirection(Descending)</usealttexture>
 						<visible>Control.IsEnabled(4)</visible>

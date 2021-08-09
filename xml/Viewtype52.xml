@@ -15,9 +15,9 @@
 				<onright>52</onright>
 				<pagecontrol>61</pagecontrol>
 				<orientation>horizontal</orientation>
-				<viewtype label="31241">list</viewtype>
+				<viewtype label="539">list</viewtype>
 				<scrolltime tween="sine" easing="out">240</scrolltime>
-				<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
 
 				<include>Viewtype52_coords2</include>
 
@@ -33,7 +33,7 @@
 					<include>Viewtype52_coords5</include>
 					<font>Font72</font>
 					<align>center</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label>$VAR[Label1]</label>
 					<scrollspeed>120</scrollspeed>
 				</control>
@@ -45,7 +45,7 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<label>$VAR[Label2]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 			</control>

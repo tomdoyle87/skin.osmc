@@ -1,8 +1,8 @@
-# skin.osmc
+# skin.osmc-classic
 
-The default skin for OSMC.
+The classic skin for OSMC from kodi 18 , based on this release: https://github.com/osmc/skin.osmc/releases/tag/v18.5.0-November_update
 
-For further information, check out the wiki here: https://osmc.tv/wiki/general/the-osmc-skin/
+This is in beta, but I'm having no issues using this in kodi 19. 
 
 ## This skin is shipped with official releases of OSMC (https://osmc.tv/download/).
 

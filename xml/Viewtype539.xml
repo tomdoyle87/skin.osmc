@@ -32,9 +32,9 @@
 				<!-- Title -->
 				<control type="fadelabel">
 					<include>Viewtype539_coords5</include>
-					<font>Font42</font>
+					<font>Font72</font>
 					<align>center</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label>$VAR[Label1]</label>
 					<scrollspeed>120</scrollspeed>
 				</control>
@@ -46,7 +46,7 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<label>$VAR[Label2]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 			</control>

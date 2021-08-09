@@ -7,93 +7,67 @@
 	<controls>
 
 		<!-- Background -->
-		<include>WindowBackgroundImageVerticalHome</include>
-		
+		<include>WindowBackgroundImage</include>
+
 		<!-- Time -->
-		<include content="Time">
-			<param name="narrow">True</param>
-			<param name="wide">False</param>
-		</include>
+		<include>Time</include>
 
-		<!-- Main group -->
-		<control type="group">
-			<include>WindowFadeAnimation</include>
+		<!-- Default list -->
+		<control type="group" id="50">
+			<control type="grouplist" id="500">
+				<include>SettingsProfile_coords1</include>
+				<itemgap>0</itemgap>
+				<onleft>3001</onleft>
+				<onright>noop</onright>
+				<onup>noop</onup>
+				<ondown>2</ondown>
+				<orientation>vertical</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<defaultcontrol always="true">4</defaultcontrol>
 
-			<!-- Default list -->
-			<control type="group" id="50">
-				<control type="grouplist" id="500">
-					<include>SettingsProfile_coords1</include>
-					<itemgap>0</itemgap>
-					<onleft>3001</onleft>
-					<onright>noop</onright>
-					<onup>noop</onup>
-					<ondown>2</ondown>
-					<orientation>vertical</orientation>
-					<usecontrolcoords>true</usecontrolcoords>
-					<defaultcontrol always="true">4</defaultcontrol>
-
-					<!-- Enable login screen -->
-					<control type="radiobutton" id="4">
-						<include>SettingsProfile_coords2</include>
-						<font>Font33</font>
-						<textcolor>$VAR[TextColorNF]</textcolor>
-						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
-						<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-						<label>20096</label>
-					</control>
-
-					<!-- Auto login -->
-					<control type="button" id="5">
-						<include>SettingsProfile_coords2</include>
-						<font>Font33</font>
-						<textcolor>$VAR[TextColorNF]</textcolor>
-						<focusedcolor>$VAR[TextColorFO]</focusedcolor>
-						<invalidcolor>$VAR[InvalidColor]</invalidcolor>
-						<disabledcolor>$VAR[DisabledColor]</disabledcolor>
-						<label>33084</label>
-						<enable>!System.HasLoginScreen</enable>
-					</control>
-
-					<!-- Separator -->
-					<control type="image" id="6">
-						<include>SettingsProfile_coords3</include>
-						<texture border="1,12,1,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
-					</control>
-
+				<!-- Enable login screen -->
+				<control type="radiobutton" id="4">
+					<include>SettingsProfile_coords2</include>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColor2]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
+					<disabledcolor>$VAR[TextColor4]</disabledcolor>
+					<label>20096</label>
 				</control>
 
-				<!-- Profile list -->
-				<control type="list" id="2">
-					<include>SettingsProfile_coords4</include>
-					<onleft>60</onleft>
-					<onright>noop</onright>
-					<onup>500</onup>
-					<ondown>noop</ondown>
-					<pagecontrol>60</pagecontrol>
-					<orientation>vertical</orientation>
-
-					<include>SettingsProfile_coords5</include>
-
-					<include>SettingsProfile_coords6</include>
-
+				<!-- Auto login -->
+				<control type="button" id="5">
+					<include>SettingsProfile_coords2</include>
+					<font>Font33</font>
+					<textcolor>$VAR[TextColor2]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
+					<invalidcolor>$VAR[InvalidColor]</invalidcolor>
+					<disabledcolor>$VAR[DisabledColor]</disabledcolor>
+					<label>33084</label>
+					<enable>!System.HasLoginScreen</enable>
 				</control>
-				
-				<!-- Scrollbar (list) -->
-				<control type="scrollbar" id="60">
-					<include>SettingsProfile_coords7</include>
-					<onleft>3001</onleft>
-					<onright>2</onright>
-					<showonepage>false</showonepage>
-					<orientation>vertical</orientation>
-					<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
-					<texturesliderbar border="8,1,6,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollbarGripFO.png</texturesliderbar>
-					<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
-					<textureslidernib></textureslidernib>
-					<textureslidernibfocus></textureslidernibfocus>
-					<visible>!Skin.HasSetting(Scrollbars)</visible>
+
+				<!-- Separator -->
+				<control type="image" id="6">
+					<include>SettingsProfile_coords3</include>
+					<texture border="1,12,1,1" colordiffuse="$VAR[DialogOverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 				</control>
+
 			</control>
-			
+
+			<control type="list" id="2">
+				<include>SettingsProfile_coords4</include>
+				<onleft>3001</onleft>
+				<onright>noop</onright>
+				<onup>500</onup>
+				<ondown>noop</ondown>
+				<orientation>vertical</orientation>
+
+				<include>SettingsProfile_coords5</include>
+
+				<include>SettingsProfile_coords6</include>
+
+			</control>
 		</control>
 		
 		<!-- Submenu indicator -->
@@ -107,7 +81,7 @@
 				<centertop>50%</centertop>
 				<width>30</width>
 				<height>30</height>
-				<texture colordiffuse="$VAR[OverlayColorNF]">sub-menu-left.png</texture>
+				<texture colordiffuse="$VAR[DialogColor2]">sub-menu-left.png</texture>
 			</control>
 		</control>
 
@@ -174,47 +148,27 @@
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 					</control>
 					<control type="button" id="194">
-						<label>15016</label>
+						<label>13200</label>
 						<height>52</height>
-						<onclick>ReplaceWindow(GameSettings)</onclick>
+						<onclick>ReplaceWindow(Profiles)</onclick>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 					</control>
-					<control type="button" id="196">
+					<control type="button" id="195">
 						<label>14036</label>
 						<height>52</height>
 						<onclick>ReplaceWindow(ServiceSettings)</onclick>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 					</control>
-					<control type="button" id="197">
+					<control type="button" id="196">
 						<label>13000</label>
 						<height>52</height>
 						<onclick>ReplaceWindow(SystemSettings)</onclick>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 					</control>
-					<control type="button" id="198">
-						<label>31091</label>
-						<height>52</height>
-						<onclick>ReplaceWindow(Settings)</onclick>
-						<onclick>RunScript(service.osmc.settings)</onclick>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
-						<visible>System.HasAddon(service.osmc.settings)</visible>
-					</control>
-					<control type="button" id="199">
+					<control type="button" id="197">
 						<label>130</label>
 						<height>52</height>
 						<onclick>ReplaceWindow(SystemInfo)</onclick>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
-					</control>
-					<control type="button" id="200">
-						<label>10040</label>
-						<height>52</height>
-						<onclick>ReplaceWindow(addonbrowser)</onclick>
-						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
-					</control>
-					<control type="button" id="201">
-						<label>7</label>
-						<height>52</height>
-						<onclick>ReplaceWindow(filemanager)</onclick>
 						<texturefocus colordiffuse="$VAR[buttonfocus]">common/focus52.png</texturefocus>
 					</control>
 					

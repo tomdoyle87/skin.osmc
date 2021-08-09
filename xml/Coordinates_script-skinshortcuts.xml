@@ -2,9 +2,9 @@
 <includes>
 
 	<include name="script-skinshortcuts_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">script-skinshortcuts_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">script-skinshortcuts_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords1_4:3</include>
 	</include>
 	<include name="script-skinshortcuts_coords1_16:9">
@@ -33,9 +33,9 @@
 	</include>
 	
 	<include name="script-skinshortcuts_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">script-skinshortcuts_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">script-skinshortcuts_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords2_4:3</include>
 	</include>
 	<include name="script-skinshortcuts_coords2_16:9">
@@ -43,7 +43,7 @@
 			<control type="label">
 				<width>230</width>
 				<height>66</height>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
 			</control>
 		</itemlayout>
@@ -53,7 +53,7 @@
 			<control type="label">
 				<width>350</width>
 				<height>66</height>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
 			</control>
 		</itemlayout>
@@ -63,7 +63,7 @@
 			<control type="label">
 				<width>350</width>
 				<height>66</height>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
 			</control>
 		</itemlayout>
@@ -73,16 +73,16 @@
 			<control type="label">
 				<width>350</width>
 				<height>66</height>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
 			</control>
 		</itemlayout>
 	</include>
 	
 	<include name="script-skinshortcuts_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">script-skinshortcuts_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">script-skinshortcuts_coords3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords3_4:3</include>
 	</include>
 	<include name="script-skinshortcuts_coords3_16:9">
@@ -91,50 +91,47 @@
 				<width>275</width>
 				<height>66</height>
 				<scroll>True</scroll>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<width>350</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus66]</texture>
+				<texture colordiffuse="$VAR[TextColor1]">$VAR[focus66]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),False)</visible>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<width>350</width>
 				<height>66</height>
 				<texture colordiffuse="darkred">$VAR[focus66]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>280</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownNF.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowDownNF.png</texture>
 				<visible>!Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>315</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpNF.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowUpNF.png</texture>
 				<visible>!Control.HasFocus(303)</visible>
 			</control>
 			<control type="image">
 				<left>280</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowDownFO.png</texture>
 				<visible>Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>315</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowUpFO.png</texture>
 				<visible>Control.HasFocus(303)</visible>
 			</control>
 		</focusedlayout>
@@ -145,50 +142,47 @@
 				<width>275</width>
 				<height>66</height>
 				<scroll>True</scroll>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<width>350</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus66]</texture>
+				<texture colordiffuse="$VAR[TextColor1]">$VAR[focus66]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),False)</visible>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<width>350</width>
 				<height>66</height>
 				<texture colordiffuse="darkred">$VAR[focus66]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>280</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownNF.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowDownNF.png</texture>
 				<visible>!Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>315</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpNF.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowUpNF.png</texture>
 				<visible>!Control.HasFocus(303)</visible>
 			</control>
 			<control type="image">
 				<left>280</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowDownFO.png</texture>
 				<visible>Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>315</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowUpFO.png</texture>
 				<visible>Control.HasFocus(303)</visible>
 			</control>
 		</focusedlayout>
@@ -199,50 +193,47 @@
 				<width>275</width>
 				<height>66</height>
 				<scroll>True</scroll>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<width>350</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus66]</texture>
+				<texture colordiffuse="$VAR[TextColor1]">$VAR[focus66]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),False)</visible>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<width>350</width>
 				<height>66</height>
 				<texture colordiffuse="darkred">$VAR[focus66]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>280</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownNF.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowDownNF.png</texture>
 				<visible>!Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>315</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpNF.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowUpNF.png</texture>
 				<visible>!Control.HasFocus(303)</visible>
 			</control>
 			<control type="image">
 				<left>280</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowDownFO.png</texture>
 				<visible>Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>315</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowUpFO.png</texture>
 				<visible>Control.HasFocus(303)</visible>
 			</control>
 		</focusedlayout>
@@ -253,59 +244,56 @@
 				<width>275</width>
 				<height>66</height>
 				<scroll>True</scroll>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 				<label>$VAR[skinshortcuts-disableindicator]</label>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<width>350</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus66]</texture>
+				<texture colordiffuse="$VAR[TextColor1]">$VAR[focus66]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),False)</visible>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<width>350</width>
 				<height>66</height>
 				<texture colordiffuse="darkred">$VAR[focus66]</texture>
 				<visible>String.IsEqual(ListItem.Property(skinshortcuts-disabled),True)</visible>
-				<animation effect="fade" start="100" end="50" time="200" tween="cubic" easing="out" reversible="false" condition="ControlGroup(9000).HasFocus | ControlGroup(9001).HasFocus | Control.HasFocus(60)">Conditional</animation>
 			</control>
 			<control type="image">
 				<left>280</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownNF.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowDownNF.png</texture>
 				<visible>!Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>315</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpNF.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowUpNF.png</texture>
 				<visible>!Control.HasFocus(303)</visible>
 			</control>
 			<control type="image">
 				<left>280</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowDownFO.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowDownFO.png</texture>
 				<visible>Control.HasFocus(304)</visible>
 			</control>
 			<control type="image">
 				<left>315</left>
 				<width>35</width>
 				<height>66</height>
-				<texture colordiffuse="$VAR[OverlayColorFO]">common/ArrowUpFO.png</texture>
+				<texture colordiffuse="$VAR[DialogColor1]">common/ArrowUpFO.png</texture>
 				<visible>Control.HasFocus(303)</visible>
 			</control>
 		</focusedlayout>
 	</include>
 	
 	<include name="script-skinshortcuts_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">script-skinshortcuts_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">script-skinshortcuts_coords4_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords4_4:3</include>
 	</include>
 	<include name="script-skinshortcuts_coords4_16:9">
@@ -334,9 +322,9 @@
 	</include>
 	
 	<include name="script-skinshortcuts_coords5">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">script-skinshortcuts_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords5_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">script-skinshortcuts_coords5_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords5_4:3</include>
 	</include>
 	<include name="script-skinshortcuts_coords5_16:9">
@@ -365,9 +353,9 @@
 	</include>
 	
 	<include name="script-skinshortcuts_coords6">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">script-skinshortcuts_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords6_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">script-skinshortcuts_coords6_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords6_4:3</include>
 	</include>
 	<include name="script-skinshortcuts_coords6_16:9">
@@ -388,9 +376,9 @@
 	</include>
 	
 	<include name="script-skinshortcuts_coords7">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords7_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">script-skinshortcuts_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords7_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords7_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">script-skinshortcuts_coords7_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords7_4:3</include>
 	</include>
 	<include name="script-skinshortcuts_coords7_16:9">
@@ -411,96 +399,34 @@
 	</include>
 
 	<include name="script-skinshortcuts_coords8">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">script-skinshortcuts_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords8_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">script-skinshortcuts_coords8_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords8_4:3</include>
 	</include>
 	<include name="script-skinshortcuts_coords8_16:9">
+		<right>150</right>
 		<left>550</left>
+		<bottom>226</bottom>
 		<top>745</top>
-		<width>1220</width>
-		<height>94</height>
 	</include>
 	<include name="script-skinshortcuts_coords8_21:9">
+		<right>150</right>
 		<left>550</left>
+		<bottom>226</bottom>
 		<top>745</top>
-		<width>1860</width>
-		<height>94</height>
 	</include>
 	<include name="script-skinshortcuts_coords8_21:9_masked">
+		<right>150</right>
 		<left>550</left>
+		<bottom>406</bottom>
 		<top>925</top>
-		<width>1860</width>
-		<height>94</height>
 	</include>
 	<include name="script-skinshortcuts_coords8_4:3">
+		<right>150</right>
 		<left>550</left>
+		<bottom>226</bottom>
 		<top>745</top>
-		<width>740</width>
-		<height>94</height>
-	</include>
-	
-	<include name="script-skinshortcuts_coords9">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords9_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords9_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords9_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords9_4:3</include>
-	</include>
-	<include name="script-skinshortcuts_coords9_16:9">
-		<left>550</left>
-		<top>745</top>
-		<width>1220</width>
-		<height>105</height>
-	</include>
-	<include name="script-skinshortcuts_coords9_21:9">
-		<left>550</left>
-		<top>745</top>
-		<width>1860</width>
-		<height>105</height>
-	</include>
-	<include name="script-skinshortcuts_coords9_21:9_masked">
-		<left>550</left>
-		<top>925</top>
-		<width>1860</width>
-		<height>105</height>
-	</include>
-	<include name="script-skinshortcuts_coords9_4:3">
-		<left>550</left>
-		<top>745</top>
-		<width>740</width>
-		<height>105</height>
-	</include>
-	
-	<include name="script-skinshortcuts_coords10">
-		<include condition="$EXP[NonMaskedCoordinates]">script-skinshortcuts_coords10_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">script-skinshortcuts_coords10_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">script-skinshortcuts_coords10_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">script-skinshortcuts_coords10_4:3</include>
-	</include>
-	<include name="script-skinshortcuts_coords10_16:9">
-		<left>550</left>
-		<top>745</top>
-		<width>1220</width>
-		<height>80</height>
-	</include>
-	<include name="script-skinshortcuts_coords10_21:9">
-		<left>550</left>
-		<top>745</top>
-		<width>1860</width>
-		<height>80</height>
-	</include>
-	<include name="script-skinshortcuts_coords10_21:9_masked">
-		<left>550</left>
-		<top>925</top>
-		<width>1860</width>
-		<height>80</height>
-	</include>
-	<include name="script-skinshortcuts_coords10_4:3">
-		<left>550</left>
-		<top>745</top>
-		<width>740</width>
-		<height>80</height>
 	</include>
 
 </includes>

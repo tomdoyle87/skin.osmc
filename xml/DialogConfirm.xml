@@ -7,7 +7,7 @@
 	<controls>
 
 		<!-- Dialog fanart -->
-		<include>DialogBackgroundImage</include>
+		<include>DialogFanart</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
@@ -18,12 +18,17 @@
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$INFO[Control.GetLabel(1)]</param>
-				<param name="secondary">False</param>
 			</include>
 
 			<!-- Heading -->
 			<control type="label" id="1">
-				<font></font>
+				<left>-15000</left>
+				<top>40</top>
+				<width>600</width>
+				<height>48</height>
+				<align>center</align>
+				<font>Font48</font>
+				<textcolor>$VAR[TextColor1]</textcolor>
 			</control>
 
 			<!-- Details -->
@@ -33,7 +38,7 @@
 				<aligny>center</aligny>
 				<font>Font36</font>
 				<autoscroll delay="10000" time="1700" repeat="12000">True</autoscroll>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 			</control>
 
 			<!-- Progress -->
@@ -41,9 +46,14 @@
 				<description>Progressbar</description>
 				<include>DialogConfirm_coords2</include>
 				<texturebg>common/ScrollBackgroundHorizontal.png</texturebg>
-				<midtexture colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripHorizontalFO.png</midtexture>
+				<midtexture colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripHorizontalFO.png</midtexture>
 				<info>System.Progressbar</info>
 			</control>
+
+			<!-- Button grouplist background -->
+			<include content="dialogButtonBackground">
+				<param name="id">9001</param>
+			</include>
 
 			<!-- Buttons -->
 			<control type="grouplist" id="9001">

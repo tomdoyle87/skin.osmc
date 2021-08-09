@@ -2,9 +2,9 @@
 <includes>
 
 	<include name="MyPVRGuide_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords1_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords1_16:9">
@@ -33,9 +33,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords2_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords2_16:9">
@@ -64,9 +64,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords3_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords3_16:9">
@@ -119,9 +119,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords4_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords4_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords4_16:9">
@@ -157,7 +157,7 @@
 				<width>282</width>
 				<height>69</height>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelName]</label>
 			</control>
 
@@ -168,7 +168,7 @@
 				<height>69</height>
 				<align>right</align>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 			</control>
 
@@ -207,7 +207,7 @@
 				<width>282</width>
 				<height>69</height>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelName]</label>
 			</control>
 
@@ -218,7 +218,7 @@
 				<height>69</height>
 				<align>right</align>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 			</control>
 
@@ -257,7 +257,7 @@
 				<width>282</width>
 				<height>69</height>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelName]</label>
 			</control>
 
@@ -268,7 +268,7 @@
 				<height>69</height>
 				<align>right</align>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 			</control>
 
@@ -307,7 +307,7 @@
 				<width>282</width>
 				<height>69</height>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelName]</label>
 			</control>
 
@@ -318,7 +318,7 @@
 				<height>69</height>
 				<align>right</align>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 			</control>
 
@@ -326,9 +326,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords5">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords5_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords5_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords5_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords5_16:9">
@@ -367,7 +367,7 @@
 					<height>69</height>
 					<font>Font33-bold</font>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 				<!-- Channel number -->
@@ -377,7 +377,7 @@
 					<height>69</height>
 					<align>right</align>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				
 				<!-- Highlighting -->
@@ -386,7 +386,7 @@
 					<top>5</top>
 					<width>363</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			
 			</control>
@@ -428,7 +428,7 @@
 					<height>69</height>
 					<font>Font33-bold</font>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 				<!-- Channel number -->
@@ -438,7 +438,7 @@
 					<height>69</height>
 					<align>right</align>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				
 				<!-- Highlighting -->
@@ -447,7 +447,7 @@
 					<top>5</top>
 					<width>363</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				
 			</control>
@@ -489,7 +489,7 @@
 					<height>69</height>
 					<font>Font33-bold</font>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 				<!-- Channel number -->
@@ -499,7 +499,7 @@
 					<height>69</height>
 					<align>right</align>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				
 				<!-- Highlighting -->
@@ -508,7 +508,7 @@
 					<top>5</top>
 					<width>363</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			
 			</control>
@@ -550,7 +550,7 @@
 					<height>69</height>
 					<font>Font33-bold</font>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 				<!-- Channel number -->
@@ -560,7 +560,7 @@
 					<height>69</height>
 					<align>right</align>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				
 				<!-- Highlighting -->
@@ -569,7 +569,7 @@
 					<top>5</top>
 					<width>363</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 			
 			</control>
@@ -577,9 +577,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords6">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords6_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords6_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords6_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords6_16:9">
@@ -602,7 +602,7 @@
 				<width>80</width>
 				<height>69</height>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 
@@ -624,18 +624,7 @@
 				<width>18</width>
 				<height>18</height>
 				<texture>pvr/Timer.png</texture>
-				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<include>NonFocusImageFadeAnimation</include>
-			</control>
-			
-			<!-- Reminder image -->
-			<control type="image">
-				<left>6</left>
-				<top>48</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
-				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 
@@ -661,7 +650,7 @@
 				<width>80</width>
 				<height>69</height>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 
@@ -683,18 +672,7 @@
 				<width>18</width>
 				<height>18</height>
 				<texture>pvr/Timer.png</texture>
-				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<include>NonFocusImageFadeAnimation</include>
-			</control>
-			
-			<!-- Reminder image -->
-			<control type="image">
-				<left>6</left>
-				<top>48</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
-				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 
@@ -720,7 +698,7 @@
 				<width>80</width>
 				<height>69</height>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 
@@ -742,18 +720,7 @@
 				<width>18</width>
 				<height>18</height>
 				<texture>pvr/Timer.png</texture>
-				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<include>NonFocusImageFadeAnimation</include>
-			</control>
-			
-			<!-- Reminder image -->
-			<control type="image">
-				<left>6</left>
-				<top>48</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
-				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 
@@ -779,7 +746,7 @@
 				<width>80</width>
 				<height>69</height>
 				<font>Font33-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$INFO[ListItem.Label]</label>
 			</control>
 
@@ -801,18 +768,7 @@
 				<width>18</width>
 				<height>18</height>
 				<texture>pvr/Timer.png</texture>
-				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<include>NonFocusImageFadeAnimation</include>
-			</control>
-			
-			<!-- Reminder image -->
-			<control type="image">
-				<left>6</left>
-				<top>48</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
-				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
 				<include>NonFocusImageFadeAnimation</include>
 			</control>
 
@@ -820,9 +776,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords7">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords7_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords7_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords7_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords7_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords7_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords7_16:9">
@@ -845,7 +801,7 @@
 				<height>69</height>
 				<font>Font33-bold</font>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 				<include content="NonFocusFadeAnimation">
 					<param name="id">10</param>
 				</include>
@@ -871,20 +827,7 @@
 				<width>18</width>
 				<height>18</height>
 				<texture>pvr/Timer.png</texture>
-				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<include content="NonFocusFadeAnimation">
-					<param name="id">10</param>
-				</include>
-			</control>
-			
-			<!-- Reminder image -->
-			<control type="image">
-				<left>6</left>
-				<top>48</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
-				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
 				<include content="NonFocusFadeAnimation">
 					<param name="id">10</param>
 				</include>
@@ -912,7 +855,7 @@
 				<height>69</height>
 				<font>Font33-bold</font>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 				<include content="NonFocusFadeAnimation">
 					<param name="id">10</param>
 				</include>
@@ -938,20 +881,7 @@
 				<width>18</width>
 				<height>18</height>
 				<texture>pvr/Timer.png</texture>
-				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<include content="NonFocusFadeAnimation">
-					<param name="id">10</param>
-				</include>
-			</control>
-			
-			<!-- Reminder image -->
-			<control type="image">
-				<left>6</left>
-				<top>48</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
-				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
 				<include content="NonFocusFadeAnimation">
 					<param name="id">10</param>
 				</include>
@@ -979,7 +909,7 @@
 				<height>69</height>
 				<font>Font33-bold</font>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 				<include content="NonFocusFadeAnimation">
 					<param name="id">10</param>
 				</include>
@@ -1005,20 +935,7 @@
 				<width>18</width>
 				<height>18</height>
 				<texture>pvr/Timer.png</texture>
-				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<include content="NonFocusFadeAnimation">
-					<param name="id">10</param>
-				</include>
-			</control>
-			
-			<!-- Reminder image -->
-			<control type="image">
-				<left>6</left>
-				<top>48</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
-				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
 				<include content="NonFocusFadeAnimation">
 					<param name="id">10</param>
 				</include>
@@ -1046,7 +963,7 @@
 				<height>69</height>
 				<font>Font33-bold</font>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[TextColorFO]</textcolor>
+				<textcolor>$VAR[TextColor1]</textcolor>
 				<include content="NonFocusFadeAnimation">
 					<param name="id">10</param>
 				</include>
@@ -1072,20 +989,7 @@
 				<width>18</width>
 				<height>18</height>
 				<texture>pvr/Timer.png</texture>
-				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording + !ListItem.HasReminder + !ListItem.HasReminderRule</visible>
-				<include content="NonFocusFadeAnimation">
-					<param name="id">10</param>
-				</include>
-			</control>
-			
-			<!-- Reminder image -->
-			<control type="image">
-				<left>6</left>
-				<top>48</top>
-				<width>18</width>
-				<height>18</height>
-				<texture>pvr/Reminder.png</texture>
-				<visible>[ListItem.HasReminder | ListItem.HasReminderRule] + !ListItem.IsRecording</visible>
+				<visible>[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording</visible>
 				<include content="NonFocusFadeAnimation">
 					<param name="id">10</param>
 				</include>
@@ -1095,9 +999,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords8">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords8_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords8_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords8_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords8_16:9">
@@ -1118,9 +1022,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords9">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords9_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords9_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords9_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords9_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords9_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords9_16:9">
@@ -1141,9 +1045,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords10">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords10_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords10_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords10_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords10_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords10_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords10_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords10_16:9">
@@ -1168,9 +1072,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords11">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords11_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords11_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords11_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords11_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords11_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords11_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords11_16:9">
@@ -1199,9 +1103,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords12">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords12_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords12_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords12_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords12_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords12_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords12_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords12_16:9">
@@ -1230,9 +1134,9 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords13">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords13_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords13_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords13_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords13_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords13_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords13_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords13_16:9">
@@ -1261,118 +1165,30 @@
 	</include>
 	
 	<include name="MyPVRGuide_coords14">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords14_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MyPVRGuide_coords14_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords14_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords14_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MyPVRGuide_coords14_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords14_4:3</include>
 	</include>
 	<include name="MyPVRGuide_coords14_16:9">
 		<left>780</left>
 		<width>900</width>
-		<height>112</height>
+		<height>150</height>
 	</include>
 	<include name="MyPVRGuide_coords14_21:9">
 		<left>1050</left>
 		<width>1269</width>
-		<height>112</height>
+		<height>150</height>
 	</include>
 	<include name="MyPVRGuide_coords14_21:9_masked">
 		<left>1050</left>
 		<width>1269</width>
-		<height>112</height>
+		<height>150</height>
 	</include>
 	<include name="MyPVRGuide_coords14_4:3">
 		<left>780</left>
 		<width>420</width>
-		<height>112</height>
-	</include>
-	
-	<include name="MyPVRGuide_coords15">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords15_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords15_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords15_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords15_4:3</include>
-	</include>
-	<include name="MyPVRGuide_coords15_16:9">
-		<height>94</height>
-	</include>
-	<include name="MyPVRGuide_coords15_21:9">
-		<height>94</height>
-	</include>
-	<include name="MyPVRGuide_coords15_21:9_masked">
-		<height>94</height>
-	</include>
-	<include name="MyPVRGuide_coords15_4:3">
-		<height>94</height>
-	</include>
-	
-	<include name="MyPVRGuide_coords16">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords16_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords16_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords16_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords16_4:3</include>
-	</include>
-	<include name="MyPVRGuide_coords16_16:9">
-		<height>105</height>
-	</include>
-	<include name="MyPVRGuide_coords16_21:9">
-		<height>105</height>
-	</include>
-	<include name="MyPVRGuide_coords16_21:9_masked">
-		<height>105</height>
-	</include>
-	<include name="MyPVRGuide_coords16_4:3">
-		<height>105</height>
-	</include>
-	
-	<include name="MyPVRGuide_coords17">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords17_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords17_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords17_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords17_4:3</include>
-	</include>
-	<include name="MyPVRGuide_coords17_16:9">
-		<height>80</height>
-	</include>
-	<include name="MyPVRGuide_coords17_21:9">
-		<height>80</height>
-	</include>
-	<include name="MyPVRGuide_coords17_21:9_masked">
-		<height>80</height>
-	</include>
-	<include name="MyPVRGuide_coords17_4:3">
-		<height>80</height>
-	</include>
-	
-	<include name="MyPVRGuide_coords18">
-		<include condition="$EXP[NonMaskedCoordinates]">MyPVRGuide_coords18_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MyPVRGuide_coords18_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MyPVRGuide_coords18_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MyPVRGuide_coords18_4:3</include>
-	</include>
-	<include name="MyPVRGuide_coords18_16:9">
-		<right>120</right>
-		<bottom>110</bottom>
-		<width>800</width>
-		<height>44</height>
-	</include>
-	<include name="MyPVRGuide_coords18_21:9">
-		<right>120</right>
-		<bottom>110</bottom>
-		<width>800</width>
-		<height>44</height>
-	</include>
-	<include name="MyPVRGuide_coords18_21:9_masked">
-		<right>120</right>
-		<bottom>270</bottom>
-		<width>800</width>
-		<height>44</height>
-	</include>
-	<include name="MyPVRGuide_coords18_4:3">
-		<right>120</right>
-		<bottom>110</bottom>
-		<width>800</width>
-		<height>44</height>
+		<height>150</height>
 	</include>
 
 </includes>

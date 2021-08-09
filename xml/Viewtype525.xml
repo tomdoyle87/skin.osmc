@@ -38,7 +38,7 @@
 					<include>Viewtype525_coords5</include>
 					<font>Font72</font>
 					<align>center</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label>$VAR[Label1]</label>
 					<scrollspeed>120</scrollspeed>
 				</control>
@@ -50,7 +50,7 @@
 					<align>center</align>
 					<aligny>top</aligny>
 					<label>$VAR[Label2]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				
 				<!-- Plot -->
@@ -58,31 +58,27 @@
 					<include>Viewtype525_coords7</include>
 					<visible>!String.IsEmpty(ListItem.Plot) | !String.IsEmpty(ListItem.PlotOutline)</visible>
 					<control type="textbox">
-						<include>Viewtype525_coords8</include>
 						<align>left</align>
-						<font>Font27</font>
 						<label>$INFO[ListItem.Plot]</label>
-						<textcolor>$VAR[TextColorFO]</textcolor>
+						<textcolor>$VAR[TextColor1]</textcolor>
 						<autoscroll delay="5000" time="1400" repeat="10000">true</autoscroll>
-						<visible>Skin.String(PlotFont,S)</visible>
+						<visible>Skin.String(PlotFont,S) | Skin.String(PlotFont,S light)</visible>
 					</control>
 					<control type="textbox">
-						<include>Viewtype525_coords9</include>
 						<align>left</align>
 						<font>Font30</font>
 						<label>$INFO[ListItem.Plot]</label>
-						<textcolor>$VAR[TextColorFO]</textcolor>
+						<textcolor>$VAR[TextColor1]</textcolor>
 						<autoscroll delay="5000" time="1300" repeat="10000">true</autoscroll>
-						<visible>Skin.String(PlotFont,M)</visible>
+						<visible>Skin.String(PlotFont,M) | Skin.String(PlotFont,M light)</visible>
 					</control>
 					<control type="textbox">
-						<include>Viewtype525_coords10</include>
 						<align>left</align>
 						<font>Font33</font>
 						<label>$INFO[ListItem.Plot]</label>
-						<textcolor>$VAR[TextColorFO]</textcolor>
+						<textcolor>$VAR[TextColor1]</textcolor>
 						<autoscroll delay="5000" time="1200" repeat="10000">true</autoscroll>
-						<visible>Skin.String(PlotFont,L)</visible>
+						<visible>Skin.String(PlotFont,L) | Skin.String(PlotFont,XL) | Skin.String(PlotFont,L light) | Skin.String(PlotFont,XL light)</visible>
 					</control>
 				</control>
 			
@@ -97,7 +93,7 @@
 		<param name="visible">False</param>
 		<definition>
 			<control type="image">
-				<include>Viewtype525_coords11</include>
+				<include>Viewtype525_coords8</include>
 				<colordiffuse>$VAR[DiffusePosterNF]</colordiffuse>
 				<texture background="true" fallback="$PARAM[fallback]">$VAR[mediaImages]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
@@ -112,7 +108,7 @@
 		<param name="visible">False</param>
 		<definition>
 			<control type="image">
-				<include>Viewtype525_coords12</include>
+				<include>Viewtype525_coords9</include>
 				<texture background="true" fallback="$PARAM[fallback]">$VAR[mediaImages]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<visible>$PARAM[visible]</visible>

@@ -104,29 +104,29 @@ msgctxt "#31021"
 msgid "Home"
 msgstr ""
 
-#: /MyPVRChannels.xml /MyPVRGuide.xml /MyPVRRecordings.xml /MyPVRSearch.xml /MyPVRTimers.xml
+#: /MyPVRChannels.xml:365 /MyPVRGuide.xml:1217 /MyPVRRecordings.xml:394 /MyPVRSearch.xml:415 /MyPVRTimers.xml:349
 msgctxt "#31022"
 msgid "Rules"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /script-skinshortcuts.xml:246
 msgctxt "#31023"
-msgid "Focus control colour"
+msgid "Edit hub menu"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /script-skinshortcuts.xml:254
 msgctxt "#31024"
-msgid "Non-focus control colour"
+msgid "Choose hub widgets"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /script-skinshortcuts.xml:237
 msgctxt "#31025"
-msgid "OSD cache bar colour"
+msgid "Autoscroll"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /script-skinshortcuts.xml:227
 msgctxt "#31026"
-msgid "Colour used for focused controls like buttons, scrollbars or highlighted indicators and progress bars"
+msgid "Shadow"
 msgstr ""
 
 msgctxt "#31027"
@@ -137,7 +137,7 @@ msgctxt "#31028"
 msgid "Show background visualisation"
 msgstr ""
 
-#: /script-skinshortcuts.xml
+#: /script-skinshortcuts.xml:217
 msgctxt "#31029"
 msgid "Fallback Artwork"
 msgstr ""
@@ -155,7 +155,7 @@ msgctxt "#31032"
 msgid "Recommended movies"
 msgstr ""
 
-#: /script-skinshortcuts.xml
+#: /script-skinshortcuts.xml:208
 msgctxt "#31033"
 msgid "Artwork"
 msgstr ""
@@ -172,9 +172,9 @@ msgctxt "#31036"
 msgid "Recommended episodes"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /SkinSettings.xml:120
 msgctxt "#31037"
-msgid "Colour used for controls without focus like buttons, scrollbars or non-highlighted indicators and progress bars"
+msgid "Main menu style"
 msgstr ""
 
 msgctxt "#31038"
@@ -226,14 +226,14 @@ msgctxt "#31049"
 msgid "Customize main menu"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /SkinSettings.xml:130
 msgctxt "#31050"
-msgid "Colour used for the OSD cache bar"
+msgid "Classic main menu (3 items)"
 msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31051"
-msgid "Settings can be accessed from the Shutdown menu.[CR]ONLY deactivate 'Always show settings link in main menu' AND remove the settings and power main menu item at the same time, if you know what you're doing!"
+msgid "Settings can be accessed from the Shutdown menu.[CR]ONLY deactivate "Always show settings link in main menu" AND remove the settings and power main menu item at the same time, if you know what you're doing!"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -275,17 +275,15 @@ msgctxt "#31059"
 msgid "Memory Used:"
 msgstr ""
 
-#: /SkinSettings.xml
 msgctxt "#31060"
-msgid "Colour used for CIH/cinemascope projector screen setup masking bars"
+msgid "Enable Headings"
 msgstr ""
 
-#: /SkinSettings.xml
 msgctxt "#31061"
-msgid "OSMC Blue"
+msgid "Enable Horizontal home layout"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /SkinSettings.xml:207
 msgctxt "#31062"
 msgid "Overlay colour"
 msgstr ""
@@ -309,37 +307,37 @@ msgctxt "#31066"
 msgid "Cinema Exp."
 msgstr ""
 
-#: /SkinSettings.xml
+#: /SkinSettings.xml:219
 msgctxt "#31067"
 msgid "Weather icons"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /SkinSettings.xml:230
 msgctxt "#31068"
 msgid "Weather fanart"
 msgstr ""
 
-#: /MyWeather.xml
+#: /MyWeather.xml:295
 msgctxt "#31069"
 msgid "Location"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /SkinSettings.xml:154
 msgctxt "#31070"
-msgid "OSMC Light blue"
+msgid "Enable hubs"
 msgstr ""
 
-#: /Variables.xml
+#: /Variables.xml:497
 msgctxt "#31071"
 msgid "Edit sub menu"
 msgstr ""
 
-#: /script-nextup-notification-StillWatchingInfo.xml
+#: /script-nextup-notification-StillWatchingInfo.xml:31
 msgctxt "#31072"
 msgid "Still there?"
 msgstr ""
 
-#: /script-nextup-notification-StillWatchingInfo.xml
+#: /script-nextup-notification-StillWatchingInfo.xml:56
 msgctxt "#31073"
 msgid "Click OK to keep watching"
 msgstr ""
@@ -364,7 +362,7 @@ msgctxt "#31077"
 msgid "Widget icons on home screen"
 msgstr ""
 
-#: /Viewtype53.xml /Viewtype535.xml
+#: /Viewtype53.xml  /Viewtype535.xml
 msgctxt "#31078"
 msgid "Wall"
 msgstr ""
@@ -379,7 +377,7 @@ msgctxt "#31080"
 msgid "Recommended"
 msgstr ""
 
-#: /SkinSettings.xml /shortcuts/overrides.xml
+#: /SkinSettings.xml
 msgctxt "#31081"
 msgid "Skin Helper Service"
 msgstr ""
@@ -521,7 +519,12 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31110"
-msgid "Overlay opacity"
+msgid "Overlay opacity "
+msgstr ""
+
+#: /SkinSettings.xml
+msgctxt "#31111"
+msgid "Background colour gradient"
 msgstr ""
 
 #: /Viewtype521.xml
@@ -539,9 +542,9 @@ msgctxt "#31114"
 msgid "Wall small"
 msgstr ""
 
-#: /DialogVideoInfo.xml
+#: /SkinSettings.xml
 msgctxt "#31115"
-msgid "Trakt.tv"
+msgid "Bigger music OSD album art"
 msgstr ""
 
 #: /Viewtype533.xml
@@ -576,7 +579,7 @@ msgstr ""
 
 #: /DialogVideoInfo.xml
 msgctxt "#31122"
-msgid "TMDb"
+msgid "TVDb"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -646,7 +649,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31136"
-msgid "Multi-image (folder)"
+msgid "Multi image (folder)"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -714,29 +717,29 @@ msgctxt "#31149"
 msgid "Disable music listened to status in library"
 msgstr ""
 
-#: /SkinSettings.xml
-msgctxt "#31050"
-msgid "Masking colour"
+#: /Custom_Backup.xml
+msgctxt "#31150"
+msgid "Please enable the Skin Helper Service Skin Backup add-on under[CR]Settings/Add-on browser/My add-ons[CR]to be able to backup and restore skin settings."
 msgstr ""
 
-#: /Custom_Welcome.xml
+#: /Custom_Backup.xml /Custom_Customization.xml /Custom_Disabled_Add-on.xml /Custom_Welcome.xml
 msgctxt "#31151"
 msgid "OK"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /Custom_Backup.xml /Custom_Customization.xml /Custom_Disabled_Add-on.xml
 msgctxt "#31152"
-msgid "OSMC Black"
+msgid "Open Add-on browser"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /Custom_Customization.xml
 msgctxt "#31153"
-msgid "OSMC Rose red"
+msgid "Please enable the Skin Helper Service add-on under[CR]Settings/Add-on browser/My add-ons[CR]to be able to customize the main menu."
 msgstr ""
 
-#: /SkinSettings.xml
+#: /Custom_Disabled_Add-on.xml
 msgctxt "#31154"
-msgid "OSMC Sunset Yellow"
+msgid "Please enable the add-on under Settings/Add-on browser/My add-ons to be able to use it."
 msgstr ""
 
 #: /Custom_Welcome.xml
@@ -804,9 +807,9 @@ msgctxt "#31167"
 msgid "Recently added movies"
 msgstr ""
 
-#: /SkinSettings.xml
+#: /Custom_Backup.xml /Custom_Customization.xml /Custom_Disabled_Add-on.xml /Custom_Welcome.xml
 msgctxt "#31168"
-msgid "OSMC Lime green"
+msgid "Enable add-on"
 msgstr ""
 
 #: /Custom_Welcome.xml
@@ -821,7 +824,7 @@ msgstr ""
 
 #: /VideoFullScreen.xml
 msgctxt "#31171"
-msgid "Press left/right button for details"
+msgid "Press OK for details"
 msgstr ""
 
 #: /script-skinshortcuts.xml
@@ -876,7 +879,7 @@ msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31182"
-msgid "In-Progress Movies"
+msgid "In Progress Movies"
 msgstr ""
 
 #: /shortcuts/overrides.xml
@@ -931,7 +934,7 @@ msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31193"
-msgid "In-Progress TV Shows"
+msgid "In Progress TV Shows"
 msgstr ""
 
 #: /shortcuts/overrides.xml
@@ -971,7 +974,7 @@ msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31201"
-msgid "In-Progress Episodes"
+msgid "In Progress Episodes"
 msgstr ""
 
 #: /shortcuts/overrides.xml
@@ -1131,22 +1134,22 @@ msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31233"
-msgid "View:"
+msgid "View: "
 msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31234"
-msgid "Order:"
+msgid "Order: "
 msgstr ""
 
-#: /SkinSettings.xml
+#: /shortcuts/overrides.xml
 msgctxt "#31235"
-msgid "Dark blue"
+msgid "Skin-helper script"
 msgstr ""
 
 #: /shortcuts/overrides.xml
 msgctxt "#31236"
-msgid "ExtendedInfo Script"
+msgid "Extended info script"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1274,6 +1277,31 @@ msgctxt "#31261"
 msgid "Icon"
 msgstr ""
 
+#: /Variables.xml
+msgctxt "#31262"
+msgid "Left-right"
+msgstr ""
+
+#: /Variables.xml
+msgctxt "#31263"
+msgid "Right-left"
+msgstr ""
+
+#: /Variables.xml
+msgctxt "#31264"
+msgid "Top-bottom"
+msgstr ""
+
+#: /Variables.xml
+msgctxt "#31265"
+msgid "Bottom-top"
+msgstr ""
+
+#: /Variables.xml
+msgctxt "#31266"
+msgid "Plain colour"
+msgstr ""
+
 #: /SkinSettings.xml
 msgctxt "#31267"
 msgid "In order to be able to customize the main menu a few add-ons have to be installed first."
@@ -1391,7 +1419,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31290"
-msgid "Default colour sets shipped with the skin (default: OSMC-Light blue)[CR]Every set contains compatible colours for the background, overlays and texts."
+msgid "Default colour sets shipped with the skin (default: OSMC Blue)[CR]Every set contains compatible colours for the background, overlays and texts.[CR]Options available: OSMC Blue, OSMC Light blue, OSMC Black, OSMC Rose red, OSMC Sunset Yellow, OSMC Lime green, Dark green, Orange, Red, Purple"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1404,9 +1432,9 @@ msgctxt "#31292"
 msgid "The opacity of the coloured dialog/OSD backgrounds (default: High)[CR]Options available: Low, Medium, High, Highest"
 msgstr ""
 
-#: /Variables.xml
+#: /SkinSettings.xml
 msgctxt "#31293"
-msgid "Search result"
+msgid "The gradient of the coloured background overlay (default: Left-right)[CR]Options available: Left-right (left: grey, right: colour), Right-left (right: grey, left: colour), Top-bottom (top: grey, bottom: colour), Bottom-top (bottom: grey, top: colour), Plain colour (solid coloured, semi-transparent)"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1516,7 +1544,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31315"
-msgid "Duration the OSD is shown when video is paused (default: Always enabled)[CR]Options available: Disabled, 5s, 10s, 20s, 30s, 1 min, 2 min, 3 min, 5 min, Always enabled"
+msgid "Time for which the OSD remains on-screen when video is paused (default: Always)[CR]Options available: Disabled, 5s, 10s, 20s, 30s, 1 min, 2 min, 3 min, 5 min, Always"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1526,7 +1554,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31317"
-msgid "Idle duration before fullscreen music player is opened (default: 1 min)[CR]Options available: 10s, 15s, 20s, 30s, 1 min"
+msgid "Idle duration before fullscreen music player is opened (default: 60s)[CR]Options available: 10s, 15s, 20s, 30s, 60s"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1536,7 +1564,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31319"
-msgid "Orange"
+msgid "Increase the size of the album cover, channel logo or player icon shown in fullscreen music playback"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1571,7 +1599,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31326"
-msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S, M, L"
+msgid "Font size of plot and description texts in wall and list info views as well as OSD info dialogs (default: S)[CR]Options available: S light, S, M light, M, L light, L, XL light, XL"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1596,7 +1624,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31331"
-msgid "Changes the format used to show the duration of scraped videos except music videos (default: Minutes)[CR]Options available: Minutes (e.g. 128 min, 20 min, 45 sec), Hours and minutes (e.g. 2hr 8min, 20 min, 45 sec)"
+msgid "Change the format used to show the duration of scraped videos except music videos (default: Minutes)[CR]Options available: Minutes (e.g. 128 min, 20 min, 45 sec), Hours and minutes (e.g. 2hr 8min, 20 min, 45 sec)"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1606,7 +1634,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31333"
-msgid "Hide the first letter label shown left of window titles when scrolling alphabetically sorted lists.[CR]Alphabetical sort orders supported:"
+msgid "Hide the first letter label shown left of window titles when scrolling alphabetically sorted lists.[CR]Alphabetical sort orders supported: "
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1726,7 +1754,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31357"
-msgid "Sets a single image or multi-image background for the selected main menu item"
+msgid "Sets a single image or multi image background for the selected main menu item"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1986,7 +2014,7 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31409"
-msgid "Set default view for video add-ons"
+msgid "Set default view for video addons"
 msgstr ""
 
 #: /SkinSettings.xml
@@ -1996,120 +2024,10 @@ msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31411"
-msgid "Views in video add-ons have to be set for each page seperately. Force a specific view to be used for all video add-on pages."
+msgid "Views in video addons have to be set for each page seperately. Force a specific view to be used for all video addon pages."
 msgstr ""
 
 #: /SkinSettings.xml
 msgctxt "#31412"
-msgid "Set the view used for all video add-on pages (default: List)[CR]Options available: List, List info, Wide, Wide low, Wide info, Wall, Wall info, Wall small, Wall small info, Wall low"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31413"
-msgid "Red"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31414"
-msgid "Purple"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31415"
-msgid "Highest"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31416"
-msgid "High"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31417"
-msgid "Medium"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31418"
-msgid "Low"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31419"
-msgid "Details"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31420"
-msgid "Description"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31421"
-msgid "Minutes"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31422"
-msgid "Hours and minutes"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31423"
-msgid "File first"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31424"
-msgid "File only"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31425"
-msgid "Language first"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31426"
-msgid "Language only"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31427"
-msgid "Duration only"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31428"
-msgid "2.40:1"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31429"
-msgid "2.35:1"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31430"
-msgid "2.33:1"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31431"
-msgid "2.00:1"
-msgstr ""
-
-#: /SkinSettings.xml
-msgctxt "#31432"
-msgid "1.78:1"
-msgstr ""
-
-#: /Variables.xml
-msgctxt "#31433"
-msgid "Timer"
-msgstr ""
-
-#: /Variables.xml
-msgctxt "#31434"
-msgid "Timers"
+msgid "Set the view used for all video addon pages (default: List)[CR]Options available: List, List info, Wide, Wide low, Wide info, Wall, Wall info, Wall small, Wall small info, Wall low"
 msgstr ""

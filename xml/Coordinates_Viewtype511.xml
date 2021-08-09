@@ -2,9 +2,9 @@
 <includes>
 	
 	<include name="Viewtype511_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords1_4:3</include>
 	</include>
 	<include name="Viewtype511_coords1_16:9">
@@ -33,9 +33,9 @@
 	</include>
 	
 	<include name="Viewtype511_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords2_4:3</include>
 	</include>
 	<include name="Viewtype511_coords2_16:9">
@@ -64,9 +64,9 @@
 	</include>
 	
 	<include name="Viewtype511_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords3_4:3</include>
 	</include>
 	<include name="Viewtype511_coords3_16:9">
@@ -95,304 +95,190 @@
 	</include>
 	
 	<include name="Viewtype511_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords4_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords4_4:3</include>
 	</include>
 	<include name="Viewtype511_coords4_16:9">
-		<height>189</height>
+		<left>120</left>
+		<top>190</top>
 	</include>
 	<include name="Viewtype511_coords4_21:9">
-		<height>189</height>
+		<left>120</left>
+		<top>190</top>
 	</include>
 	<include name="Viewtype511_coords4_21:9_masked">
-		<height>189</height>
-	</include>
-	<include name="Viewtype511_coords4_4:3">
-		<height>189</height>
-	</include>
-	
-	<include name="Viewtype511_coords5">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords5_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords5_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords5_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords5_4:3</include>
-	</include>
-	<include name="Viewtype511_coords5_16:9">
-		<height>177</height>
-	</include>
-	<include name="Viewtype511_coords5_21:9">
-		<height>177</height>
-	</include>
-	<include name="Viewtype511_coords5_21:9_masked">
-		<height>177</height>
-	</include>
-	<include name="Viewtype511_coords5_4:3">
-		<height>177</height>
-	</include>
-	
-	<include name="Viewtype511_coords6">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords6_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords6_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords6_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords6_4:3</include>
-	</include>
-	<include name="Viewtype511_coords6_16:9">
-		<height>161</height>
-	</include>
-	<include name="Viewtype511_coords6_21:9">
-		<height>161</height>
-	</include>
-	<include name="Viewtype511_coords6_21:9_masked">
-		<height>161</height>
-	</include>
-	<include name="Viewtype511_coords6_4:3">
-		<height>161</height>
-	</include>
-	
-	<include name="Viewtype511_coords7">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords7_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords7_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords7_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords7_4:3</include>
-	</include>
-	<include name="Viewtype511_coords7_16:9">
-		<left>120</left>
-		<top>190</top>
-	</include>
-	<include name="Viewtype511_coords7_21:9">
-		<left>120</left>
-		<top>190</top>
-	</include>
-	<include name="Viewtype511_coords7_21:9_masked">
 		<left>120</left>
 		<top>370</top>
 	</include>
-	<include name="Viewtype511_coords7_4:3">
+	<include name="Viewtype511_coords4_4:3">
 		<left>120</left>
 		<top>190</top>
 	</include>
 	
+	<include name="Viewtype511_coords5">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords5_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords5_4:3</include>
+	</include>
+	<include name="Viewtype511_coords5_16:9">
+		<left>0</left>
+		<top>314</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords5_21:9">
+		<left>0</left>
+		<top>314</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords5_21:9_masked">
+		<left>0</left>
+		<top>314</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords5_4:3">
+		<left>0</left>
+		<top>314</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	
+	<include name="Viewtype511_coords6">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords6_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords6_4:3</include>
+	</include>
+	<include name="Viewtype511_coords6_16:9">
+		<left>0</left>
+		<top>366</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords6_21:9">
+		<left>0</left>
+		<top>366</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords6_21:9_masked">
+		<left>0</left>
+		<top>366</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords6_4:3">
+		<left>0</left>
+		<top>366</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	
+	<include name="Viewtype511_coords7">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords7_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords7_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords7_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords7_4:3</include>
+	</include>
+	<include name="Viewtype511_coords7_16:9">
+		<left>0</left>
+		<top>420</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords7_21:9">
+		<left>0</left>
+		<top>420</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords7_21:9_masked">
+		<left>0</left>
+		<top>420</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	<include name="Viewtype511_coords7_4:3">
+		<left>0</left>
+		<top>420</top>
+		<width>450</width>
+		<height>45</height>
+	</include>
+	
 	<include name="Viewtype511_coords8">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords8_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords8_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords8_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords8_4:3</include>
 	</include>
 	<include name="Viewtype511_coords8_16:9">
 		<left>0</left>
-		<top>314</top>
+		<top>474</top>
 		<width>450</width>
-		<height>45</height>
+		<height>190</height>
 	</include>
 	<include name="Viewtype511_coords8_21:9">
 		<left>0</left>
-		<top>314</top>
+		<top>474</top>
 		<width>450</width>
-		<height>45</height>
+		<height>190</height>
 	</include>
 	<include name="Viewtype511_coords8_21:9_masked">
 		<left>0</left>
-		<top>314</top>
+		<top>474</top>
 		<width>450</width>
-		<height>45</height>
+		<height>190</height>
 	</include>
 	<include name="Viewtype511_coords8_4:3">
 		<left>0</left>
-		<top>314</top>
+		<top>474</top>
 		<width>450</width>
-		<height>45</height>
+		<height>190</height>
 	</include>
 	
 	<include name="Viewtype511_coords9">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords9_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords9_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords9_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords9_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords9_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords9_4:3</include>
 	</include>
 	<include name="Viewtype511_coords9_16:9">
-		<left>0</left>
-		<top>366</top>
-		<width>450</width>
-		<height>45</height>
-	</include>
-	<include name="Viewtype511_coords9_21:9">
-		<left>0</left>
-		<top>366</top>
-		<width>450</width>
-		<height>45</height>
-	</include>
-	<include name="Viewtype511_coords9_21:9_masked">
-		<left>0</left>
-		<top>366</top>
-		<width>450</width>
-		<height>45</height>
-	</include>
-	<include name="Viewtype511_coords9_4:3">
-		<left>0</left>
-		<top>366</top>
-		<width>450</width>
-		<height>45</height>
-	</include>
-	
-	<include name="Viewtype511_coords10">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords10_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords10_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords10_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords10_4:3</include>
-	</include>
-	<include name="Viewtype511_coords10_16:9">
-		<left>0</left>
-		<top>420</top>
-		<width>450</width>
-		<height>45</height>
-	</include>
-	<include name="Viewtype511_coords10_21:9">
-		<left>0</left>
-		<top>420</top>
-		<width>450</width>
-		<height>45</height>
-	</include>
-	<include name="Viewtype511_coords10_21:9_masked">
-		<left>0</left>
-		<top>420</top>
-		<width>450</width>
-		<height>45</height>
-	</include>
-	<include name="Viewtype511_coords10_4:3">
-		<left>0</left>
-		<top>420</top>
-		<width>450</width>
-		<height>45</height>
-	</include>
-	
-	<include name="Viewtype511_coords11">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords11_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords11_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords11_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords11_4:3</include>
-	</include>
-	<include name="Viewtype511_coords11_16:9">
-		<left>0</left>
-		<top>474</top>
-		<width>450</width>
-		<height>190</height>
-	</include>
-	<include name="Viewtype511_coords11_21:9">
-		<left>0</left>
-		<top>474</top>
-		<width>450</width>
-		<height>190</height>
-	</include>
-	<include name="Viewtype511_coords11_21:9_masked">
-		<left>0</left>
-		<top>474</top>
-		<width>450</width>
-		<height>190</height>
-	</include>
-	<include name="Viewtype511_coords11_4:3">
-		<left>0</left>
-		<top>474</top>
-		<width>450</width>
-		<height>190</height>
-	</include>
-	
-	<include name="Viewtype511_coords12">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords12_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords12_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords12_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords12_4:3</include>
-	</include>
-	<include name="Viewtype511_coords12_16:9">
-		<height>188</height>
-	</include>
-	<include name="Viewtype511_coords12_21:9">
-		<height>188</height>
-	</include>
-	<include name="Viewtype511_coords12_21:9_masked">
-		<height>188</height>
-	</include>
-	<include name="Viewtype511_coords12_4:3">
-		<height>188</height>
-	</include>
-	
-	<include name="Viewtype511_coords13">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords13_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords13_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords13_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords13_4:3</include>
-	</include>
-	<include name="Viewtype511_coords13_16:9">
-		<height>175</height>
-	</include>
-	<include name="Viewtype511_coords13_21:9">
-		<height>175</height>
-	</include>
-	<include name="Viewtype511_coords13_21:9_masked">
-		<height>175</height>
-	</include>
-	<include name="Viewtype511_coords13_4:3">
-		<height>175</height>
-	</include>
-	
-	<include name="Viewtype511_coords14">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords14_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords14_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords14_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords14_4:3</include>
-	</include>
-	<include name="Viewtype511_coords14_16:9">
-		<height>159</height>
-	</include>
-	<include name="Viewtype511_coords14_21:9">
-		<height>159</height>
-	</include>
-	<include name="Viewtype511_coords14_21:9_masked">
-		<height>159</height>
-	</include>
-	<include name="Viewtype511_coords14_4:3">
-		<height>159</height>
-	</include>
-	
-	<include name="Viewtype511_coords15">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords15_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords15_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords15_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords15_4:3</include>
-	</include>
-	<include name="Viewtype511_coords15_16:9">
 		<left>750</left>
 		<centertop>50%</centertop>
 		<width>1050</width>
 		<height>720</height>
 	</include>
-	<include name="Viewtype511_coords15_21:9">
+	<include name="Viewtype511_coords9_21:9">
 		<left>750</left>
 		<centertop>50%</centertop>
 		<width>1690</width>
 		<height>720</height>
 	</include>
-	<include name="Viewtype511_coords15_21:9_masked">
+	<include name="Viewtype511_coords9_21:9_masked">
 		<left>750</left>
 		<centertop>50%</centertop>
 		<width>1690</width>
 		<height>720</height>
 	</include>
-	<include name="Viewtype511_coords15_4:3">
+	<include name="Viewtype511_coords9_4:3">
 		<left>750</left>
 		<centertop>50%</centertop>
 		<width>570</width>
 		<height>720</height>
 	</include>
 	
-	<include name="Viewtype511_coords16">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords16_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords16_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords16_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords16_4:3</include>
+	<include name="Viewtype511_coords10">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords10_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords10_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords10_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords10_4:3</include>
 	</include>
-	<include name="Viewtype511_coords16_16:9">
+	<include name="Viewtype511_coords10_16:9">
 		<itemlayout height="72" width="1050">
 			<control type="label">
 				<left>32</left>
@@ -401,7 +287,7 @@
 				<height>72</height>
 				<font>Font36-light</font>
 				<label>$VAR[Label1]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 			<!-- Collection -->
 			<control type="image">
@@ -411,7 +297,7 @@
 				<height>22</height>
 				<texture>views/OverlayCollection.png</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
+				<colordiffuse>$VAR[TextColor2]</colordiffuse>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>ListItem.IsCollection</visible>
 			</control>
@@ -423,13 +309,13 @@
 				<height>22</height>
 				<texture>$VAR[StatusOverlay]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
+				<colordiffuse>$VAR[TextColor2]</colordiffuse>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>!ListItem.IsCollection</visible>
 			</control>
 		</itemlayout>
 	</include>
-	<include name="Viewtype511_coords16_21:9">
+	<include name="Viewtype511_coords10_21:9">
 		<itemlayout height="72" width="1690">
 			<control type="label">
 				<left>32</left>
@@ -438,7 +324,7 @@
 				<height>72</height>
 				<font>Font36-light</font>
 				<label>$VAR[Label1]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 			<!-- Collection -->
 			<control type="image">
@@ -448,7 +334,7 @@
 				<height>22</height>
 				<texture>views/OverlayCollection.png</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
+				<colordiffuse>$VAR[TextColor2]</colordiffuse>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>ListItem.IsCollection</visible>
 			</control>
@@ -460,13 +346,13 @@
 				<height>22</height>
 				<texture>$VAR[StatusOverlay]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
+				<colordiffuse>$VAR[TextColor2]</colordiffuse>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>!ListItem.IsCollection</visible>
 			</control>
 		</itemlayout>
 	</include>
-	<include name="Viewtype511_coords16_21:9_masked">
+	<include name="Viewtype511_coords10_21:9_masked">
 		<itemlayout height="72" width="1690">
 			<control type="label">
 				<left>32</left>
@@ -475,7 +361,7 @@
 				<height>72</height>
 				<font>Font36-light</font>
 				<label>$VAR[Label1]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 			<!-- Collection -->
 			<control type="image">
@@ -485,7 +371,7 @@
 				<height>22</height>
 				<texture>views/OverlayCollection.png</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
+				<colordiffuse>$VAR[TextColor2]</colordiffuse>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>ListItem.IsCollection</visible>
 			</control>
@@ -497,13 +383,13 @@
 				<height>22</height>
 				<texture>$VAR[StatusOverlay]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
+				<colordiffuse>$VAR[TextColor2]</colordiffuse>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>!ListItem.IsCollection</visible>
 			</control>
 		</itemlayout>
 	</include>
-	<include name="Viewtype511_coords16_4:3">
+	<include name="Viewtype511_coords10_4:3">
 		<itemlayout height="72" width="570">
 			<control type="label">
 				<left>32</left>
@@ -512,7 +398,7 @@
 				<height>72</height>
 				<font>Font36-light</font>
 				<label>$VAR[Label1]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 			<!-- Collection -->
 			<control type="image">
@@ -522,7 +408,7 @@
 				<height>22</height>
 				<texture>views/OverlayCollection.png</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
+				<colordiffuse>$VAR[TextColor2]</colordiffuse>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>ListItem.IsCollection</visible>
 			</control>
@@ -534,20 +420,20 @@
 				<height>22</height>
 				<texture>$VAR[StatusOverlay]</texture>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
-				<colordiffuse>$VAR[TextColorNF]</colordiffuse>
+				<colordiffuse>$VAR[TextColor2]</colordiffuse>
 				<include>NonFocusImageFadeAnimation</include>
 				<visible>!ListItem.IsCollection</visible>
 			</control>
 		</itemlayout>
 	</include>
 	
-	<include name="Viewtype511_coords17">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords17_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords17_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords17_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords17_4:3</include>
+	<include name="Viewtype511_coords11">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords11_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords11_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords11_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords11_4:3</include>
 	</include>
-	<include name="Viewtype511_coords17_16:9">
+	<include name="Viewtype511_coords11_16:9">
 		<focusedlayout height="144" width="1050">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
@@ -560,7 +446,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<label>$VAR[Label1]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
@@ -568,7 +454,7 @@
 					<top>25</top>
 					<width>1018</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="label">
@@ -578,7 +464,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<label>$VAR[Label2]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<!-- Collection -->
@@ -589,7 +475,7 @@
 					<height>22</height>
 					<texture>views/OverlayCollection.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
+					<colordiffuse>$VAR[TextColor1]</colordiffuse>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 				<!-- Watched status -->
@@ -600,13 +486,13 @@
 					<height>22</height>
 					<texture>$VAR[StatusOverlay]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
+					<colordiffuse>$VAR[TextColor1]</colordiffuse>
 					<visible>!ListItem.IsCollection</visible>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="Viewtype511_coords17_21:9">
+	<include name="Viewtype511_coords11_21:9">
 		<focusedlayout height="144" width="1690">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
@@ -619,7 +505,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<label>$VAR[Label1]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
@@ -627,7 +513,7 @@
 					<top>25</top>
 					<width>1658</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="label">
@@ -637,7 +523,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<label>$VAR[Label2]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<!-- Collection -->
@@ -648,7 +534,7 @@
 					<height>22</height>
 					<texture>views/OverlayCollection.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
+					<colordiffuse>$VAR[TextColor1]</colordiffuse>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 				<!-- Watched status -->
@@ -659,13 +545,13 @@
 					<height>22</height>
 					<texture>$VAR[StatusOverlay]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
+					<colordiffuse>$VAR[TextColor1]</colordiffuse>
 					<visible>!ListItem.IsCollection</visible>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="Viewtype511_coords17_21:9_masked">
+	<include name="Viewtype511_coords11_21:9_masked">
 		<focusedlayout height="144" width="1690">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
@@ -678,7 +564,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<label>$VAR[Label1]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
@@ -686,7 +572,7 @@
 					<top>25</top>
 					<width>1658</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="label">
@@ -696,7 +582,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<label>$VAR[Label2]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<!-- Collection -->
@@ -707,7 +593,7 @@
 					<height>22</height>
 					<texture>views/OverlayCollection.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
+					<colordiffuse>$VAR[TextColor1]</colordiffuse>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 				<!-- Watched status -->
@@ -718,13 +604,13 @@
 					<height>22</height>
 					<texture>$VAR[StatusOverlay]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
+					<colordiffuse>$VAR[TextColor1]</colordiffuse>
 					<visible>!ListItem.IsCollection</visible>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="Viewtype511_coords17_4:3">
+	<include name="Viewtype511_coords11_4:3">
 		<focusedlayout height="144" width="570">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
@@ -737,7 +623,7 @@
 					<height>48</height>
 					<font>Font48-bold</font>
 					<label>$VAR[Label1]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
@@ -745,7 +631,7 @@
 					<top>25</top>
 					<width>538</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 					<visible>!ListItem.IsParentFolder</visible>
 				</control>
 				<control type="label">
@@ -755,7 +641,7 @@
 					<height>27</height>
 					<font>Font27</font>
 					<label>$VAR[Label2]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<!-- Collection -->
@@ -766,7 +652,7 @@
 					<height>22</height>
 					<texture>views/OverlayCollection.png</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
+					<colordiffuse>$VAR[TextColor1]</colordiffuse>
 					<visible>ListItem.IsCollection</visible>
 				</control>
 				<!-- Watched status -->
@@ -777,69 +663,69 @@
 					<height>22</height>
 					<texture>$VAR[StatusOverlay]</texture>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<colordiffuse>$VAR[TextColorFO]</colordiffuse>
+					<colordiffuse>$VAR[TextColor1]</colordiffuse>
 					<visible>!ListItem.IsCollection</visible>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	
-	<include name="Viewtype511_coords18">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords18_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords18_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords18_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords18_4:3</include>
+	<include name="Viewtype511_coords12">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords12_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords12_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords12_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords12_4:3</include>
 	</include>
-	<include name="Viewtype511_coords18_16:9">
+	<include name="Viewtype511_coords12_16:9">
 		<left>149</left>
 		<top>225</top>
 		<width>394</width>
 		<height>394</height>
 	</include>
-	<include name="Viewtype511_coords18_21:9">
+	<include name="Viewtype511_coords12_21:9">
 		<left>149</left>
 		<top>225</top>
 		<width>394</width>
 		<height>394</height>
 	</include>
-	<include name="Viewtype511_coords18_21:9_masked">
+	<include name="Viewtype511_coords12_21:9_masked">
 		<left>149</left>
 		<top>405</top>
 		<width>394</width>
 		<height>394</height>
 	</include>
-	<include name="Viewtype511_coords18_4:3">
+	<include name="Viewtype511_coords12_4:3">
 		<left>149</left>
 		<top>225</top>
 		<width>394</width>
 		<height>394</height>
 	</include>
 	
-	<include name="Viewtype511_coords19">
-		<include condition="$EXP[NonMaskedCoordinates]">Viewtype511_coords19_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords19_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Viewtype511_coords19_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords19_4:3</include>
+	<include name="Viewtype511_coords13">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Viewtype511_coords13_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Viewtype511_coords13_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Viewtype511_coords13_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Viewtype511_coords13_4:3</include>
 	</include>
-	<include name="Viewtype511_coords19_16:9">
+	<include name="Viewtype511_coords13_16:9">
 		<left>120</left>
 		<top>190</top>
 		<width>452</width>
 		<height>286</height>
 	</include>
-	<include name="Viewtype511_coords19_21:9">
+	<include name="Viewtype511_coords13_21:9">
 		<left>120</left>
 		<top>190</top>
 		<width>452</width>
 		<height>286</height>
 	</include>
-	<include name="Viewtype511_coords19_21:9_masked">
+	<include name="Viewtype511_coords13_21:9_masked">
 		<left>120</left>
 		<top>190</top>
 		<width>452</width>
 		<height>286</height>
 	</include>
-	<include name="Viewtype511_coords19_4:3">
+	<include name="Viewtype511_coords13_4:3">
 		<left>120</left>
 		<top>190</top>
 		<width>452</width>

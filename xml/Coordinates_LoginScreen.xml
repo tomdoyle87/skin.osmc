@@ -2,9 +2,9 @@
 <includes>
 
 	<include name="LoginScreen_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">LoginScreen_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">LoginScreen_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">LoginScreen_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords1_4:3</include>
 	</include>
 	<include name="LoginScreen_coords1_16:9">
@@ -33,9 +33,9 @@
 	</include>
 	
 	<include name="LoginScreen_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">LoginScreen_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">LoginScreen_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">LoginScreen_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords2_4:3</include>
 	</include>
 	<include name="LoginScreen_coords2_16:9">
@@ -64,9 +64,9 @@
 	</include>
 	
 	<include name="LoginScreen_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">LoginScreen_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">LoginScreen_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">LoginScreen_coords3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords3_4:3</include>
 	</include>
 	<include name="LoginScreen_coords3_16:9">
@@ -95,60 +95,68 @@
 	</include>
 	
 	<include name="LoginScreen_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">LoginScreen_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">LoginScreen_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">LoginScreen_coords4_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords4_4:3</include>
 	</include>
 	<include name="LoginScreen_coords4_16:9">
-		<itemlayout height="72" width="1050">
+		<itemlayout height="90" width="1050">
 			<control type="label">
-				<width>1050</width>
-				<height>72</height>
+				<left>32</left>
+				<top>0</top>
+				<width>1018</width>
+				<height>90</height>
 				<font>Font36-light</font>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	<include name="LoginScreen_coords4_21:9">
-		<itemlayout height="72" width="1690">
+		<itemlayout height="90" width="1690">
 			<control type="label">
-				<width>1690</width>
+				<left>32</left>
+				<top>0</top>
+				<width>1658</width>
 				<height>90</height>
 				<font>Font36-light</font>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	<include name="LoginScreen_coords4_21:9_masked">
-		<itemlayout height="72" width="1690">
+		<itemlayout height="90" width="1690">
 			<control type="label">
-				<width>1690</width>
-				<height>72</height>
+				<left>32</left>
+				<top>0</top>
+				<width>1658</width>
+				<height>90</height>
 				<font>Font36-light</font>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	<include name="LoginScreen_coords4_4:3">
-		<itemlayout height="72" width="570">
+		<itemlayout height="90" width="570">
 			<control type="label">
-				<width>570</width>
-				<height>72</height>
+				<left>32</left>
+				<top>0</top>
+				<width>538</width>
+				<height>90</height>
 				<font>Font36-light</font>
 				<label>$INFO[ListItem.Label]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	
 	<include name="LoginScreen_coords5">
-		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">LoginScreen_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords5_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">LoginScreen_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">LoginScreen_coords5_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords5_4:3</include>
 	</include>
 	<include name="LoginScreen_coords5_16:9">
@@ -158,27 +166,30 @@
 					<param name="id">52</param>
 				</include>
 				<control type="label">
-					<top>25</top>
-					<width>1050</width>
+					<left>32</left>
+					<top>43</top>
+					<width>1018</width>
 					<height>48</height>
 					<font>Font48-bold</font>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>25</top>
-					<width>1050</width>
+					<left>32</left>
+					<top>43</top>
+					<width>1018</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				<control type="label">
-					<top>82</top>
-					<width>1050</width>
+					<left>32</left>
+					<top>100</top>
+					<width>1018</width>
 					<height>27</height>
 					<font>Font27</font>
 					<label>$INFO[ListItem.Label2]</label>
-					<textcolor>$VAR[TextColorNF]</textcolor>
+					<textcolor>$VAR[TextColor2]</textcolor>
 					<scroll>True</scroll>
 				</control>
 			</control>
@@ -191,27 +202,30 @@
 					<param name="id">52</param>
 				</include>
 				<control type="label">
-					<top>25</top>
-					<width>1690</width>
+					<left>32</left>
+					<top>43</top>
+					<width>1658</width>
 					<height>48</height>
 					<font>Font48-bold</font>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>25</top>
-					<width>1690</width>
+					<left>32</left>
+					<top>43</top>
+					<width>1658</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				<control type="label">
-					<top>82</top>
-					<width>1690</width>
+					<left>32</left>
+					<top>100</top>
+					<width>1658</width>
 					<height>27</height>
 					<font>Font27</font>
 					<label>$INFO[ListItem.Label2]</label>
-					<textcolor>$VAR[TextColorNF]</textcolor>
+					<textcolor>$VAR[TextColor2]</textcolor>
 					<scroll>True</scroll>
 				</control>
 			</control>
@@ -224,27 +238,30 @@
 					<param name="id">52</param>
 				</include>
 				<control type="label">
-					<top>25</top>
-					<width>1690</width>
+					<left>32</left>
+					<top>43</top>
+					<width>1658</width>
 					<height>48</height>
 					<font>Font48-bold</font>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>25</top>
-					<width>1690</width>
+					<left>32</left>
+					<top>43</top>
+					<width>1658</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				<control type="label">
-					<top>82</top>
-					<width>1690</width>
+					<left>32</left>
+					<top>100</top>
+					<width>1658</width>
 					<height>27</height>
 					<font>Font27</font>
 					<label>$INFO[ListItem.Label2]</label>
-					<textcolor>$VAR[TextColorNF]</textcolor>
+					<textcolor>$VAR[TextColor2]</textcolor>
 					<scroll>True</scroll>
 				</control>
 			</control>
@@ -257,62 +274,34 @@
 					<param name="id">52</param>
 				</include>
 				<control type="label">
-					<top>25</top>
-					<width>570</width>
+					<left>32</left>
+					<top>43</top>
+					<width>538</width>
 					<height>48</height>
 					<font>Font48-bold</font>
 					<label>$INFO[ListItem.Label]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
-					<top>25</top>
-					<width>570</width>
+					<left>32</left>
+					<top>43</top>
+					<width>538</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				<control type="label">
-					<top>82</top>
-					<width>570</width>
+					<left>32</left>
+					<top>100</top>
+					<width>538</width>
 					<height>27</height>
 					<font>Font27</font>
 					<label>$INFO[ListItem.Label2]</label>
-					<textcolor>$VAR[TextColorNF]</textcolor>
+					<textcolor>$VAR[TextColor2]</textcolor>
 					<scroll>True</scroll>
 				</control>
 			</control>
 		</focusedlayout>
-	</include>
-	
-	<include name="LoginScreen_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">LoginScreen_coords3_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">LoginScreen_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">LoginScreen_coords3_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">LoginScreen_coords3_4:3</include>
-	</include>
-	<include name="LoginScreen_coords3_16:9">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>680</height>
-	</include>
-	<include name="LoginScreen_coords3_21:9">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>680</height>
-	</include>
-	<include name="LoginScreen_coords3_21:9_masked">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>680</height>
-	</include>
-	<include name="LoginScreen_coords3_4:3">
-		<left>690</left>
-		<centertop>50%</centertop>
-		<width>20</width>
-		<height>680</height>
 	</include>
 
 </includes>

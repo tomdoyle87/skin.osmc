@@ -2,9 +2,9 @@
 <includes>
 
 	<include name="DialogPVRChannelsOSD_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords1_4:3</include>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords1_16:9">
@@ -33,9 +33,9 @@
 	</include>
 	
 	<include name="DialogPVRChannelsOSD_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords2_4:3</include>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords2_16:9">
@@ -56,9 +56,9 @@
 	</include>
 	
 	<include name="DialogPVRChannelsOSD_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords3_4:3</include>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords3_16:9">
@@ -87,9 +87,9 @@
 	</include>
 	
 	<include name="DialogPVRChannelsOSD_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords4_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords4_4:3</include>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords4_16:9">
@@ -118,131 +118,74 @@
 	</include>
 	
 	<include name="DialogPVRChannelsOSD_coords5">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords5_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords5_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords5_4:3</include>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords5_16:9">
-		<height>408</height>
+		<right>70</right>
+		<top>25</top>
+		<width>750</width>
+		<height>33</height>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords5_21:9">
-		<height>408</height>
+		<right>70</right>
+		<top>25</top>
+		<width>750</width>
+		<height>33</height>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords5_21:9_masked">
-		<height>408</height>
+		<right>70</right>
+		<top>25</top>
+		<width>750</width>
+		<height>33</height>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords5_4:3">
-		<height>408</height>
+		<right>70</right>
+		<top>25</top>
+		<width>510</width>
+		<height>33</height>
 	</include>
 	
 	<include name="DialogPVRChannelsOSD_coords6">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords6_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords6_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords6_4:3</include>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords6_16:9">
-		<height>420</height>
+		<right>70</right>
+		<top>83</top>
+		<width>750</width>
+		<height>630</height>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords6_21:9">
-		<height>420</height>
+		<right>70</right>
+		<top>83</top>
+		<width>750</width>
+		<height>630</height>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords6_21:9_masked">
-		<height>420</height>
+		<right>70</right>
+		<top>83</top>
+		<width>750</width>
+		<height>630</height>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords6_4:3">
-		<height>420</height>
+		<right>70</right>
+		<top>83</top>
+		<width>510</width>
+		<height>630</height>
 	</include>
 	
 	<include name="DialogPVRChannelsOSD_coords7">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords7_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords7_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords7_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords7_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords7_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords7_4:3</include>
 	</include>
 	<include name="DialogPVRChannelsOSD_coords7_16:9">
-		<height>398</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords7_21:9">
-		<height>398</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords7_21:9_masked">
-		<height>398</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords7_4:3">
-		<height>398</height>
-	</include>
-	
-	<include name="DialogPVRChannelsOSD_coords8">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords8_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords8_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords8_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords8_4:3</include>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords8_16:9">
-		<right>70</right>
-		<top>25</top>
-		<width>750</width>
-		<height>33</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords8_21:9">
-		<right>70</right>
-		<top>25</top>
-		<width>750</width>
-		<height>33</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords8_21:9_masked">
-		<right>70</right>
-		<top>25</top>
-		<width>750</width>
-		<height>33</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords8_4:3">
-		<right>70</right>
-		<top>25</top>
-		<width>510</width>
-		<height>33</height>
-	</include>
-	
-	<include name="DialogPVRChannelsOSD_coords9">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords9_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords9_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords9_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords9_4:3</include>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords9_16:9">
-		<right>70</right>
-		<top>83</top>
-		<width>750</width>
-		<height>630</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords9_21:9">
-		<right>70</right>
-		<top>83</top>
-		<width>750</width>
-		<height>630</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords9_21:9_masked">
-		<right>70</right>
-		<top>83</top>
-		<width>750</width>
-		<height>630</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords9_4:3">
-		<right>70</right>
-		<top>83</top>
-		<width>510</width>
-		<height>630</height>
-	</include>
-	
-	<include name="DialogPVRChannelsOSD_coords10">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords10_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords10_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords10_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords10_4:3</include>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords10_16:9">
 		<itemlayout height="90" width="750">
 			<control type="label">
 				<top>-12</top>
@@ -250,14 +193,14 @@
 				<height>90</height>
 				<font>Font36</font>
 				<label>$INFO[ListItem.ChannelName]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 			<control type="label">
 				<top>58</top>
 				<width>750</width>
 				<height>27</height>
 				<font>Font27</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>[LIGHT]$INFO[ListItem.StartTime,,:][/LIGHT] $INFO[ListItem.Title]</label>
 			</control>
 			<control type="label">
@@ -268,11 +211,11 @@
 				<font>Font36</font>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 				<align>right</align>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords10_21:9">
+	<include name="DialogPVRChannelsOSD_coords7_21:9">
 		<itemlayout height="90" width="750">
 			<control type="label">
 				<top>-12</top>
@@ -280,7 +223,7 @@
 				<height>90</height>
 				<font>Font36</font>
 				<label>$INFO[ListItem.ChannelName]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 			<control type="label">
 				<left>32</left>
@@ -288,7 +231,7 @@
 				<width>750</width>
 				<height>27</height>
 				<font>Font27</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>[LIGHT]$INFO[ListItem.StartTime,,:][/LIGHT] $INFO[ListItem.Title]</label>
 			</control>
 			<control type="label">
@@ -299,11 +242,11 @@
 				<font>Font36</font>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 				<align>right</align>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords10_21:9_masked">
+	<include name="DialogPVRChannelsOSD_coords7_21:9_masked">
 		<itemlayout height="90" width="750">
 			<control type="label">
 				<top>-12</top>
@@ -311,14 +254,14 @@
 				<height>90</height>
 				<font>Font36</font>
 				<label>$INFO[ListItem.ChannelName]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 			<control type="label">
 				<top>58</top>
 				<width>750</width>
 				<height>27</height>
 				<font>Font27</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>[LIGHT]$INFO[ListItem.StartTime,,:][/LIGHT] $INFO[ListItem.Title]</label>
 			</control>
 			<control type="label">
@@ -329,11 +272,11 @@
 				<font>Font36</font>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 				<align>right</align>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords10_4:3">
+	<include name="DialogPVRChannelsOSD_coords7_4:3">
 		<itemlayout height="90" width="510">
 			<control type="label">
 				<top>-12</top>
@@ -341,14 +284,14 @@
 				<height>90</height>
 				<font>Font36</font>
 				<label>$INFO[ListItem.ChannelName]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 			<control type="label">
 				<top>58</top>
 				<width>510</width>
 				<height>27</height>
 				<font>Font27</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>[LIGHT]$INFO[ListItem.StartTime,,:][/LIGHT] $INFO[ListItem.Title]</label>
 			</control>
 			<control type="label">
@@ -359,18 +302,18 @@
 				<font>Font36</font>
 				<label>$INFO[ListItem.ChannelNumberLabel]</label>
 				<align>right</align>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	
-	<include name="DialogPVRChannelsOSD_coords11">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords11_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords11_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords11_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords11_4:3</include>
+	<include name="DialogPVRChannelsOSD_coords8">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords8_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords8_4:3</include>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords11_16:9">
+	<include name="DialogPVRChannelsOSD_coords8_16:9">
 		<focusedlayout height="180" width="750">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
@@ -383,7 +326,7 @@
 					<font>Font48</font>
 					<scroll>True</scroll>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="label">
 					<top>100</top>
@@ -392,7 +335,7 @@
 					<font>Font27</font>
 					<scroll>True</scroll>
 					<label>[LIGHT]$INFO[ListItem.StartTime,,:][/LIGHT] $INFO[ListItem.Title]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="label">
 					<top>127</top>
@@ -401,13 +344,13 @@
 					<font>Font27</font>
 					<scroll>True</scroll>
 					<label>[LIGHT]$INFO[ListItem.NextStartTime,,:][/LIGHT] $INFO[ListItem.NextTitle]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="image">
 					<top>43</top>
 					<width>750</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -418,12 +361,12 @@
 					<scroll>True</scroll>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<align>right</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords11_21:9">
+	<include name="DialogPVRChannelsOSD_coords8_21:9">
 		<focusedlayout height="180" width="750">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
@@ -436,7 +379,7 @@
 					<font>Font48</font>
 					<scroll>True</scroll>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="label">
 					<top>100</top>
@@ -445,7 +388,7 @@
 					<font>Font27</font>
 					<scroll>True</scroll>
 					<label>[LIGHT]$INFO[ListItem.StartTime,,:][/LIGHT] $INFO[ListItem.Title]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="label">
 					<top>127</top>
@@ -454,13 +397,13 @@
 					<font>Font27</font>
 					<scroll>True</scroll>
 					<label>[LIGHT]$INFO[ListItem.NextStartTime,,:][/LIGHT] $INFO[ListItem.NextTitle]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="image">
 					<top>43</top>
 					<width>750</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -471,12 +414,12 @@
 					<scroll>True</scroll>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<align>right</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords11_21:9_masked">
+	<include name="DialogPVRChannelsOSD_coords8_21:9_masked">
 		<focusedlayout height="180" width="750">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
@@ -489,7 +432,7 @@
 					<font>Font48</font>
 					<scroll>True</scroll>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="label">
 					<top>100</top>
@@ -498,7 +441,7 @@
 					<font>Font27</font>
 					<scroll>True</scroll>
 					<label>[LIGHT]$INFO[ListItem.StartTime,,:][/LIGHT] $INFO[ListItem.Title]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="label">
 					<top>127</top>
@@ -507,13 +450,13 @@
 					<font>Font27</font>
 					<scroll>True</scroll>
 					<label>[LIGHT]$INFO[ListItem.NextStartTime,,:][/LIGHT] $INFO[ListItem.NextTitle]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="image">
 					<top>43</top>
 					<width>750</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -524,12 +467,12 @@
 					<scroll>True</scroll>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<align>right</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords11_4:3">
+	<include name="DialogPVRChannelsOSD_coords8_4:3">
 		<focusedlayout height="180" width="510">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
@@ -542,7 +485,7 @@
 					<font>Font48</font>
 					<scroll>True</scroll>
 					<label>$INFO[ListItem.ChannelName]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="label">
 					<top>100</top>
@@ -551,7 +494,7 @@
 					<font>Font27</font>
 					<scroll>True</scroll>
 					<label>[LIGHT]$INFO[ListItem.StartTime,,:][/LIGHT] $INFO[ListItem.Title]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="label">
 					<top>127</top>
@@ -560,13 +503,13 @@
 					<font>Font27</font>
 					<scroll>True</scroll>
 					<label>[LIGHT]$INFO[ListItem.NextStartTime,,:][/LIGHT] $INFO[ListItem.NextTitle]</label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 				<control type="image">
 					<top>43</top>
 					<width>510</width>
 					<height>58</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus58]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus58]</texture>
 				</control>
 				<control type="label">
 					<right>0</right>
@@ -577,103 +520,41 @@
 					<scroll>True</scroll>
 					<label>$INFO[ListItem.ChannelNumberLabel]</label>
 					<align>right</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	
-	<include name="DialogPVRChannelsOSD_coords12">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords12_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords12_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords12_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords12_4:3</include>
+	<include name="DialogPVRChannelsOSD_coords9">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogPVRChannelsOSD_coords9_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords9_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogPVRChannelsOSD_coords9_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords9_4:3</include>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords12_16:9">
+	<include name="DialogPVRChannelsOSD_coords9_16:9">
 		<left>850</left>
 		<top>103</top>
 		<width>20</width>
 		<height>590</height>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords12_21:9">
+	<include name="DialogPVRChannelsOSD_coords9_21:9">
 		<left>850</left>
 		<top>103</top>
 		<width>20</width>
 		<height>590</height>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords12_21:9_masked">
+	<include name="DialogPVRChannelsOSD_coords9_21:9_masked">
 		<left>850</left>
 		<top>103</top>
 		<width>20</width>
 		<height>590</height>
 	</include>
-	<include name="DialogPVRChannelsOSD_coords12_4:3">
+	<include name="DialogPVRChannelsOSD_coords9_4:3">
 		<left>610</left>
 		<top>103</top>
 		<width>20</width>
 		<height>590</height>
-	</include>
-	
-	<include name="DialogPVRChannelsOSD_coords13">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords13_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords13_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords13_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords13_4:3</include>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords13_16:9">
-		<left>10</left>
-		<centertop>50%</centertop>
-		<width>30</width>
-		<height>30</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords13_21:9">
-		<left>10</left>
-		<centertop>50%</centertop>
-		<width>30</width>
-		<height>30</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords13_21:9_masked">
-		<left>10</left>
-		<centertop>50%</centertop>
-		<width>30</width>
-		<height>30</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords13_4:3">
-		<left>10</left>
-		<centertop>50%</centertop>
-		<width>30</width>
-		<height>30</height>
-	</include>
-	
-	<include name="DialogPVRChannelsOSD_coords14">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogPVRChannelsOSD_coords14_16:9</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogPVRChannelsOSD_coords14_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogPVRChannelsOSD_coords14_21:9_masked</include>
-		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogPVRChannelsOSD_coords14_4:3</include>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords14_16:9">
-		<right>10</right>
-		<centertop>50%</centertop>
-		<width>30</width>
-		<height>30</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords14_21:9">
-		<right>10</right>
-		<centertop>50%</centertop>
-		<width>30</width>
-		<height>30</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords14_21:9_masked">
-		<right>10</right>
-		<centertop>50%</centertop>
-		<width>30</width>
-		<height>30</height>
-	</include>
-	<include name="DialogPVRChannelsOSD_coords14_4:3">
-		<right>10</right>
-		<centertop>50%</centertop>
-		<width>30</width>
-		<height>30</height>
 	</include>
 
 </includes>

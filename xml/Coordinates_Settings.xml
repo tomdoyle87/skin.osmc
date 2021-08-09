@@ -2,57 +2,57 @@
 <includes>
 
 	<include name="Settings_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Settings_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Settings_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Settings_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Settings_coords1_4:3</include>
 	</include>
 	<include name="Settings_coords1_16:9">
 		<left>120</left>
 		<top>240</top>
-		<width>300</width>
-		<height>720</height>
+		<width>500</width>
+		<height>870</height>
 	</include>
 	<include name="Settings_coords1_21:9">
 		<left>120</left>
 		<top>240</top>
-		<width>300</width>
-		<height>720</height>
+		<width>500</width>
+		<height>870</height>
 	</include>
 	<include name="Settings_coords1_21:9_masked">
 		<left>120</left>
 		<top>420</top>
-		<width>300</width>
-		<height>720</height>
+		<width>500</width>
+		<height>870</height>
 	</include>
 	<include name="Settings_coords1_4:3">
 		<left>120</left>
 		<top>240</top>
-		<width>300</width>
-		<height>720</height>
+		<width>500</width>
+		<height>870</height>
 	</include>
 	
 	<include name="Settings_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">Settings_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Settings_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Settings_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Settings_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Settings_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Settings_coords2_4:3</include>
 	</include>
 	<include name="Settings_coords2_16:9">
-		<width>300</width>
-		<height>58</height>
+		<width>500</width>
+		<height>66</height>
 	</include>
 	<include name="Settings_coords2_21:9">
-		<width>300</width>
-		<height>58</height>
+		<width>500</width>
+		<height>66</height>
 	</include>
 	<include name="Settings_coords2_21:9_masked">
-		<width>300</width>
-		<height>58</height>
+		<width>500</width>
+		<height>66</height>
 	</include>
 	<include name="Settings_coords2_4:3">
-		<width>300</width>
-		<height>58</height>
+		<width>500</width>
+		<height>66</height>
 	</include>
 
 </includes>

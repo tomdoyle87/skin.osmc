@@ -6,7 +6,7 @@
 	<controls>
 
 		<!-- Dialog fanart -->
-		<include>DialogBackgroundImage</include>
+		<include>DialogFanart</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
@@ -17,11 +17,13 @@
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$INFO[Control.GetLabel(2)]</param>
-				<param name="secondary">False</param>
 			</include>
-			
 			<control type="label" id="2">
-				<font></font>
+				<left>-150000</left>
+				<top>96</top>
+				<width>1620</width>
+				<height>72</height>
+				<font>Font72</font>
 				<label></label>
 			</control>
 
@@ -34,7 +36,7 @@
 					<include>SmartPlaylistEditor_coords2</include>
 					<label>21433</label>
 					<align>right</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 				<!-- Rules label -->
@@ -42,7 +44,7 @@
 					<include>SmartPlaylistEditor_coords3</include>
 					<label>21434</label>
 					<align>right</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 				<!-- Name Label -->
@@ -50,7 +52,7 @@
 					<include>SmartPlaylistEditor_coords4</include>
 					<label>31048</label>
 					<align>right</align>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 			</control>
@@ -190,7 +192,12 @@
 				</control>
 
 			</control>
-			
+
+			<!-- Button grouplist background -->
+			<include content="dialogButtonBackground">
+				<param name="id">9001</param>
+			</include>
+
 			<!-- Buttons -->
 			<control type="grouplist" id="9001">
 				<include>DialogButtons</include>

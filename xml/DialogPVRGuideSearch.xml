@@ -4,12 +4,12 @@
 	<defaultcontrol always="true">9</defaultcontrol>
 
 	<controls>
-	
-		<!-- Dialog fanart -->
-		<include>DialogBackgroundImage</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
+
+			<!-- Dialog fanart -->
+			<include>DialogFanart</include>
 
 			<!-- Animation -->
 			<include>DialogZoomAnimation</include>
@@ -17,7 +17,6 @@
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$LOCALIZE[19142]</param>
-				<param name="secondary">False</param>
 			</include>
 
 			<!-- Search -->
@@ -27,8 +26,8 @@
 				<ondown>9001</ondown>
 				<onleft>noop</onleft>
 				<onright>noop</onright>
-				<texturefocus colordiffuse="$VAR[TextColorFO]" border="2">common/Border.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[TextColorNF]" border="2">common/Border.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[TextColor1]" border="2">common/Border.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[TextColor2]" border="2">common/Border.png</texturenofocus>
 			</control>
 
 			<!-- Search help -->
@@ -176,6 +175,11 @@
 				</control>
 
 			</control>
+
+			<!-- Button grouplist background -->
+			<include content="dialogButtonBackground">
+				<param name="id">9000</param>
+			</include>
 
 			<!-- Button grouplist -->
 			<control type="grouplist" id="9000">

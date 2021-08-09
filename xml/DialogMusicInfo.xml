@@ -8,7 +8,7 @@
 	<controls>
 
 		<!-- Dialog fanart -->
-		<include>DialogBackgroundImage</include>
+		<include>DialogFanart</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
@@ -19,7 +19,6 @@
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$VAR[MusicInfoLabel]</param>
-				<param name="secondary">False</param>
 			</include>
 
 			<!-- Song image -->
@@ -58,7 +57,7 @@
 				<font>Font27</font>
 				<align>center</align>
 				<label>$INFO[ListItem.FileNameAndPath]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<visible>Control.HasFocus(6)</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
@@ -69,7 +68,7 @@
 				<font>Font27</font>
 				<align>center</align>
 				<label>$INFO[ListItem.LastPlayed,$LOCALIZE[568]: ,]$INFO[ListItem.PlayCount, &#8226; $LOCALIZE[576]: ,]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<visible>!Control.HasFocus(6)</visible>
 				<visible>!String.IsEmpty(ListItem.LastPlayed)</visible>
 				<include>VisibleFadeAnimation</include>
@@ -98,13 +97,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>557</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Artist]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -117,13 +116,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>558</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Album]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -136,13 +135,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>427</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.DiscNumber]$INFO[ListItem.DiscTitle, (,)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -155,51 +154,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>562</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Year]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
-						</control>
-					</control>
-					
-					<!-- Release Date -->
-					<control type="group">
-						<include>DialogMusicInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.ReleaseDate)</visible>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords6</include>
-							<align>right</align>
-							<font>Font36</font>
-							<label>172</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
-						</control>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords7</include>
-							<font>Font36</font>
-							<label>$INFO[ListItem.ReleaseDate]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
-						</control>
-					</control>
-					
-					<!-- Original Date -->
-					<control type="group">
-						<include>DialogMusicInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.OriginalDate) + !String.IsEqual(ListItem.ReleaseDate,ListItem.OriginalDate)</visible>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords6</include>
-							<align>right</align>
-							<font>Font36</font>
-							<label>38079</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
-						</control>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords7</include>
-							<font>Font36</font>
-							<label>$INFO[ListItem.OriginalDate]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -212,13 +173,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>515</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Genre]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -231,32 +192,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>554</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.TrackNumber]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
-						</control>
-					</control>
-					
-					<!-- BPM -->
-					<control type="group">
-						<include>DialogMusicInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.BPM)</visible>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords6</include>
-							<align>right</align>
-							<font>Font36</font>
-							<label>180</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
-						</control>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords7</include>
-							<font>Font36</font>
-							<label>$INFO[ListItem.BPM]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -269,13 +211,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>569</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Comment]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -288,13 +230,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>180</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$VAR[Duration]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -307,7 +249,7 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>563</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="image">
 							<include>DialogMusicInfo_coords7</include>
@@ -325,32 +267,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>175</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Mood]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
-						</control>
-					</control>
-
-					<!-- File information -->
-					<control type="group">
-						<include>DialogMusicInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.MusicChannels)</visible>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords6</include>
-							<align>right</align>
-							<font>Font36</font>
-							<label>445</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
-						</control>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords7</include>
-							<font>Font36</font>
-							<label>$VAR[MusicChannels,, &#8226; ]$INFO[ListItem.SampleRate,, kHz ]$INFO[ListItem.BitRate,(, kBit/s)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -376,70 +299,32 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>566</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.AlbumArtist]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
 					<!-- Year -->
 					<control type="group">
 						<include>DialogMusicInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.Year) + String.IsEmpty(ListItem.ReleaseDate) + String.IsEmpty(ListItem.OriginalDate)</visible>
+						<visible>!String.IsEmpty(ListItem.Year)</visible>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords6</include>
 							<align>right</align>
 							<font>Font36</font>
 							<label>562</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Year]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
-						</control>
-					</control>
-					
-					<!-- Release Date -->
-					<control type="group">
-						<include>DialogMusicInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.ReleaseDate)</visible>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords6</include>
-							<align>right</align>
-							<font>Font36</font>
-							<label>172</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
-						</control>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords7</include>
-							<font>Font36</font>
-							<label>$INFO[ListItem.ReleaseDate]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
-						</control>
-					</control>
-					
-					<!-- Original Date -->
-					<control type="group">
-						<include>DialogMusicInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.OriginalDate) + !String.IsEqual(ListItem.ReleaseDate,ListItem.OriginalDate)</visible>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords6</include>
-							<align>right</align>
-							<font>Font36</font>
-							<label>38079</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
-						</control>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords7</include>
-							<font>Font36</font>
-							<label>$INFO[ListItem.OriginalDate]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -452,13 +337,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>126</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.AlbumStatus]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -471,32 +356,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>515</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Genre]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
-						</control>
-					</control>
-					
-					<!-- Duration -->
-					<control type="group">
-						<include>DialogMusicInfo_coords5</include>
-						<visible>!String.IsEmpty(ListItem.Duration)</visible>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords6</include>
-							<align>right</align>
-							<font>Font36</font>
-							<label>180</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
-						</control>
-						<control type="fadelabel">
-							<include>DialogMusicInfo_coords7</include>
-							<font>Font36</font>
-							<label>$VAR[Duration]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -509,13 +375,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>467</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Album_Type)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -528,13 +394,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>21899</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Album_Label)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -547,7 +413,7 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>563</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="image" id="99">
 							<include>DialogMusicInfo_coords7</include>
@@ -565,13 +431,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>175</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Album_Mood)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -584,13 +450,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>176</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Album_Style)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -603,13 +469,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>21895</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Album_Theme)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -635,13 +501,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>21893</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Born)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -654,13 +520,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>21897</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Died)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -673,13 +539,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>21894</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Formed)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 					
@@ -692,13 +558,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>21896</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Disbanded)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -711,13 +577,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>652</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -730,13 +596,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>467</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Type)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -749,13 +615,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>39025</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Gender)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -768,13 +634,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>515</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Genre)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -787,13 +653,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>21892</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Instrument)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -806,13 +672,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>175</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Mood)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -825,13 +691,13 @@
 							<align>right</align>
 							<font>Font36</font>
 							<label>176</label>
-							<textcolor>$VAR[TextColorNF]</textcolor>
+							<textcolor>$VAR[TextColor2]</textcolor>
 						</control>
 						<control type="fadelabel">
 							<include>DialogMusicInfo_coords7</include>
 							<font>Font36</font>
 							<label>$INFO[ListItem.Property(Artist_Style)]</label>
-							<textcolor>$VAR[TextColorFO]</textcolor>
+							<textcolor>$VAR[TextColor1]</textcolor>
 						</control>
 					</control>
 
@@ -844,12 +710,17 @@
 				<include>DialogMusicInfo_coords8</include>
 				<align>left</align>
 				<font>Font36</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 				<label>$VAR[MusicInfoDescription]</label>
 				<autoscroll delay="10000" time="1700" repeat="12000">True</autoscroll>
 				<visible>!String.IsEmpty(Window(10135).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) | String.IsEmpty(Window(10135).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Description) + [!String.IsEmpty(ListItem.ContributorAndRole) + String.IsEqual(ListItem.DBTYPE,song) | !String.IsEmpty(ListItem.Property(Album_Description)) + String.IsEqual(ListItem.DBTYPE,album) | !String.IsEmpty(ListItem.Property(Artist_Description)) + String.IsEqual(ListItem.DBTYPE,artist)] | String.IsEmpty(Window(10135).Property(description)) + String.IsEqual(Skin.String(infodialogfirstpage),Details) + String.IsEmpty(ListItem.Property(Artist_Born)) + String.IsEmpty(ListItem.Property(Artist_Died)) + String.IsEmpty(ListItem.Property(Artist_Formed)) + String.IsEmpty(ListItem.Property(Artist_Disbanded)) + String.IsEmpty(ListItem.Property(Artist_YearsActive)) + String.IsEmpty(ListItem.Property(Artist_Type)) + String.IsEmpty(ListItem.Property(Artist_Gender)) + String.IsEmpty(ListItem.Property(Artist_Genre)) + String.IsEmpty(ListItem.Property(Artist_Instrument)) + String.IsEmpty(ListItem.Property(Artist_Mood)) + String.IsEmpty(ListItem.Property(Artist_Style)) + String.IsEqual(ListItem.DBTYPE,artist)</visible>
 				<include>VisibleFadeAnimation</include>
 			</control>
+
+			<!-- Button grouplist background -->
+			<include content="dialogButtonBackground">
+				<param name="id">9000</param>
+			</include>
 
 			<!-- Buttons -->
 			<control type="grouplist" id="9000">

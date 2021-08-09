@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<!-- Dialog Buttons -->
 	<include name="DialogButtons">
-		<include condition="$EXP[NonMaskedCoordinates]">DialogButtons_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">DialogButtons_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">DialogButtons_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">DialogButtons_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">DialogButtons_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">DialogButtons_4:3</include>
 	</include>
 	<include name="DialogButtons_16:9">
@@ -32,10 +33,11 @@
 		<height>66</height>
 	</include>
 	
+	<!-- Options side-menu -->
 	<include name="OptionsSideMenu1">
-		<include condition="$EXP[NonMaskedCoordinates]">OptionsSideMenu1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">OptionsSideMenu1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">OptionsSideMenu1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">OptionsSideMenu1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">OptionsSideMenu1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">OptionsSideMenu1_4:3</include>
 	</include>
 	<include name="OptionsSideMenu1_16:9">
@@ -64,9 +66,9 @@
 	</include>
 	
 	<include name="OptionsSideMenu2">
-		<include condition="$EXP[NonMaskedCoordinates]">OptionsSideMenu2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">OptionsSideMenu2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">OptionsSideMenu2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">OptionsSideMenu2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">OptionsSideMenu2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">OptionsSideMenu2_4:3</include>
 	</include>
 	<include name="OptionsSideMenu2_16:9">
@@ -95,9 +97,9 @@
 	</include>
 	
 	<include name="OptionsSideMenu3">
-		<include condition="$EXP[NonMaskedCoordinates]">OptionsSideMenu3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">OptionsSideMenu3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">OptionsSideMenu3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">OptionsSideMenu3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">OptionsSideMenu3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">OptionsSideMenu3_4:3</include>
 	</include>
 	<include name="OptionsSideMenu3_16:9">
@@ -125,10 +127,11 @@
 		<height>1040</height>
 	</include>
 
+	<!-- Includes.xml -->	
 	<include name="KeyboardButtons_coords">
-		<include condition="$EXP[NonMaskedCoordinates]">KeyboardButtons_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">KeyboardButtons_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">KeyboardButtons_coords_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">KeyboardButtons_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">KeyboardButtons_coords_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">KeyboardButtons_coords_4:3</include>
 	</include>
 	<include name="KeyboardButtons_coords_16:9">
@@ -149,9 +152,9 @@
 	</include>
 	
 	<include name="OSDButtons_coords">
-		<include condition="$EXP[NonMaskedCoordinates]">OSDButtons_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">OSDButtons_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">OSDButtons_coords_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">OSDButtons_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">OSDButtons_coords_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">OSDButtons_coords_4:3</include>
 	</include>
 	<include name="OSDButtons_coords_16:9">
@@ -172,9 +175,9 @@
 	</include>
 	
 	<include name="SideMenuControls_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">SideMenuControls_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">SideMenuControls_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SideMenuControls_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">SideMenuControls_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">SideMenuControls_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SideMenuControls_coords1_4:3</include>
 	</include>
 	<include name="SideMenuControls_coords1_16:9">
@@ -199,9 +202,9 @@
 	</include>
 	
 	<include name="SideMenuControls_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">SideMenuControls_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">SideMenuControls_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SideMenuControls_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">SideMenuControls_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">SideMenuControls_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SideMenuControls_coords2_4:3</include>
 	</include>
 	<include name="SideMenuControls_coords2_16:9">
@@ -226,9 +229,9 @@
 	</include>
 	
 	<include name="SideMenuControls_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">SideMenuControls_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">SideMenuControls_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SideMenuControls_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">SideMenuControls_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">SideMenuControls_coords3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SideMenuControls_coords3_4:3</include>
 	</include>
 	<include name="SideMenuControls_coords3_16:9">
@@ -248,9 +251,9 @@
 	</include>
 	
 	<include name="SideMenuControls_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">SideMenuControls_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">SideMenuControls_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SideMenuControls_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">SideMenuControls_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">SideMenuControls_coords4_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SideMenuControls_coords4_4:3</include>
 	</include>
 	<include name="SideMenuControls_coords4_16:9">
@@ -271,9 +274,9 @@
 	</include>
 	
 	<include name="SideMenuControls_coords5">
-		<include condition="$EXP[NonMaskedCoordinates]">SideMenuControls_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">SideMenuControls_coords5_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SideMenuControls_coords5_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">SideMenuControls_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">SideMenuControls_coords5_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SideMenuControls_coords5_4:3</include>
 	</include>
 	<include name="SideMenuControls_coords5_16:9">
@@ -294,9 +297,9 @@
 	</include>
 	
 	<include name="SideMenuControls_coords6">
-		<include condition="$EXP[NonMaskedCoordinates]">SideMenuControls_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">SideMenuControls_coords6_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">SideMenuControls_coords6_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">SideMenuControls_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">SideMenuControls_coords6_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">SideMenuControls_coords6_4:3</include>
 	</include>
 	<include name="SideMenuControls_coords6_16:9">
@@ -318,13 +321,13 @@
 	
 	<include name="SideMenuAnimation">
 		<definition>
-			<include condition="$EXP[NonMaskedCoordinates]" content="SideMenuAnimation_16:9">
+			<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True" content="SideMenuAnimation_16:9">
 				<param name="containerID">$PARAM[containerID]</param>
 			</include>
 			<include condition="String.IsEqual(Skin.AspectRatio,21:9)" content="SideMenuAnimation_21:9">
 				<param name="containerID">$PARAM[containerID]</param>
 			</include>
-			<include condition="$EXP[MaskedCoordinates]" content="SideMenuAnimation_21:9_masked">
+			<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False" content="SideMenuAnimation_21:9_masked">
 				<param name="containerID">$PARAM[containerID]</param>
 			</include>
 			<include condition="String.IsEqual(Skin.AspectRatio,4:3)" content="SideMenuAnimation_4:3">
@@ -418,9 +421,9 @@
 	</include>
 	
 	<include name="MaskingBars_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">MaskingBars_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MaskingBars_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MaskingBars_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MaskingBars_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MaskingBars_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MaskingBars_coords1_4:3</include>
 	</include>
 	<include name="MaskingBars_coords1_16:9">
@@ -449,9 +452,9 @@
 	</include>
 	
 	<include name="MaskingBars_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">MaskingBars_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MaskingBars_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MaskingBars_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">MaskingBars_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MaskingBars_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MaskingBars_coords2_4:3</include>
 	</include>
 	<include name="MaskingBars_coords2_16:9">
@@ -477,6 +480,1255 @@
 		<top>0</top>
 		<width>0</width>
 		<height>0</height>
+	</include>
+	
+	<!-- Includes_MediaFlags.xml -->
+	<include name="MediaFlags_coords1">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords1_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords1_4:3</include>
+	</include>
+	<include name="MediaFlags_coords1_16:9">
+		<left>120</left>
+		<bottom>84</bottom>
+		<width>400</width>
+		<height>96</height>
+	</include>
+	<include name="MediaFlags_coords1_21:9">
+		<left>120</left>
+		<bottom>84</bottom>
+		<width>400</width>
+		<height>96</height>
+	</include>
+	<include name="MediaFlags_coords1_21:9_masked">
+		<left>120</left>
+		<bottom>264</bottom>
+		<width>400</width>
+		<height>96</height>
+	</include>
+	<include name="MediaFlags_coords1_4:3">
+		<left>120</left>
+		<bottom>84</bottom>
+		<width>400</width>
+		<height>96</height>
+	</include>
+	
+	<include name="MediaFlags_coords2">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords2_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords2_4:3</include>
+	</include>
+	<include name="MediaFlags_coords2_16:9">
+		<top>3</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords2_21:9">
+		<top>3</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords2_21:9_masked">
+		<top>3</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords2_4:3">
+		<top>3</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	
+	<include name="MediaFlags_coords3">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords3_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords3_4:3</include>
+	</include>
+	<include name="MediaFlags_coords3_16:9">
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords3_21:9">
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords3_21:9_masked">
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords3_4:3">
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	
+	<include name="MediaFlags_coords4">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords4_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords4_4:3</include>
+	</include>
+	<include name="MediaFlags_coords4_16:9">
+		<top>30</top>
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords4_21:9">
+		<top>30</top>
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords4_21:9_masked">
+		<top>30</top>
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords4_4:3">
+		<top>30</top>
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	
+	<include name="MediaFlags_coords5">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords5_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords5_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords5_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords5_4:3</include>
+	</include>
+	<include name="MediaFlags_coords5_16:9">
+		<top>32</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords5_21:9">
+		<top>32</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords5_21:9_masked">
+		<top>32</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords5_4:3">
+		<top>32</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	
+	<include name="MediaFlags_coords6">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords6_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords6_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords6_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords6_4:3</include>
+	</include>
+	<include name="MediaFlags_coords6_16:9">
+		<top>65</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords6_21:9">
+		<top>65</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords6_21:9_masked">
+		<top>65</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords6_4:3">
+		<top>65</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	
+	<include name="MediaFlags_coords7">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords7_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords7_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords7_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords7_4:3</include>
+	</include>
+	<include name="MediaFlags_coords7_16:9">
+		<top>62</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords7_21:9">
+		<top>62</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords7_21:9_masked">
+		<top>62</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords7_4:3">
+		<top>62</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	
+	<include name="MediaFlags_coords8">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords8_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords8_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords8_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords8_4:3</include>
+	</include>
+	<include name="MediaFlags_coords8_16:9">
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords8_21:9">
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords8_21:9_masked">
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords8_4:3">
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	
+	<include name="MediaFlags_coords9">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords9_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords9_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords9_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords9_4:3</include>
+	</include>
+	<include name="MediaFlags_coords9_16:9">
+		<top>30</top>
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords9_21:9">
+		<top>30</top>
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords9_21:9_masked">
+		<top>30</top>
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	<include name="MediaFlags_coords9_4:3">
+		<top>30</top>
+		<left>-2</left>
+		<width>32</width>
+		<height>34</height>
+	</include>
+	
+	<include name="MediaFlags_coords10">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords10_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords10_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords10_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords10_4:3</include>
+	</include>
+	<include name="MediaFlags_coords10_16:9">
+		<top>35</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords10_21:9">
+		<top>35</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords10_21:9_masked">
+		<top>35</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	<include name="MediaFlags_coords10_4:3">
+		<top>35</top>
+		<width>30</width>
+		<height>26</height>
+	</include>
+	
+	<include name="MediaFlags_coords11">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">MediaFlags_coords11_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">MediaFlags_coords11_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">MediaFlags_coords11_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">MediaFlags_coords11_4:3</include>
+	</include>
+	<include name="MediaFlags_coords11_16:9">
+		<top>32</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords11_21:9">
+		<top>32</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords11_21:9_masked">
+		<top>32</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	<include name="MediaFlags_coords11_4:3">
+		<top>32</top>
+		<left>30</left>
+		<width>372</width>
+		<height>32</height>
+	</include>
+	
+	<include name="ItemCount_coords">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">ItemCount_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">ItemCount_coords_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">ItemCount_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">ItemCount_coords_4:3</include>
+	</include>
+	<include name="ItemCount_coords_16:9">
+		<right>120</right>
+		<bottom>116</bottom>
+		<width>400</width>
+		<height>30</height>
+	</include>
+	<include name="ItemCount_coords_21:9">
+		<right>120</right>
+		<bottom>116</bottom>
+		<width>400</width>
+		<height>30</height>
+	</include>
+	<include name="ItemCount_coords_21:9_masked">
+		<right>120</right>
+		<bottom>296</bottom>
+		<width>400</width>
+		<height>30</height>
+	</include>
+	<include name="ItemCount_coords_4:3">
+		<right>120</right>
+		<bottom>116</bottom>
+		<width>400</width>
+		<height>30</height>
+	</include>
+
+	<!-- Includes_Time_NowPlaying.xml -->
+	<include name="heading_coords">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">heading_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">heading_coords_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">heading_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">heading_coords_4:3</include>
+	</include>
+	<include name="heading_coords_16:9">
+		<left>120</left>
+		<top>127</top>
+		<width>830</width>
+		<height>33</height>
+	</include>
+	<include name="heading_coords_21:9">
+		<left>120</left>
+		<top>127</top>
+		<width>1470</width>
+		<height>33</height>
+	</include>
+	<include name="heading_coords_21:9_masked">
+		<left>120</left>
+		<top>307</top>
+		<width>1470</width>
+		<height>33</height>
+	</include>
+	<include name="heading_coords_4:3">
+		<left>120</left>
+		<top>127</top>
+		<width>350</width>
+		<height>33</height>
+	</include>
+	
+	<include name="ScrollingLabel_coords1">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">ScrollingLabel_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">ScrollingLabel_coords1_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">ScrollingLabel_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">ScrollingLabel_coords1_4:3</include>
+	</include>
+	<include name="ScrollingLabel_coords1_16:9">
+		<top>90</top>
+		<left>-100</left>
+		<width>175</width>
+		<height>75</height>
+	</include>
+	<include name="ScrollingLabel_coords1_21:9">
+		<top>90</top>
+		<left>-100</left>
+		<width>175</width>
+		<height>75</height>
+	</include>
+	<include name="ScrollingLabel_coords1_21:9_masked">
+		<top>270</top>
+		<left>-100</left>
+		<width>175</width>
+		<height>75</height>
+	</include>
+	<include name="ScrollingLabel_coords1_4:3">
+		<top>90</top>
+		<left>-100</left>
+		<width>175</width>
+		<height>75</height>
+	</include>
+	
+	<include name="ScrollingLabel_coords2">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">ScrollingLabel_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">ScrollingLabel_coords2_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">ScrollingLabel_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">ScrollingLabel_coords2_4:3</include>
+	</include>
+	<include name="ScrollingLabel_coords2_16:9">
+		<top>90</top>
+		<left>0</left>
+		<width>75</width>
+		<height>75</height>
+	</include>
+	<include name="ScrollingLabel_coords2_21:9">
+		<top>90</top>
+		<left>0</left>
+		<width>75</width>
+		<height>75</height>
+	</include>
+	<include name="ScrollingLabel_coords2_21:9_masked">
+		<top>270</top>
+		<left>0</left>
+		<width>75</width>
+		<height>75</height>
+	</include>
+	<include name="ScrollingLabel_coords2_4:3">
+		<top>90</top>
+		<left>0</left>
+		<width>75</width>
+		<height>75</height>
+	</include>
+	
+	<include name="time_coords1">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">time_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">time_coords1_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">time_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">time_coords1_4:3</include>
+	</include>
+	<include name="time_coords1_16:9">
+		<right>120</right>
+		<top>127</top>
+		<width>1400</width>
+		<height>33</height>
+	</include>
+	<include name="time_coords1_21:9">
+		<right>120</right>
+		<top>127</top>
+		<width>2040</width>
+		<height>33</height>
+	</include>
+	<include name="time_coords1_21:9_masked">
+		<right>120</right>
+		<top>307</top>
+		<width>2040</width>
+		<height>33</height>
+	</include>
+	<include name="time_coords1_4:3">
+		<right>120</right>
+		<top>127</top>
+		<width>920</width>
+		<height>33</height>
+	</include>
+	
+	<include name="time_coords2">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">time_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">time_coords2_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">time_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">time_coords2_4:3</include>
+	</include>
+	<include name="time_coords2_16:9">
+		<right>120</right>
+		<top>93</top>
+		<width>1400</width>
+		<height>66</height>
+	</include>
+	<include name="time_coords2_21:9">
+		<right>120</right>
+		<top>93</top>
+		<width>2040</width>
+		<height>66</height>
+	</include>
+	<include name="time_coords2_21:9_masked">
+		<right>120</right>
+		<top>273</top>
+		<width>2040</width>
+		<height>66</height>
+	</include>
+	<include name="time_coords2_4:3">
+		<right>120</right>
+		<top>93</top>
+		<width>920</width>
+		<height>66</height>
+	</include>
+	
+	<include name="nowplaying_coords1">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">nowplaying_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords1_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">nowplaying_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">nowplaying_coords1_4:3</include>
+	</include>
+	<include name="nowplaying_coords1_16:9">
+		<right>240</right>
+		<top>93</top>
+		<width>1440</width>
+		<height>33</height>
+	</include>
+	<include name="nowplaying_coords1_21:9">
+		<right>240</right>
+		<top>93</top>
+		<width>2080</width>
+		<height>33</height>
+	</include>
+	<include name="nowplaying_coords1_21:9_masked">
+		<right>240</right>
+		<top>273</top>
+		<width>2080</width>
+		<height>33</height>
+	</include>
+	<include name="nowplaying_coords1_4:3">
+		<right>240</right>
+		<top>93</top>
+		<width>960</width>
+		<height>33</height>
+	</include>
+	
+	<include name="nowplaying_coords2">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">nowplaying_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords2_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">nowplaying_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">nowplaying_coords2_4:3</include>
+	</include>
+	<include name="nowplaying_coords2_16:9">
+		<right>240</right>
+		<top>127</top>
+		<width>710</width>
+		<height>33</height>
+	</include>
+	<include name="nowplaying_coords2_21:9">
+		<right>240</right>
+		<top>127</top>
+		<width>710</width>
+		<height>33</height>
+	</include>
+	<include name="nowplaying_coords2_21:9_masked">
+		<right>240</right>
+		<top>307</top>
+		<width>710</width>
+		<height>33</height>
+	</include>
+	<include name="nowplaying_coords2_4:3">
+		<right>240</right>
+		<top>127</top>
+		<width>710</width>
+		<height>33</height>
+	</include>
+	
+	<include name="nowplaying_coords3">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">nowplaying_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords3_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">nowplaying_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">nowplaying_coords3_4:3</include>
+	</include>
+	<include name="nowplaying_coords3_16:9">
+		<right>170</right>
+		<top>100</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="nowplaying_coords3_21:9">
+		<right>170</right>
+		<top>100</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="nowplaying_coords3_21:9_masked">
+		<right>170</right>
+		<top>280</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="nowplaying_coords3_4:3">
+		<right>170</right>
+		<top>100</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	
+	<include name="nowplaying_coords4">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">nowplaying_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">nowplaying_coords4_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">nowplaying_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">nowplaying_coords4_4:3</include>
+	</include>
+	<include name="nowplaying_coords4_16:9">
+		<right>110</right>
+		<top>100</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="nowplaying_coords4_21:9">
+		<right>110</right>
+		<top>100</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="nowplaying_coords4_21:9_masked">
+		<right>110</right>
+		<top>280</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	<include name="nowplaying_coords4_4:3">
+		<right>110</right>
+		<top>100</top>
+		<width>60</width>
+		<height>60</height>
+	</include>
+	
+	<!-- Includes_Widgets.xml -->
+	<include name="widgetLayoutSlide-weather-OSMC">
+		<definition>
+			<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True" content="widgetLayoutSlide-weather-OSMC_16:9">
+				<param name="container">$PARAM[container]</param>
+			</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,21:9)" content="widgetLayoutSlide-weather-OSMC_21:9">
+				<param name="container">$PARAM[container]</param>
+			</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False" content="widgetLayoutSlide-weather-OSMC_21:9_masked">
+				<param name="container">$PARAM[container]</param>
+			</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)" content="widgetLayoutSlide-weather-OSMC_4:3">
+				<param name="container">$PARAM[container]</param>
+			</include>
+		</definition>
+	</include>
+	<include name="widgetLayoutSlide-weather-OSMC_16:9">
+		<animation effect="slide" start="0,0" end="1015,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="812,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="609,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="406,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="203,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-weather-OSMC_21:9">
+		<animation effect="slide" start="0,0" end="1624,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1421,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1218,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1015,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="812,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="609,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		<animation effect="slide" start="0,0" end="406,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+		<animation effect="slide" start="0,0" end="203,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-weather-OSMC_21:9_masked">
+		<animation effect="slide" start="0,0" end="1624,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1421,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1218,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1015,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="812,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="609,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		<animation effect="slide" start="0,0" end="406,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+		<animation effect="slide" start="0,0" end="203,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,8)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,8)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-weather-OSMC_4:3">
+		<animation effect="slide" start="0,0" end="406,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="203,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+	</include>	
+	
+	<include name="widgetLayoutSlide-tall-OSMC">
+		<definition>
+			<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True" content="widgetLayoutSlide-tall-OSMC_16:9">
+				<param name="container">$PARAM[container]</param>
+			</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,21:9)" content="widgetLayoutSlide-tall-OSMC_21:9">
+				<param name="container">$PARAM[container]</param>
+			</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False" content="widgetLayoutSlide-tall-OSMC_21:9_masked">
+				<param name="container">$PARAM[container]</param>
+			</include>
+			<include condition="String.IsEqual(Skin.AspectRatio,4:3)" content="widgetLayoutSlide-tall-OSMC_4:3">
+				<param name="container">$PARAM[container]</param>
+			</include>
+		</definition>
+	</include>
+	<include name="widgetLayoutSlide-tall-OSMC_16:9">
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,4)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-tall-OSMC_21:9">
+		<animation effect="slide" start="0,0" end="1680,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1440,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1200,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-tall-OSMC_21:9_masked">
+		<animation effect="slide" start="0,0" end="1680,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1440,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1200,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-tall-OSMC_4:3">
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+	</include>
+	
+	<include name="widgetLayoutSlide-wide-OSMC">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True" content="widgetLayoutSlide-wide-OSMC_16:9">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)" content="widgetLayoutSlide-wide-OSMC_21:9">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False" content="widgetLayoutSlide-wide-OSMC_21:9_masked">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)" content="widgetLayoutSlide-wide-OSMC_4:3">
+			<param name="container">$PARAM[container]</param>
+		</include>
+	</include>
+	<include name="widgetLayoutSlide-wide-OSMC_16:9">
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="640,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-wide-OSMC_21:9">
+		<animation effect="slide" start="0,0" end="1360,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1040,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="640,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-wide-OSMC_21:9_masked">
+		<animation effect="slide" start="0,0" end="1360,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1040,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="640,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-wide-OSMC_4:3">
+		<animation effect="slide" start="0,0" end="640,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="String.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+	</include>
+	
+	<include name="widgetLayoutSlide-square-OSMC">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True" content="widgetLayoutSlide-square-OSMC_16:9">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)" content="widgetLayoutSlide-square-OSMC_21:9">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False" content="widgetLayoutSlide-square-OSMC_21:9_masked">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)" content="widgetLayoutSlide-square-OSMC_4:3">
+			<param name="container">$PARAM[container]</param>
+		</include>
+	</include>
+	<include name="widgetLayoutSlide-square-OSMC_16:9">
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="640,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,3)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-square-OSMC_21:9">
+		<animation effect="slide" start="0,0" end="1600,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1280,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="640,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-square-OSMC_21:9_masked">
+		<animation effect="slide" start="0,0" end="1600,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1280,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="640,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,5)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-square-OSMC_4:3">
+		<animation effect="slide" start="0,0" end="320,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="String.IsGreater(Container($PARAM[container]).NumItems,1)">conditional</animation>
+	</include>
+	
+	<include name="widgetLayoutSlide-square-small-OSMC">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True" content="widgetLayoutSlide-square-small-OSMC_16:9">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)" content="widgetLayoutSlide-square-small-OSMC_21:9">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False" content="widgetLayoutSlide-square-small-OSMC_21:9_masked">
+			<param name="container">$PARAM[container]</param>
+		</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)" content="widgetLayoutSlide-square-small-OSMC_4:3">
+			<param name="container">$PARAM[container]</param>
+		</include>
+	</include>
+	<include name="widgetLayoutSlide-square-small-OSMC_16:9">
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,4)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-square-small-OSMC_21:9">
+		<animation effect="slide" start="0,0" end="1680,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1440,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1200,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-square-small-OSMC_21:9_masked">
+		<animation effect="slide" start="0,0" end="1680,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1440,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="1200,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="960,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="720,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,6)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,7)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="Integer.IsGreater(Container($PARAM[container]).NumItems,7)">conditional</animation>
+	</include>
+	<include name="widgetLayoutSlide-square-small-OSMC_4:3">
+		<animation effect="slide" start="0,0" end="480,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,1)">conditional</animation>
+		<animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container($PARAM[container]).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="0,0" time="0" condition="String.IsGreater(Container($PARAM[container]).NumItems,2)">conditional</animation>
+	</include>
+	
+	<include name="widgetLayout-weather-OSMC">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">widgetLayout-weather-OSMC_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-weather-OSMC_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">widgetLayout-weather-OSMC_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">widgetLayout-weather-OSMC_4:3</include>
+	</include>
+	<include name="widgetLayout-weather-OSMC_16:9">
+		<left>582</left>
+		<top>374</top>
+		<width>1218</width>
+		<height>326</height>
+	</include>
+	<include name="widgetLayout-weather-OSMC_21:9">
+		<left>613</left>
+		<top>374</top>
+		<width>1827</width>
+		<height>326</height>
+	</include>
+	<include name="widgetLayout-weather-OSMC_21:9_masked">
+		<left>613</left>
+		<top>554</top>
+		<width>1827</width>
+		<height>326</height>
+	</include>
+	<include name="widgetLayout-weather-OSMC_4:3">
+		<left>711</left>
+		<top>374</top>
+		<width>609</width>
+		<height>326</height>
+	</include>
+	
+	<include name="widgetLayout-tall-OSMC">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">widgetLayout-tall-OSMC_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-tall-OSMC_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">widgetLayout-tall-OSMC_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">widgetLayout-tall-OSMC_4:3</include>
+	</include>
+	<include name="widgetLayout-tall-OSMC_16:9">
+		<left>600</left>
+		<top>340</top>
+		<width>1200</width>
+		<height>360</height>
+	</include>
+	<include name="widgetLayout-tall-OSMC_21:9">
+		<left>520</left>
+		<top>340</top>
+		<width>1920</width>
+		<height>360</height>
+	</include>
+	<include name="widgetLayout-tall-OSMC_21:9_masked">
+		<left>520</left>
+		<top>520</top>
+		<width>1920</width>
+		<height>360</height>
+	</include>
+	<include name="widgetLayout-tall-OSMC_4:3">
+		<left>600</left>
+		<top>340</top>
+		<width>720</width>
+		<height>360</height>
+	</include>
+	
+	<include name="widgetLayout-wide-OSMC">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">widgetLayout-wide-OSMC_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-wide-OSMC_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">widgetLayout-wide-OSMC_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">widgetLayout-wide-OSMC_4:3</include>
+	</include>
+	<include name="widgetLayout-wide-OSMC_16:9">
+		<left>520</left>
+		<top>460</top>
+		<width>1280</width>
+		<height>240</height>
+	</include>
+	<include name="widgetLayout-wide-OSMC_21:9">
+		<left>520</left>
+		<top>460</top>
+		<width>1920</width>
+		<height>240</height>
+	</include>
+	<include name="widgetLayout-wide-OSMC_21:9_masked">
+		<left>520</left>
+		<top>640</top>
+		<width>1920</width>
+		<height>240</height>
+	</include>
+	<include name="widgetLayout-wide-OSMC_4:3">
+		<left>600</left>
+		<top>460</top>
+		<width>720</width>
+		<height>240</height>
+	</include>
+	
+	<include name="widgetLayout-square-OSMC">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">widgetLayout-square-OSMC_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-square-OSMC_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">widgetLayout-square-OSMC_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">widgetLayout-square-OSMC_4:3</include>
+	</include>
+	<include name="widgetLayout-square-OSMC_16:9">
+		<left>520</left>
+		<top>380</top>
+		<width>1280</width>
+		<height>320</height>
+	</include>
+	<include name="widgetLayout-square-OSMC_21:9">
+		<left>520</left>
+		<top>380</top>
+		<width>1920</width>
+		<height>320</height>
+	</include>
+	<include name="widgetLayout-square-OSMC_21:9_masked">
+		<left>520</left>
+		<top>560</top>
+		<width>1920</width>
+		<height>320</height>
+	</include>
+	<include name="widgetLayout-square-OSMC_4:3">
+		<left>680</left>
+		<top>380</top>
+		<width>640</width>
+		<height>320</height>
+	</include>
+	
+	<include name="widgetLayout-square-small-OSMC">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">widgetLayout-square-small-OSMC_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetLayout-square-small-OSMC_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">widgetLayout-square-small-OSMC_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">widgetLayout-square-small-OSMC_4:3</include>
+	</include>
+	<include name="widgetLayout-square-small-OSMC_16:9">
+		<left>600</left>
+		<top>460</top>
+		<width>1200</width>
+		<height>240</height>
+	</include>
+	<include name="widgetLayout-square-small-OSMC_21:9">
+		<left>520</left>
+		<top>460</top>
+		<width>1920</width>
+		<height>240</height>
+	</include>
+	<include name="widgetLayout-square-small-OSMC_21:9_masked">
+		<left>520</left>
+		<top>640</top>
+		<width>1920</width>
+		<height>240</height>
+	</include>
+	<include name="widgetLayout-square-small-OSMC_4:3">
+		<left>600</left>
+		<top>460</top>
+		<width>720</width>
+		<height>240</height>
+	</include>
+	
+	<include name="widgetHeading-OSMC_coords">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">widgetHeading-OSMC_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetHeading-OSMC_coords_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">widgetHeading-OSMC_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">widgetHeading-OSMC_coords_4:3</include>
+	</include>
+	<include name="widgetHeading-OSMC_coords_16:9">
+		<left>520</left>
+		<top>720</top>
+		<width>1280</width>
+		<height>326</height>
+	</include>
+	<include name="widgetHeading-OSMC_coords_21:9">
+		<left>520</left>
+		<top>720</top>
+		<width>1920</width>
+		<height>326</height>
+	</include>
+	<include name="widgetHeading-OSMC_coords_21:9_masked">
+		<left>520</left>
+		<top>900</top>
+		<width>1920</width>
+		<height>326</height>
+	</include>
+	<include name="widgetHeading-OSMC_coords_4:3">
+		<left>520</left>
+		<top>720</top>
+		<width>800</width>
+		<height>326</height>
+	</include>
+	
+	<include name="widgetdetails_coords">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">widgetdetails_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetdetails_coords_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">widgetdetails_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">widgetdetails_coords_4:3</include>
+	</include>
+	<include name="widgetdetails_coords_16:9">
+		<width>1280</width>
+	</include>
+	<include name="widgetdetails_coords_21:9">
+		<width>1920</width>
+	</include>
+	<include name="widgetdetails_coords_21:9_masked">
+		<width>1920</width>
+	</include>
+	<include name="widgetdetails_coords_4:3">
+		<width>800</width>
+	</include>
+	
+	<include name="widgetreloadingindicator_coords">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">widgetreloadingindicator_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">widgetreloadingindicator_coords_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">widgetreloadingindicator_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">widgetreloadingindicator_coords_4:3</include>
+	</include>
+	<include name="widgetreloadingindicator_coords_16:9">
+		<left>1280</left>
+		<top>3</top>
+	</include>
+	<include name="widgetreloadingindicator_coords_21:9">
+		<left>1920</left>
+		<top>3</top>
+	</include>
+	<include name="widgetreloadingindicator_coords_21:9_masked">
+		<left>1920</left>
+		<top>3</top>
+	</include>
+	<include name="widgetreloadingindicator_coords_4:3">
+		<left>800</left>
+		<top>3</top>
+	</include>
+	
+	<!-- Includes_Windows_Dialogs.xml -->
+	<include name="FullscreenDimensions">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">FullscreenDimensions_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FullscreenDimensions_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">FullscreenDimensions_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">FullscreenDimensions_4:3</include>
+	</include>
+	<include name="FullscreenDimensions_16:9">
+		<left>0</left>
+		<top>0</top>
+		<width>1920</width>
+		<height>1080</height>
+	</include>
+	<include name="FullscreenDimensions_21:9">
+		<left>0</left>
+		<top>0</top>
+		<width>2560</width>
+		<height>1080</height>
+	</include>
+	<include name="FullscreenDimensions_21:9_masked">
+		<left>0</left>
+		<top>0</top>
+		<width>2560</width>
+		<height>1440</height>
+	</include>
+	<include name="FullscreenDimensions_4:3">
+		<left>0</left>
+		<top>0</top>
+		<width>1440</width>
+		<height>1080</height>
+	</include>
+	
+	<include name="FullscreenOverlayDimensions">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">FullscreenDimensions_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">FullscreenDimensions_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">FullscreenDimensions_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">FullscreenDimensions_4:3</include>
+	</include>
+	<include name="FullscreenDimensions_16:9">
+		<left>-100</left>
+		<top>-100</top>
+		<width>2120</width>
+		<height>1280</height>
+	</include>
+	<include name="FullscreenDimensions_21:9">
+		<left>-100</left>
+		<top>-100</top>
+		<width>2760</width>
+		<height>1280</height>
+	</include>
+	<include name="FullscreenDimensions_21:9_masked">
+		<left>-100</left>
+		<top>-100</top>
+		<width>2760</width>
+		<height>1640</height>
+	</include>
+	<include name="FullscreenDimensions_4:3">
+		<left>-100</left>
+		<top>-100</top>
+		<width>1640</width>
+		<height>1280</height>
+	</include>
+	
+	<include name="dialogButtonBackground_coords1">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">dialogButtonBackground_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">dialogButtonBackground_coords1_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">dialogButtonBackground_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">dialogButtonBackground_coords1_4:3</include>
+	</include>
+	<include name="dialogButtonBackground_coords1_16:9">
+		<left>-10</left>
+		<bottom>174</bottom>
+		<width>1940</width>
+		<height>2</height>
+	</include>
+	<include name="dialogButtonBackground_coords1_21:9">
+		<left>-10</left>
+		<bottom>174</bottom>
+		<width>2580</width>
+		<height>2</height>
+	</include>
+	<include name="dialogButtonBackground_coords1_21:9_masked">
+		<left>-10</left>
+		<bottom>354</bottom>
+		<width>2580</width>
+		<height>2</height>
+	</include>
+	<include name="dialogButtonBackground_coords1_4:3">
+		<left>-10</left>
+		<bottom>174</bottom>
+		<width>1460</width>
+		<height>2</height>
+	</include>
+	
+	<include name="dialogButtonBackground_coords2">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">dialogButtonBackground_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">dialogButtonBackground_coords2_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">dialogButtonBackground_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">dialogButtonBackground_coords2_4:3</include>
+	</include>
+	<include name="dialogButtonBackground_coords2_16:9">
+		<left>-10</left>
+		<bottom>90</bottom>
+		<width>1940</width>
+		<height>2</height>
+	</include>
+	<include name="dialogButtonBackground_coords2_21:9">
+		<left>-10</left>
+		<bottom>90</bottom>
+		<width>2580</width>
+		<height>2</height>
+	</include>
+	<include name="dialogButtonBackground_coords2_21:9_masked">
+		<left>-10</left>
+		<bottom>270</bottom>
+		<width>2580</width>
+		<height>2</height>
+	</include>
+	<include name="dialogButtonBackground_coords2_4:3">
+		<left>-10</left>
+		<bottom>90</bottom>
+		<width>1460</width>
+		<height>2</height>
+	</include>
+	
+	<include name="dialogButtonBackground_coords3">
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">dialogButtonBackground_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">dialogButtonBackground_coords3_21:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">dialogButtonBackground_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">dialogButtonBackground_coords3_4:3</include>
+	</include>
+	<include name="dialogButtonBackground_coords3_16:9">
+		<left>-10</left>
+		<bottom>90</bottom>
+		<width>1940</width>
+		<height>86</height>
+	</include>
+	<include name="dialogButtonBackground_coords3_21:9">
+		<left>-10</left>
+		<bottom>90</bottom>
+		<width>2580</width>
+		<height>86</height>
+	</include>
+	<include name="dialogButtonBackground_coords3_21:9_masked">
+		<left>-10</left>
+		<bottom>270</bottom>
+		<width>2580</width>
+		<height>86</height>
+	</include>
+	<include name="dialogButtonBackground_coords3_4:3">
+		<left>-10</left>
+		<bottom>90</bottom>
+		<width>1460</width>
+		<height>86</height>
 	</include>
 	
 </includes>

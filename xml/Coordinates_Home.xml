@@ -2,9 +2,9 @@
 <includes>
 
 	<include name="HomeLogo_coords">
-		<include condition="$EXP[NonMaskedCoordinates]">HomeLogo_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">HomeLogo_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">HomeLogo_coords_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">HomeLogo_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">HomeLogo_coords_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeLogo_coords_4:3</include>
 	</include>
 	<include name="HomeLogo_coords_16:9">
@@ -33,9 +33,9 @@
 	</include>
 
 	<include name="HomeRSS_coords">
-		<include condition="$EXP[NonMaskedCoordinates]">HomeRSS_coords_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">HomeRSS_coords_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">HomeRSS_coords_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">HomeRSS_coords_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">HomeRSS_coords_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">HomeRSS_coords_4:3</include>
 	</include>
 	<include name="HomeRSS_coords_16:9">
@@ -60,103 +60,103 @@
 	</include>
 
 	<include name="Home_coords1">
-		<include condition="$EXP[NonMaskedCoordinates]">Home_coords1_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Home_coords1_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Home_coords1_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Home_coords1_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Home_coords1_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Home_coords1_4:3</include>
 	</include>
 	<include name="Home_coords1_16:9">
 		<left>120</left>
 		<top>240</top>
-		<width>300</width>
+		<width>400</width>
 		<height>679</height>
 	</include>
 	<include name="Home_coords1_21:9">
 		<left>120</left>
 		<top>240</top>
-		<width>300</width>
+		<width>400</width>
 		<height>679</height>
 	</include>
 	<include name="Home_coords1_21:9_masked">
 		<left>120</left>
 		<top>420</top>
-		<width>300</width>
+		<width>400</width>
 		<height>679</height>
 	</include>
 	<include name="Home_coords1_4:3">
 		<left>120</left>
 		<top>240</top>
-		<width>300</width>
+		<width>400</width>
 		<height>679</height>
 	</include>
 	
 	<include name="Home_coords2">
-		<include condition="$EXP[NonMaskedCoordinates]">Home_coords2_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Home_coords2_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Home_coords2_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Home_coords2_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Home_coords2_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Home_coords2_4:3</include>
 	</include>
 	<include name="Home_coords2_16:9">
-		<itemlayout width="300" height="97">
+		<itemlayout width="400" height="97">
 			<control type="label">
 				<left>0</left>
 				<top>0</top>
-				<width>300</width>
+				<width>400</width>
 				<height>97</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font50-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	<include name="Home_coords2_21:9">
-		<itemlayout width="300" height="97">
+		<itemlayout width="400" height="97">
 			<control type="label">
 				<left>0</left>
 				<top>0</top>
-				<width>300</width>
+				<width>400</width>
 				<height>97</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font50-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	<include name="Home_coords2_21:9_masked">
-		<itemlayout width="300" height="97">
+		<itemlayout width="400" height="97">
 			<control type="label">
 				<left>0</left>
 				<top>0</top>
-				<width>300</width>
+				<width>400</width>
 				<height>97</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font50-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	<include name="Home_coords2_4:3">
-		<itemlayout width="300" height="97">
+		<itemlayout width="400" height="97">
 			<control type="label">
 				<left>0</left>
 				<top>0</top>
-				<width>300</width>
+				<width>400</width>
 				<height>97</height>
 				<label>$INFO[ListItem.Label]</label>
 				<font>Font50-light</font>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 		</itemlayout>
 	</include>
 	
 	<include name="Home_coords3">
-		<include condition="$EXP[NonMaskedCoordinates]">Home_coords3_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Home_coords3_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Home_coords3_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Home_coords3_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Home_coords3_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Home_coords3_4:3</include>
 	</include>
 	<include name="Home_coords3_16:9">
-		<focusedlayout width="300" height="97">
+		<focusedlayout width="400" height="97">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
 					<param name="id">9000</param>
@@ -164,25 +164,25 @@
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>400</width>
 					<height>97</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font50-bold</font>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>400</width>
 					<height>97</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus97]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus97]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	<include name="Home_coords3_21:9_masked">
-		<focusedlayout width="300" height="97">
+		<focusedlayout width="400" height="97">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
 					<param name="id">9000</param>
@@ -190,25 +190,25 @@
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>400</width>
 					<height>97</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font50-bold</font>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>400</width>
 					<height>97</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus97]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus97]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	<include name="Home_coords3_21:9">
-		<focusedlayout width="300" height="97">
+		<focusedlayout width="400" height="97">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
 					<param name="id">9000</param>
@@ -216,25 +216,25 @@
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>400</width>
 					<height>97</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font50-bold</font>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>400</width>
 					<height>97</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus97]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus97]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	<include name="Home_coords3_4:3">
-		<focusedlayout width="300" height="97">
+		<focusedlayout width="400" height="97">
 			<control type="group">
 				<include content="NonFocusFadeAnimation">
 					<param name="id">9000</param>
@@ -242,28 +242,28 @@
 				<control type="label">
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>400</width>
 					<height>97</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font50-bold</font>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<scroll>True</scroll>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
-					<width>300</width>
+					<width>400</width>
 					<height>97</height>
-					<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus97]</texture>
+					<texture colordiffuse="$VAR[TextColor1]">$VAR[focus97]</texture>
 				</control>
 			</control>
 		</focusedlayout>
 	</include>
 	
 	<include name="Home_coords4">
-		<include condition="$EXP[NonMaskedCoordinates]">Home_coords4_16:9</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + True">Home_coords4_16:9</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,21:9)">Home_coords4_21:9</include>
-		<include condition="$EXP[MaskedCoordinates]">Home_coords4_21:9_masked</include>
+		<include condition="String.IsEqual(Skin.AspectRatio,16:9) + False">Home_coords4_21:9_masked</include>
 		<include condition="String.IsEqual(Skin.AspectRatio,4:3)">Home_coords4_4:3</include>
 	</include>
 	<include name="Home_coords4_16:9">

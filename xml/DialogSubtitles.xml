@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<!-- subtitlesearch -->
-	<defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol>150</defaultcontrol>
 	
 	<controls>
 		
@@ -47,30 +47,19 @@
 			<include>DialogBackgroundDepth</include>
 		</control>
 		<!-- Overlay -->
-		<control type="group">
-			<include>BackgroundOverlayDialog1</include>
+		<control type="image">
+			<include>FullscreenOverlayDimensions</include>
+			<texture background="true">$INFO[Skin.String(OSMCBackgroundOverlay),overlays/,.png]</texture>
+			<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
 			<animation type="WindowOpen">
 				<effect type="zoom" start="70" end="100" center="auto" tween="back" easing="inout" time="300" />
-				<effect type="fade" start="0" end="100" time="200" tween="quadratic" easing="out" />
+				<effect type="fade" start="0" end="100" time="300" tween="quadratic" easing="out" />
 			</animation>
 			<animation type="WindowClose">
 				<effect type="zoom" start="100" end="70" center="auto" time="300" />
-				<effect type="fade" start="100" end="0" time="400" tween="quadratic" easing="in" />
+				<effect type="fade" start="100" end="0" time="300" tween="quadratic" easing="in" />
 			</animation>
-			<control type="image">
-				<include>BackgroundOverlayDialog2</include>
-				<texture background="true">common/overlay.png</texture>
-				<aspectratio>scale</aspectratio>
-				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-				<include>DialogBackgroundDepth</include>
-			</control>
-			<control type="image">
-				<include>BackgroundOverlayDialog3</include>
-				<texture background="true">common/overlaybottom.png</texture>
-				<aspectratio>scale</aspectratio>
-				<colordiffuse>$VAR[BackgroundColor]</colordiffuse>
-				<include>DialogBackgroundDepth</include>
-			</control>
+			<include>DialogBackgroundDepth</include>
 		</control>
 
 		<control type="group">
@@ -82,24 +71,27 @@
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$LOCALIZE[24134]</param>
-				<param name="secondary">False</param>
 			</include>
 			
 			<control type="label" id="100">
-				<font></font>
+				<left>-15000</left>
+				<top>96</top>
+				<width>1620</width>
+				<height>72</height>
+				<font>Font72</font>
 			</control>
 
 			<!-- Left heading -->
 			<control type="fadelabel">
 				<include>DialogSubtitles_coords1</include>
 				<label>24018</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 
 			<!-- Seperator -->
 			<control type="image">
 				<include>DialogSubtitles_coords2</include>
-				<texture border="1,12,1,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
+				<texture border="1,12,1,1" colordiffuse="$VAR[DialogOverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 			</control>
 
 			<!-- Left list -->
@@ -130,7 +122,7 @@
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 				<texturesliderbackground border="9,1,6,1">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
-				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
@@ -140,20 +132,20 @@
 			<control type="fadelabel">
 				<include>DialogSubtitles_coords7</include>
 				<label>$INFO[Player.Filename]</label>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 
 			<!-- Number label -->
 			<control type="fadelabel" id="140">
 				<include>DialogSubtitles_coords8</include>
 				<align>right</align>
-				<textcolor>$VAR[TextColorNF]</textcolor>
+				<textcolor>$VAR[TextColor2]</textcolor>
 			</control>
 
 			<!-- Seperator -->
 			<control type="image">
 				<include>DialogSubtitles_coords9</include>
-				<texture border="1,12,1,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
+				<texture border="1,12,1,1" colordiffuse="$VAR[DialogOverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 			</control>
 
 			<!-- Right list -->
@@ -184,11 +176,16 @@
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 				<texturesliderbackground border="9,1,6,1">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
-				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars)</visible>
 			</control>
+			
+			<!-- Button grouplist background -->
+			<include content="dialogButtonBackground">
+				<param name="id">9001</param>
+			</include>
 
 			<!-- Button grouplist -->
 			<control type="grouplist" id="9001">

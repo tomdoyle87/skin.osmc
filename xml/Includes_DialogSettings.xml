@@ -6,7 +6,7 @@
 		<controls>
 
 			<!-- Dialog fanart -->
-			<include>DialogBackgroundImage</include>
+			<include>DialogFanart</include>
 
 			<control type="group">
 				<include>DialogDepth</include>
@@ -17,7 +17,6 @@
 				<!-- Heading -->
 				<include content="Time">
 					<param name="heading">$INFO[Control.GetLabel(2)]</param>
-					<param name="secondary">False</param>
 				</include>
 
 				<!-- Grouplist -->
@@ -38,7 +37,7 @@
 					<font>Font33</font>
 					<align>center</align>
 					<label></label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 				<!-- Default button -->
@@ -69,12 +68,17 @@
 				<!-- Default image -->
 				<control type="image" id="11">
 					<include>DialogSettings_coords5</include>
-					<texture border="1,12,1,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
+					<texture border="1,12,1,1" colordiffuse="$VAR[DialogOverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 				</control>
 				
 				<!-- Button grouplist indicator -->
 				<include content="dialogButtonIndicator">
 					<param name="visibility">!ControlGroup(9001).HasFocus + !Window.IsVisible(shutdownmenu)</param>
+				</include>
+
+				<!-- Button grouplist background -->
+				<include content="dialogButtonBackground">
+					<param name="id">9001</param>
 				</include>
 
 				<!-- Buttons -->
@@ -110,7 +114,7 @@
 					<width>1620</width>
 					<height>72</height>
 					<font>Font72</font>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 					<label></label>
 				</control>
 			</control>
@@ -164,7 +168,7 @@
 					<font>Font33</font>
 					<align>center</align>
 					<label></label>
-					<textcolor>$VAR[TextColorFO]</textcolor>
+					<textcolor>$VAR[TextColor1]</textcolor>
 				</control>
 
 				<!-- Default button -->
@@ -195,7 +199,7 @@
 				<!-- Default image -->
 				<control type="image" id="11">
 					<include>DialogSettings_coords13</include>
-					<texture border="1,12,1,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
+					<texture border="1,12,1,1" colordiffuse="$VAR[DialogOverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 				</control>
 
 				<!-- Button grouplist -->

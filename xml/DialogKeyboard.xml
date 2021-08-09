@@ -6,7 +6,7 @@
 	<controls>
 
 		<!-- Dialog fanart -->
-		<include>DialogBackgroundImage</include>
+		<include>DialogFanart</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
@@ -14,14 +14,17 @@
 			<!-- Animation -->
 			<include>DialogZoomAnimation</include>
 			
-			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$INFO[Control.GetLabel(311)]</param>
-				<param name="secondary">False</param>
 			</include>
 
+			<!-- Heading -->
 			<control type="label" id="311">
-				<font></font>
+				<left>-150000</left>
+				<top>296</top>
+				<width>1620</width>
+				<height>72</height>
+				<font>Font72</font>
 				<label>13406</label>
 			</control>
 
@@ -461,8 +464,8 @@
 					<scroll>True</scroll>
 					<font>Font48</font>
 					<textoffsetx>20</textoffsetx>
-					<texturefocus colordiffuse="$VAR[TextColorFO]" border="2">common/Border.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[TextColorNF]" border="2">common/Border.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[TextColor1]" border="2">common/Border.png</texturefocus>
+					<texturenofocus colordiffuse="$VAR[TextColor2]" border="2">common/Border.png</texturenofocus>
 				</control>
 
 			</control>
@@ -489,6 +492,11 @@
 				<content>$VAR[keyboard-autocompletion]</content>
 				
 			</control>
+
+			<!-- Button grouplist background -->
+			<include content="dialogButtonBackground">
+				<param name="id">9001</param>
+			</include>
 
 			<!-- Button grouplist -->
 			<control type="grouplist" id="9001">

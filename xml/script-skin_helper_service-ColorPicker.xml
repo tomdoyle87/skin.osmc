@@ -8,24 +8,25 @@
 	<controls>
 
 		<!-- Dialog fanart -->
-		<include>DialogBackgroundImage</include>
+		<include>DialogFanart</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
 		
 			<!-- Animation -->
 			<include>DialogZoomAnimation</include>
-
-			<!-- Heading -->
-			<include content="Time">
-				<param name="heading">$INFO[Control.GetLabel(1)]</param>
-				<param name="secondary">False</param>
-			</include>
 			
+			<!-- Heading -->
 			<control type="label" id="1">
-				<font></font>
+				<include>heading_coords</include>
+				<aligny>top</aligny>
+				<font>Font33</font>
 				<label></label>
 			</control>
+			
+			<include content="Time">
+				<param name="heading"></param>
+			</include>
 	        
 			<!-- Preview-->
 			<control type="grouplist">
@@ -43,8 +44,8 @@
 					<include>script-skin_helper_service-ColorPicker_coords3</include>
 					<label>$VAR[ColorPicker-Name]</label>
 					<font>Font33</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<disabledcolor>$VAR[TextColorFO]</disabledcolor>
+					<textcolor>$VAR[TextColor2]</textcolor>
+					<disabledcolor>$VAR[TextColor1]</disabledcolor>
 				</control>
 			</control>
 	        
@@ -65,8 +66,8 @@
 					<include>script-skin_helper_service-ColorPicker_coords6</include>
 					<label>$LOCALIZE[21450]</label>
 					<font>Font33</font>
-					<textcolor>$VAR[TextColorNF]</textcolor>
-					<focusedcolor>$VAR[TextColorFO]</focusedcolor>
+					<textcolor>$VAR[TextColor2]</textcolor>
+					<focusedcolor>$VAR[TextColor1]</focusedcolor>
 				</control>
 
 				<!-- Opacity -->
@@ -75,7 +76,7 @@
 					<label>$ADDON[script.skin.helper.colorpicker 32049]:</label>
 					<label2>$INFO[Control.Getlabel(3015)]</label2>
 					<font>Font33</font>
-					<disabledcolor>$VAR[TextColorNF]</disabledcolor>
+					<disabledcolor>$VAR[TextColor2]</disabledcolor>
 					<enable>False</enable>
 				</control>
 
@@ -100,6 +101,11 @@
 				<include>script-skin_helper_service-ColorPicker_coords10</include>
 				
 	        </control>
+
+			<!-- Button grouplist background -->
+			<include content="dialogButtonBackground">
+				<param name="id">9001</param>
+			</include>
 			
 			<!-- Button grouplist indicator -->
 			<include content="dialogButtonIndicator">

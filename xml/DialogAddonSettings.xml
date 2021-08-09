@@ -6,7 +6,7 @@
 	<controls>
 
 		<!-- Dialog fanart -->
-		<include>DialogBackgroundImage</include>
+		<include>DialogFanart</include>
 
 		<control type="group">
 			<include>DialogDepth</include>
@@ -17,7 +17,6 @@
 			<!-- Heading -->
 			<include content="Time">
 				<param name="heading">$INFO[Window.Property(heading)]</param>
-				<param name="secondary">False</param>
 			</include>
 
 			<!-- Left grouplist -->
@@ -73,7 +72,7 @@
 			<!-- Default seperator -->
 			<control type="image" id="11">
 				<include>DialogAddonSettings_coords6</include>
-				<texture border="1,12,1,1" colordiffuse="$VAR[OverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
+				<texture border="1,12,1,1" colordiffuse="$VAR[DialogOverlayColorNF]">common/ScrollBackgroundHorizontal.png</texture>
 			</control>
 			
 			<!-- Default edit -->
@@ -86,6 +85,11 @@
 			<control type="sliderex" id="13">
 				<include>DialogAddonSettings_coords4</include>
 			</control>
+
+			<!-- Button grouplist background -->
+			<include content="dialogButtonBackground">
+				<param name="id">9001</param>
+			</include>
 
 			<!-- Buttons -->
 			<control type="grouplist" id="9001">
