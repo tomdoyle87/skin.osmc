@@ -1,3 +1,14 @@
+**Changes to the OSMC Classic-Like skin**
+
+---
+
+**_v0.0.2_**
+
+_Restore_
+- Restored view to episodes left to watch
+- Restore OSMC Blue as default Color/Theme
+- Restore MyOSMC to Mainmenu
+
 **Changes to the OSMC skin**
 
 ---
