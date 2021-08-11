@@ -1,4 +1,43 @@
+**Changes to the skin.osmc-classic**
+
+**v0.0.2**
+
+Change to Matrix upsream - https://github.com/osmc/skin.osmc/tree/f74df29e420c6816436b4ca620027378073d1630 as Base
+Restored view to episodes left to watch.
+
+---
+
+**v0.0.1**
+
+The classic skin for OSMC from kodi 18 , based on this release: https://github.com/osmc/skin.osmc/releases/tag/v18.5.0-November_update
+addon.xml values updated to work for kodi 19. 
+
 **Changes to the OSMC skin**
+
+---
+
+**_v19.0.0_**
+
+_New_
+- add new v19 features (music library, movie sets, PVR additions and chapter/EDL markers in video OSD)
+- add channel sort by and sort order toggles to PVR guide side menu
+- add artist, album and radio now/next/RDS information to fullscreen music/radio playback window
+- add new info button to video and music OSD
+- add trackt.tv ratings information to video info dialog
+- add first WebLate translations
+
+_Improved_
+- rework look of default fullscreen music playback screen to match general skin look
+- refine video fullscreen OSD and info dialog behaviour
+- improve behaviour of weather widget when no weather information is available
+- improve widget headings and general secondary label information
+- improve localize consistency
+- add missing custom colour settings
+- improve skin setting select process for settings with a lot of options to choose from
+- use translatable labels for skin setting options
+
+_Fixed_
+- add missing "play recorded programme" button to PVR info dialog
 
 ---
 
@@ -128,7 +167,7 @@ _New_
 _Improved_
 - use OSMC busy spinner for widget loading
 - add Disabled option to Adjust OSD on-time during video pause button
-- rework skin structure for Transiflex localization
+- rework skin structure for Transifex localization
 - improve widget icon animations
 - rework dialog animations to prevent bright transition
 
@@ -145,7 +184,7 @@ _New_
 - add new second video info dialog screen (with extended rating, audio and subtitle information and bigger plot text box)
 - add new wall info view (based on wall view)
 - add new adjust representation of video duration setting
-- add new multi image (folder) background option
+- add new multi-image (folder) background option
 - add new individual background option for home menu entries
 - add new options for music OSD to automatically show
 - add user rating to music and video library
@@ -172,7 +211,7 @@ _New_
 - add new resolution select button/dialog in video player
 - add player icon to now playing dialog
 - add new dependency button in addon info dialog to match v18 requirements
-- new color options (color sets, background gradients, adjustable opacity)
+- new colour options (colour sets, background gradients, adjustable opacity)
 - add PVR channel number input dialog
 - add PVR timeshift status dialog
 - add welcome dialog on non-OSMC devices
@@ -187,7 +226,7 @@ _New_
 _Improved_
 - adjust syntax, values, labels and infobools to match v18 requirements
 - adjust PVR section to match v18 requirements
-- highlighting color now adjusts according to text color
+- highlighting colour now adjusts according to text color
 - streamline OSD animations
 - add missing adjustable plot fonts
 - let favourites dialog behave like a normal window
@@ -229,13 +268,13 @@ _Improved_
 - adjust representation of object based audio codec tags
 - refine positioning and scaling of media tag icons
 - adjust viewtype 55 for music and add-ons to match viewtype 53 for movies and TV shows
-- improve highlight color of selected text
+- improve highlight colour of selected text
 - change appearance of all progress icons to round shape
 - add no dimming of cover art
 - dim watched and collection indicator depending on cover dimming setting
 - update watched overlay icon to match appearance of new movie collection indicator
 - add current control ID to debug overlay
-- change overlay color setting to match appearance of background color setting
+- change overlay colour setting to match appearance of background colour setting
 
 _Fixed_
 - fix scrollbar in music navigation
@@ -283,7 +322,7 @@ _Fixed_
 - recognize TV show specials and show them correctly (no season, just episode S1)
 - adjust width of scrolling titles in wall view and wide list view to avoid overlap with new media flags
 - “now playing” dialog now shows album/artist tags correctly even when one of them or both are not present in the currently playing music file
-- fix custom background color option
+- fix custom background colour option
 - bring back current playlist button in music OSD functionality
 
 ---
@@ -326,11 +365,176 @@ Release
 
 ---
 
-**Changelog v18.5.0**
+**Changelog v19.0.0**
 
-overrides.xml:
-- add new videos and music root directory to home menu entry and submenu customization dialog
-- add picture root and addon browser directory to home menu and submenu entry section
+_accommodate  for changes of the v19 skin engine_
+_add  localize files for WebLate translations_
+_replace old TextColor1, TextColor2 by new TextColorFO, TextColorNF variables in all files_
+_replace masking includes conditions by new expressions_
+
+defaults.xml:
+- remove deprecated colours
+
+strings.po:
+- update PVR fullscreen playback localize (31171)
+- rework localize for new trackt.tv ratings information (31115)
+- rework localizes for consistency (31136, 31182, 31193, 31201, 31315, 31331, 31357)
+- rework localizes for new skin colour settings (31023, 31024, 31025, 31026, 31037, 31050, 31060, 31150)
+- rework localizes for new skin settings secondary labels (31061, 31070, 31152, 31153, 31154, 31168, 31235, 31319)
+- add new localizes for new skin settings secondary labels (31413, 31414, 31415, 31416, 31417, 31418, 31419, 31420, 31421, 31422, 31423, 31424, 31425, 31426, 31427, 31428, 31429, 31430, 31431, 31432)
+
+Textures.xbt:
+- update textures file with new OSD ranges and new PVR reminder icon
+- update textures file with new music OSD info button file and reworked music OSD repeat button file
+
+template.xml:
+- hide weather widget when no weather information is available
+- improve widget heading details
+
+Coordinates_DialogVideoInfo.xml:
+- add new sets information
+- rework coordinates for improved ratings and audio/subtitle streams information
+
+Coordinates_DialogPVRInfo.xml:
+- add new reminder icon
+
+Coordinates_MusicOSD.xml:
+- adjust width and position of right OSD buttons
+
+Coordinates_MusicVisualisation.xml:
+- adjust coordinates for reworked fullscreen music playback window
+
+Coordinates_VideoFullScreen.xml:
+- add new coordinates for chapter and EDL markers
+
+Coordinates_VideoOSD.xml:
+- update right options width for new info button
+
+
+Coordinates_Viewtype52.xml:
+- add conditional visibility of view icons for movie sets
+
+Coordinates_Viewtype521.xml:
+- add conditional visibility of view icons for movie sets
+
+Coordinates_Viewtype522.xml:
+- add conditional visibility of view icons for movie sets
+
+Coordinates_Viewtype53.xml:
+- add conditional visibility of view icons for movie sets
+
+Coordinates_Viewtype531.xml:
+- add conditional visibility of view icons for movie sets
+
+Coordinates_Viewtype532.xml:
+- add conditional visibility of view icons for movie sets
+
+Coordinates_Viewtype533.xml:
+- add conditional visibility of view icons for movie sets
+
+Coordinates_Viewtype534.xml:
+- add conditional visibility of view icons for movie sets
+
+DialogAddonInfo.xml:
+- add new versions and update buttons
+
+DialogFullScreenInfo.xml:
+- add new onleft and onright controls to switch between PVR now and next information
+- change onclick to close info dialog
+
+DialogMusicInfo.xml:
+- add new release date, original date, BPM and file information detail labels
+
+DialogPVRInfo.xml:
+- add new first aired detail labels
+- add new 'Add reminder' button
+- add missing "play recorded programme" button
+
+DialogVideoInfo.xml:
+- add new movie set poster image
+- rework visibility conditions for new movie set information
+- improved ratings and audio/subtitle streams information (add tracks.tv)
+
+Includes.xml:
+- rework DefaultView include for reworked video addons forced view skin setting
+
+Includes_Widgets.xml:
+- add widget heading animations to hide and show weather widget heading depending on availability of weather information
+
+MusicOSD.xml:
+- add new info button
+
+MusicVisualisation.xml:
+- rework look of default fullscreen music playback window to match general skin look
+- rework fullscreen music playback to show additional album, artist and radio now/next/RDS information
+
+MyPVRGuide.xml:
+- add channel sort by and sort order toggles (ID 3 and 4) to PVR guide side menu
+
+MyVideoNav.xml:
+- add hidden list for movie sets information
+
+script-skinshortcuts-static.xml:
+- hide weather widget when no weather information is available
+- improve widget heading details
+
+SkinSettings.xml:
+- remove deprecated bigger music OSD album art setting
+- add new custom focus control colour, custom non-focus control colour, custom OSD cache bar colour and custom masking colour settings
+- change label2 of settings with multiple options to use variables
+- let default colour set and default video addon view open a select dialog
+- adjust automatically showing music OSD setting to match general skin setting formatting
+
+Variables.xml:
+- adjust MusicNextPlaying variables to avoid showing wrong information while shuffle is enabled during playback
+- add new MusicNextPlayingLabel variables for reworked fullscreen music playback window
+- rework label2 variable for new movie sets information and improved TV show details
+- add new masking condition expressions
+- move OSMCBackgroundOverlayName variable to skin settings variable file
+
+Variables_Colours.xml:
+- adjust colour variables to use new colour settings needed for skin setting select dialog feature
+- use new colour setting label variables for colour name variables
+
+Variables_SkinSettings.xml:
+- remove SkinSettingsExplanation variable value of deprecated bigger music OSD album art setting
+- change skin setting explanation variable localize formatting
+- add new MaskingBars, DefaultColorSet, DefaultBackgroundOpacity, DefaultOverlayOpacity, OSMCBackgroundOverlay, HideOSD, PlotFont, infodialogfirstpage, videodurationformat, mediaflags and DefaultVideosView variables for reworked skin setting label2
+
+VideoFullScreen.xml:
+- add new chapter and EDL markers
+
+VideoOSD.xml:
+- adjust controls onleft for new info button
+- add onback to controls grouplists to close fullscreen info dialog when closing the video OSD
+- add new info button to right controls
+
+Viewtype511.xml:
+- add conditional visibility of view icons for movie sets
+
+Viewtype52.xml:
+- add conditional visibility of view icons for movie sets
+
+Viewtype521.xml:
+- add conditional visibility of view icons for movie sets
+
+Viewtype522.xml:
+- add conditional visibility of view icons for movie sets
+
+Viewtype53.xml:
+- add conditional visibility of view icons for movie sets
+
+Viewtype531.xml:
+- add conditional visibility of view icons for movie sets
+
+Viewtype532.xml:
+- add conditional visibility of view icons for movie sets
+
+Viewtype533.xml:
+- add conditional visibility of view icons for movie sets
+
+Viewtype534.xml:
+- add conditional visibility of view icons for movie sets
 
 addon.xml:
-- bump version to 18.5.0
+- bump version to 19.0.0

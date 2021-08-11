@@ -1,6 +1,6 @@
 # skin.osmc-classic
 
-The classic skin for OSMC from kodi 18 , based on this release: https://github.com/osmc/skin.osmc/releases/tag/v18.5.0-November_update
+The classic skin for OSMC from kodi 18, based on this release: https://github.com/osmc/skin.osmc/tree/f74df29e420c6816436b4ca620027378073d1630 - Has Episodes Left to watch restored. 
 
 This is in **beta**, but I'm having no issues using this in kodi 19. 
 
