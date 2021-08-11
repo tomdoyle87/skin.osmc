@@ -33,7 +33,7 @@
 				<colordiffuse>$VAR[OverlayColorNF]</colordiffuse>
 				<texturesliderbackground border="9,1,6,1">common/ScrollBackground.png</texturesliderbackground>
 				<texturesliderbar border="8,1,6,1">common/ScrollbarGripNF.png</texturesliderbar>
-				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[DialogColor1]">common/ScrollbarGripFO.png</texturesliderbarfocus>
+				<texturesliderbarfocus border="8,1,6,1" colordiffuse="$VAR[OverlayColorFO]">common/ScrollbarGripFO.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
 				<textureslidernibfocus></textureslidernibfocus>
 				<visible>!Skin.HasSetting(Scrollbars) + [Control.IsVisible(50) | Control.IsVisible(51)]</visible>
@@ -93,7 +93,7 @@
 					<!-- View -->
 					<control type="button" id="99">
 						<height>52</height>
-						<label>$LOCALIZE[31233]$INFO[Container.ViewMode]</label>
+						<label>$LOCALIZE[31233] $INFO[Container.ViewMode]</label>
 						<onclick>Container.NextViewMode</onclick>
 						<visible>Integer.IsGreater(Container.ViewCount,1)</visible>
 					</control>
@@ -118,8 +118,8 @@
 					<!-- Sort ascending/descending -->
 					<control type="togglebutton" id="4">
 						<height>52</height>
-						<label>$LOCALIZE[31234]$LOCALIZE[584]</label>
-						<altlabel>$LOCALIZE[31234]$LOCALIZE[585]</altlabel>
+						<label>$LOCALIZE[31234] $LOCALIZE[584]</label>
+						<altlabel>$LOCALIZE[31234] $LOCALIZE[585]</altlabel>
 						<usealttexture>Container.SortDirection(Descending)</usealttexture>
 						<visible>Control.IsEnabled(4)</visible>
 					</control>

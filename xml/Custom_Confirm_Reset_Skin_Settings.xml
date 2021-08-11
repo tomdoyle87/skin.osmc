@@ -26,7 +26,7 @@
 				<height>48</height>
 				<align>center</align>
 				<font>Font48</font>
-				<textcolor>$VAR[TextColor1]</textcolor>
+				<textcolor>$VAR[TextColorFO]</textcolor>
 			</control>
 
 			<!-- Details -->
@@ -37,7 +37,7 @@
 					<aligny>center</aligny>
 					<font>Font36</font>
 					<autoscroll delay="10000" time="1700" repeat="12000">True</autoscroll>
-					<textcolor>$VAR[TextColor1]</textcolor>
+					<textcolor>$VAR[TextColorFO]</textcolor>
 					<label>$LOCALIZE[31394]</label>
 				</control>
 			</control>
@@ -67,6 +67,9 @@
 					<onclick>Skin.ResetSettings</onclick>
 					<onclick>ReloadSkin()</onclick>
 					<onclick>Dialog.Close(1107)</onclick>
+					<onclick>Control.SetFocus(9000,7,absolute)</onclick>
+					<onclick>Control.SetFocus(803,absolute)</onclick>
+					<onclick>Skin.SetString(WelcomeDialogShown,true)</onclick>
 					<label>$LOCALIZE[107]</label>
 				</control>
 			</control>

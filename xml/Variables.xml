@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<!-- Masking -->
+	<expression name="Masking">False</expression><!-- If masking should be available, this should be set to "True". -->
+	<expression name="NonMaskedCoordinates">String.IsEqual(Skin.AspectRatio,16:9) + True</expression><!-- If masking should be available, this should be set to "False". -->
+	<expression name="MaskedCoordinates">String.IsEqual(Skin.AspectRatio,16:9) + False</expression><!-- If masking should be available, this should be set to "True". -->
+
 	<!-- Background images/overlay -->
 	<variable name="OSMCBackgroundImage">
 		<value condition="String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),yes) + !String.IsEmpty(Skin.String(CustomBackground))">$INFO[Skin.String(CustomBackground)]</value>
 		<value condition="String.IsEqual(Skin.String(BackgroundDefaultImage),no) + String.IsEqual(Skin.String(BackgroundSingleImage),no) + !String.IsEmpty(Skin.String(CustomBackgroundFolder))">$INFO[Skin.String(CustomBackgroundFolder)]</value>
 		<value condition="!String.IsEmpty(Skin.String(BackgroundImage))">$INFO[Skin.String(BackgroundImage),special://skin/extras/backgrounds/,.jpg]</value>
 		<value>special://skin/extras/backgrounds/1.jpg</value>
-	</variable>
-	
-	<variable name="OSMCBackgroundOverlayName">
-		<value condition="String.IsEqual(Skin.String(OSMCBackgroundOverlay),1)">$LOCALIZE[31262]</value>
-		<value condition="String.IsEqual(Skin.String(OSMCBackgroundOverlay),2)">$LOCALIZE[31263]</value>
-		<value condition="String.IsEqual(Skin.String(OSMCBackgroundOverlay),3)">$LOCALIZE[31264]</value>
-		<value condition="String.IsEqual(Skin.String(OSMCBackgroundOverlay),4)">$LOCALIZE[31265]</value>
-		<value condition="String.IsEqual(Skin.String(OSMCBackgroundOverlay),5)">$LOCALIZE[31266]</value>
 	</variable>
 	
 	<!-- Opacity Dim Factor -->
@@ -28,7 +25,7 @@
 
 	<!-- Highlighting -->
 	<variable name="buttonfocus">
-		<value condition="!Skin.HasSetting(TextHighlight)">$VAR[TextColor1]</value>
+		<value condition="!Skin.HasSetting(TextHighlight)">$VAR[TextColorFO]</value>
 		<value condition="Skin.HasSetting(TextHighlight)">00FFFFFF</value>
 	</variable>
 	
@@ -239,11 +236,11 @@
 	<variable name="VideoPlayerTitle">
 		<value condition="VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg + String.IsEmpty(Window(12005).Property(shownext))">$LOCALIZE[19030]: [B]$INFO[Player.Title][/B] [LIGHT]($INFO[VideoPlayer.StartTime] - $INFO[VideoPlayer.EndTime])[/LIGHT]</value>
 		<value condition="VideoPlayer.Content(LiveTV) + VideoPlayer.HasEpg + !String.IsEmpty(Window(12005).Property(shownext))">$LOCALIZE[19031]: [B]$INFO[VideoPlayer.NextTitle][/B] [LIGHT]($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])[/LIGHT]</value>
-		<value condition="VideoPlayer.Content(episodes) + Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E0, &#8226; ]$INFO[Player.Title]</value>
-		<value condition="VideoPlayer.Content(episodes) + Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E, &#8226; ]$INFO[Player.Title]</value>
-		<value condition="VideoPlayer.Content(episodes) + Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E0, &#8226; ]$INFO[Player.Title]</value>
-		<value condition="VideoPlayer.Content(episodes) + Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E, &#8226; ]$INFO[Player.Title]</value>
-		<value condition="VideoPlayer.Content(episodes) + String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Player.Title]</value>
+		<value condition="VideoPlayer.Content(episodes) + Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E0, &#8226; ]$INFO[Player.Title]</value>
+		<value condition="VideoPlayer.Content(episodes) + Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E, &#8226; ]$INFO[Player.Title]</value>
+		<value condition="VideoPlayer.Content(episodes) + Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E0, &#8226; ]$INFO[Player.Title]</value>
+		<value condition="VideoPlayer.Content(episodes) + Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E, &#8226; ]$INFO[Player.Title]</value>
+		<value condition="VideoPlayer.Content(episodes) + String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.TVShowTitle]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[VideoPlayer.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[Player.Title]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Title]</value>
 		<value>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[LIGHT] (,)[/LIGHT]]</value>
 	</variable>
@@ -301,22 +298,43 @@
 		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist)">$INFO[MusicPlayer.Offset(1).Album]$INFO[MusicPlayer.Offset(1).Year,[LIGHT] (,)[/LIGHT]]</value>
 		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Album)">$INFO[MusicPlayer.Offset(1).Artist]</value>
 		<value condition="Pvr.IsPlayingRadio + VideoPlayer.HasEpg">$INFO[VideoPlayer.NextTitle] [LIGHT]($INFO[VideoPlayer.NextStartTime] - $INFO[VideoPlayer.NextEndTime])[/LIGHT]</value>
-		<value>$INFO[MusicPlayer.Offset(1).Artist]</value>
+		<value condition="MusicPlayer.HasNext">$INFO[MusicPlayer.Offset(1).Artist]</value>
 	</variable>
 	
 	<variable name="MusicNextPlaying2">
 		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist) + String.IsEqual(MusicPlayer.Album,MusicPlayer.Offset(1).Album)"></value>
 		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist)">$INFO[MusicPlayer.Offset(1).TrackNumber,[LIGHT],.[/LIGHT] ]$INFO[MusicPlayer.Offset(1).Title]</value>
 		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Album)">$INFO[MusicPlayer.Offset(1).TrackNumber,[LIGHT],.[/LIGHT] ]$INFO[MusicPlayer.Offset(1).Title]</value>
-		<value condition="Pvr.IsPlayingRadio + VideoPlayer.HasEpg">$INFO[VideoPlayer.NextGenre]</value>
-		<value>$INFO[MusicPlayer.Offset(1).Album,,]$INFO[MusicPlayer.Offset(1).Year,[LIGHT] (,)[/LIGHT]]</value>
+		<value condition="MusicPlayer.HasNext">$INFO[MusicPlayer.Offset(1).Album,,]$INFO[MusicPlayer.Offset(1).Year,[LIGHT] (,)[/LIGHT]]</value>
 	</variable>
 	
 	<variable name="MusicNextPlaying3">
 		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist) + String.IsEqual(MusicPlayer.Album,MusicPlayer.Offset(1).Album)"></value>
 		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist)"></value>
 		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Album)"></value>
-		<value>$INFO[MusicPlayer.Offset(1).TrackNumber,[LIGHT],.[/LIGHT] ]$INFO[MusicPlayer.Offset(1).Title]</value>
+		<value condition="MusicPlayer.HasNext">$INFO[MusicPlayer.Offset(1).TrackNumber,[LIGHT],.[/LIGHT] ]$INFO[MusicPlayer.Offset(1).Title]</value>
+	</variable>
+	
+	<variable name="MusicNextPlayingLabel1">
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist) + String.IsEqual(MusicPlayer.Album,MusicPlayer.Offset(1).Album)">$LOCALIZE[556]</value>
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist)">$LOCALIZE[558]</value>
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Album)">$LOCALIZE[557]</value>
+		<value condition="Pvr.IsPlayingRadio + VideoPlayer.HasEpg">$LOCALIZE[29908]</value>
+		<value condition="MusicPlayer.HasNext">$LOCALIZE[557]</value>
+	</variable>
+	
+	<variable name="MusicNextPlayingLabel2">
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist) + String.IsEqual(MusicPlayer.Album,MusicPlayer.Offset(1).Album)"></value>
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist)">$LOCALIZE[556]</value>
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Album)">$LOCALIZE[556]</value>
+		<value condition="MusicPlayer.HasNext">$LOCALIZE[558]</value>
+	</variable>
+	
+	<variable name="MusicNextPlayingLabel3">
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist) + String.IsEqual(MusicPlayer.Album,MusicPlayer.Offset(1).Album)"></value>
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Artist)"></value>
+		<value condition="!Pvr.IsPlayingRadio + String.IsEqual(MusicPlayer.Artist,MusicPlayer.Offset(1).Album)"></value>
+		<value condition="MusicPlayer.HasNext">$LOCALIZE[556]</value>
 	</variable>
 
 	<variable name="StatusOverlay">
@@ -375,11 +393,11 @@
 	
 	<!-- Info dialog labels -->
 	<variable name="VideoInfoLabel">
-		<value condition="Container.Content(episodes) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E0, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(episodes) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(episodes) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E0, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(episodes) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(episodes) + String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(episodes) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E0, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(episodes) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(episodes) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E0, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(episodes) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E, &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(episodes) + String.IsEqual(ListItem.Season,0)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT] &#8226; ]$INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE] &#8226; ]$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
 		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Title]$VAR[LabelUserRating]</value>
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]$INFO[ListItem.Year,[LIGHT] (,)[/LIGHT]]$VAR[LabelUserRating]</value>
 		<value>$INFO[ListItem.Label]</value>
@@ -421,20 +439,19 @@
 	</variable>
 
 	<variable name="Label2">
-		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Year] &#8226; $INFO[ListItem.Genre]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Year) + String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Year]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(movies) + String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]$VAR[LabelUserRating]</value>
-		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Year) + String.IsEqual(ListItem.Property(UnWatchedEpisodes),1)">$INFO[ListItem.Year] &#8226; $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101] $LOCALIZE[20452]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(movies) + !ListItem.IsCollection + !String.IsEmpty(ListItem.Year)">$INFO[ListItem.Year]$INFO[ListItem.Genre, &#8226; ,]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(movies) + !ListItem.IsCollection + String.IsEmpty(ListItem.Year)">$INFO[ListItem.Genre]$VAR[LabelUserRating]</value>
+		<value condition="[Container.Content(sets) | ListItem.IsCollection] + Integer.IsLessOrEqual(Container(4500).NumItems,1) + !ListItem.IsParentFolder">$INFO[Container(4500).ListItem(0).Year,, &#8226; ]$INFO[Container(4500).NumItems,, $LOCALIZE[20338]]</value>
+		<value condition="[Container.Content(sets) | ListItem.IsCollection] + Integer.IsGreater(Container(4500).NumItems,1) + !ListItem.IsParentFolder">$INFO[Container(4500).ListItem(0).Year]$INFO[Container(4500).ListItem(-1).Year, - , &#8226; ]$INFO[Container(4500).NumItems,, $LOCALIZE[342]]</value>
+                <value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Year) + String.IsEqual(ListItem.Property(UnWatchedEpisodes),1)">$INFO[ListItem.Year] &#8226; $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101] $LOCALIZE[20452]$VAR[LabelUserRating]</value>
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Year) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),1)">$INFO[ListItem.Year] &#8226; $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101] $LOCALIZE[20453]$VAR[LabelUserRating]</value>
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(ListItem.Year) + !Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),1)">$INFO[ListItem.Year]$VAR[LabelUserRating]</value>
 		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + String.IsEmpty(ListItem.Year) + String.IsEqual(ListItem.Property(UnWatchedEpisodes),1)">$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101] $LOCALIZE[20452]$VAR[LabelUserRating]</value>
-		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + String.IsEmpty(ListItem.Year) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),1)">$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101] $LOCALIZE[20453]$VAR[LabelUserRating]</value>
+		<value condition="[Container.Content(tvshows) | Container.Content(seasons)] + String.IsEmpty(ListItem.Year) + Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),1)">$INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101] $LOCALIZE[20453]$VAR[LabelUserRating]</value>  
 		<value condition="[Container.Content(episodes) | Container.Content(videos)] + !String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered,$LOCALIZE[20416]: ,]$VAR[LabelUserRating]</value>
 		<value condition="[Container.Content(episodes) | Container.Content(videos)] + !String.IsEmpty(ListItem.Date)">$INFO[ListItem.Date,$LOCALIZE[570]: ,]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Year] &#8226; $INFO[ListItem.Artist]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(albums) + !String.IsEmpty(ListItem.Year) + String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Year]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(albums) + String.IsEmpty(ListItem.Year) + !String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]$VAR[LabelUserRating]</value>
-		<value condition="Container.Content(addons) + !String.IsEmpty(ListItem.AddonVersion)">$INFO[ListItem.AddonVersion,$LOCALIZE[19114]: ,]</value>
+		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year, &#8226; ,]$VAR[LabelUserRating]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion,$LOCALIZE[19114]: ,]</value>
 		<value condition="Container.Content(images) + !String.IsEmpty(ListItem.PictureDatetime)">$INFO[ListItem.PictureDatetime,$LOCALIZE[21820]: ,]</value>
 		<value condition="[Container.Content(files) | Container.Content(games) | Container.Content(images)] + !String.IsEmpty(ListItem.Date)">$INFO[ListItem.Date,$LOCALIZE[21820]: ,]</value>
 	</variable>
@@ -637,6 +654,17 @@
 		<value condition="Integer.IsEqual(ListItem.AudioChannels,2)">Stereo</value>
 		<value condition="Integer.IsGreater(ListItem.AudioChannels,2)">Surround</value>
 	</variable>
+	
+	<variable name="MusicChannels">
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,1)">1.0</value>
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,2)">2.0</value>
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,4)">3.1/4.0</value>
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,5)">4.1/5.0</value>
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,6)">5.1</value>
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,7)">6.1</value>
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,8)">7.1</value>
+		<value condition="Integer.IsEqual(ListItem.MusicChannels,10)">9.1</value>
+	</variable>
 
 	<variable name="MusicPlayerChannels">
 		<value condition="Integer.IsEqual(MusicPlayer.Channels,1)">1.0</value>
@@ -706,7 +734,7 @@
 
 	<!-- Audio/Video Duration -->
 	<variable name="Duration">
-		<value condition="Container.Content(songs) | Container.Content(files) | Container.Content(musicvideos)">$INFO[ListItem.Duration]</value>
+		<value condition="Container.Content(albums) | Container.Content(songs) | Container.Content(files) | Container.Content(musicvideos)">$INFO[ListItem.Duration]</value>
 		<value condition="String.IsEqual(Skin.String(videodurationformat),Hours and minutes) + !Integer.IsEqual(ListItem.Duration(h),0)">$INFO[ListItem.Duration(h),,hr ]$INFO[ListItem.Duration(m),,min]</value>
 		<value condition="String.IsEqual(Skin.String(videodurationformat),Minutes) + !Integer.IsEqual(ListItem.Duration(h),0) | [[String.IsEqual(Skin.String(videodurationformat),Minutes) | String.IsEqual(Skin.String(videodurationformat),Hours and minutes)] + Integer.IsEqual(ListItem.Duration(h),0) + Integer.IsGreaterOrEqual(ListItem.Duration(m),1)]">$INFO[ListItem.Duration(mins),, min]</value>
 		<value condition="Integer.IsEqual(ListItem.Duration(h),0) + Integer.IsLess(ListItem.Duration(m),1)">$INFO[ListItem.Duration(secs),, sec]</value>
@@ -763,93 +791,93 @@
 	
 	<!-- Season/Episode label -->
 	<variable name="SEplaying">
-		<value condition="Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Episode,s)">$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]</value>		
-		<value condition="String.Contains(VideoPlayer.Episode,S)">$INFO[VideoPlayer.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(VideoPlayer.Season,9) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.Season,S0,]$INFO[VideoPlayer.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsLessOrEqual(VideoPlayer.Episode,9) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(VideoPlayer.Season,10) + Integer.IsGreaterOrEqual(VideoPlayer.Episode,10) + !String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.Season,S,]$INFO[VideoPlayer.Episode,E,]</value>		
+		<value condition="String.Contains(VideoPlayer.Season,0)">$INFO[VideoPlayer.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SElist">
-		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E0,]</value>
-		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E,]</value>
-		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E0,]</value>
-		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E,]</value>
-		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + String.Contains(ListItem.Episode,s)">$INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E0,]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E,]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E0,]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E,]</value>
-		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + String.Contains(ListItem.Episode,s)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Season,0)">$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E0,]</value>
+		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Season,0)">$INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E,]</value>
+		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Season,0)">$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E0,]</value>
+		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Season,0)">$INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E,]</value>
+		<value condition="!String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + String.Contains(ListItem.Season,0)">$INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Season,0)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E0,]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsLessOrEqual(ListItem.Season,9) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Season,0)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Season,S0,]$INFO[ListItem.Episode,E,]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsLessOrEqual(ListItem.Episode,9) + !String.Contains(ListItem.Season,0)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E0,]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + Integer.IsGreaterOrEqual(ListItem.Season,10) + Integer.IsGreaterOrEqual(ListItem.Episode,10) + !String.Contains(ListItem.Season,0)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Season,S,]$INFO[ListItem.Episode,E,]</value>
+		<value condition="String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) + String.Contains(ListItem.Season,0)">$INFO[ListItem.TVShowTitle] &#8226; $INFO[ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEContainer10101">
-		<value condition="Integer.IsLessOrEqual(Container(10101).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10101).ListItem.Episode,9) + !String.Contains(Container(10101).ListItem.Episode,s)">$INFO[Container(10101).ListItem.Season,S0,]$INFO[Container(10101).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(Container(10101).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10101).ListItem.Episode,10) + !String.Contains(Container(10101).ListItem.Episode,s)">$INFO[Container(10101).ListItem.Season,S0,]$INFO[Container(10101).ListItem.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10101).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10101).ListItem.Episode,9) + !String.Contains(Container(10101).ListItem.Episode,s)">$INFO[Container(10101).ListItem.Season,S,]$INFO[Container(10101).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10101).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10101).ListItem.Episode,10) + !String.Contains(Container(10101).ListItem.Episode,s)">$INFO[Container(10101).ListItem.Season,S,]$INFO[Container(10101).ListItem.Episode,E,]</value>
-		<value condition="String.Contains(Container(10101).ListItem.Episode,s)">$INFO[Container(10101).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10101).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10101).ListItem.Episode,9) + !String.Contains(Container(10101).ListItem.Season,0)">$INFO[Container(10101).ListItem.Season,S0,]$INFO[Container(10101).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10101).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10101).ListItem.Episode,10) + !String.Contains(Container(10101).ListItem.Season,0)">$INFO[Container(10101).ListItem.Season,S0,]$INFO[Container(10101).ListItem.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10101).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10101).ListItem.Episode,9) + !String.Contains(Container(10101).ListItem.Season,0)">$INFO[Container(10101).ListItem.Season,S,]$INFO[Container(10101).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10101).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10101).ListItem.Episode,10) + !String.Contains(Container(10101).ListItem.Season,0)">$INFO[Container(10101).ListItem.Season,S,]$INFO[Container(10101).ListItem.Episode,E,]</value>
+		<value condition="String.Contains(Container(10101).ListItem.Season,0)">$INFO[Container(10101).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEContainer10201">
-		<value condition="Integer.IsLessOrEqual(Container(10201).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10201).ListItem.Episode,9) + !String.Contains(Container(10201).ListItem.Episode,s)">$INFO[Container(10201).ListItem.Season,S0,]$INFO[Container(10201).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(Container(10201).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10201).ListItem.Episode,10) + !String.Contains(Container(10201).ListItem.Episode,s)">$INFO[Container(10201).ListItem.Season,S0,]$INFO[Container(10201).ListItem.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10201).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10201).ListItem.Episode,9) + !String.Contains(Container(10201).ListItem.Episode,s)">$INFO[Container(10201).ListItem.Season,S,]$INFO[Container(10201).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10201).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10201).ListItem.Episode,10) + !String.Contains(Container(10201).ListItem.Episode,s)">$INFO[Container(10201).ListItem.Season,S,]$INFO[Container(10201).ListItem.Episode,E,]</value>
-		<value condition="String.Contains(Container(10201).ListItem.Episode,s)">$INFO[Container(10201).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10201).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10201).ListItem.Episode,9) + !String.Contains(Container(10201).ListItem.Season,0)">$INFO[Container(10201).ListItem.Season,S0,]$INFO[Container(10201).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10201).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10201).ListItem.Episode,10) + !String.Contains(Container(10201).ListItem.Season,0)">$INFO[Container(10201).ListItem.Season,S0,]$INFO[Container(10201).ListItem.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10201).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10201).ListItem.Episode,9) + !String.Contains(Container(10201).ListItem.Season,0)">$INFO[Container(10201).ListItem.Season,S,]$INFO[Container(10201).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10201).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10201).ListItem.Episode,10) + !String.Contains(Container(10201).ListItem.Season,0)">$INFO[Container(10201).ListItem.Season,S,]$INFO[Container(10201).ListItem.Episode,E,]</value>
+		<value condition="String.Contains(Container(10201).ListItem.Season,0)">$INFO[Container(10201).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEContainer10401">
-		<value condition="Integer.IsLessOrEqual(Container(10401).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10401).ListItem.Episode,9) + !String.Contains(Container(10401).ListItem.Episode,s)">$INFO[Container(10401).ListItem.Season,S0,]$INFO[Container(10401).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(Container(10401).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10401).ListItem.Episode,10) + !String.Contains(Container(10401).ListItem.Episode,s)">$INFO[Container(10401).ListItem.Season,S0,]$INFO[Container(10401).ListItem.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10401).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10401).ListItem.Episode,9) + !String.Contains(Container(10401).ListItem.Episode,s)">$INFO[Container(10401).ListItem.Season,S,]$INFO[Container(10401).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10401).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10401).ListItem.Episode,10) + !String.Contains(Container(10401).ListItem.Episode,s)">$INFO[Container(10401).ListItem.Season,S,]$INFO[Container(10401).ListItem.Episode,E,]</value>
-		<value condition="String.Contains(Container(10401).ListItem.Episode,s)">$INFO[Container(10401).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10401).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10401).ListItem.Episode,9) + !String.Contains(Container(10401).ListItem.Season,0)">$INFO[Container(10401).ListItem.Season,S0,]$INFO[Container(10401).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10401).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10401).ListItem.Episode,10) + !String.Contains(Container(10401).ListItem.Season,0)">$INFO[Container(10401).ListItem.Season,S0,]$INFO[Container(10401).ListItem.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10401).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10401).ListItem.Episode,9) + !String.Contains(Container(10401).ListItem.Season,0)">$INFO[Container(10401).ListItem.Season,S,]$INFO[Container(10401).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10401).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10401).ListItem.Episode,10) + !String.Contains(Container(10401).ListItem.Season,0)">$INFO[Container(10401).ListItem.Season,S,]$INFO[Container(10401).ListItem.Episode,E,]</value>
+		<value condition="String.Contains(Container(10401).ListItem.Season,0)">$INFO[Container(10401).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEContainer10601">
-		<value condition="Integer.IsLessOrEqual(Container(10601).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10601).ListItem.Episode,9) + !String.Contains(Container(10601).ListItem.Episode,s)">$INFO[Container(10601).ListItem.Season,S0,]$INFO[Container(10601).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(Container(10601).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10601).ListItem.Episode,10) + !String.Contains(Container(10601).ListItem.Episode,s)">$INFO[Container(10601).ListItem.Season,S0,]$INFO[Container(10601).ListItem.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10601).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10601).ListItem.Episode,9) + !String.Contains(Container(10601).ListItem.Episode,s)">$INFO[Container(10601).ListItem.Season,S,]$INFO[Container(10601).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10601).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10601).ListItem.Episode,10) + !String.Contains(Container(10601).ListItem.Episode,s)">$INFO[Container(10601).ListItem.Season,S,]$INFO[Container(10601).ListItem.Episode,E,]</value>
-		<value condition="String.Contains(Container(10601).ListItem.Episode,s)">$INFO[Container(10601).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10601).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10601).ListItem.Episode,9) + !String.Contains(Container(10601).ListItem.Season,0)">$INFO[Container(10601).ListItem.Season,S0,]$INFO[Container(10601).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10601).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10601).ListItem.Episode,10) + !String.Contains(Container(10601).ListItem.Season,0)">$INFO[Container(10601).ListItem.Season,S0,]$INFO[Container(10601).ListItem.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10601).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10601).ListItem.Episode,9) + !String.Contains(Container(10601).ListItem.Season,0)">$INFO[Container(10601).ListItem.Season,S,]$INFO[Container(10601).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10601).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10601).ListItem.Episode,10) + !String.Contains(Container(10601).ListItem.Season,0)">$INFO[Container(10601).ListItem.Season,S,]$INFO[Container(10601).ListItem.Episode,E,]</value>
+		<value condition="String.Contains(Container(10601).ListItem.Season,0)">$INFO[Container(10601).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEContainer10801">
-		<value condition="Integer.IsLessOrEqual(Container(10801).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10801).ListItem.Episode,9) + !String.Contains(Container(10801).ListItem.Episode,s)">$INFO[Container(10801).ListItem.Season,S0,]$INFO[Container(10801).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(Container(10801).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10801).ListItem.Episode,10) + !String.Contains(Container(10801).ListItem.Episode,s)">$INFO[Container(10801).ListItem.Season,S0,]$INFO[Container(10801).ListItem.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10801).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10801).ListItem.Episode,9) + !String.Contains(Container(10801).ListItem.Episode,s)">$INFO[Container(10801).ListItem.Season,S,]$INFO[Container(10801).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10801).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10801).ListItem.Episode,10) + !String.Contains(Container(10801).ListItem.Episode,s)">$INFO[Container(10801).ListItem.Season,S,]$INFO[Container(10801).ListItem.Episode,E,]</value>
-		<value condition="String.Contains(Container(10801).ListItem.Episode,s)">$INFO[Container(10801).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10801).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10801).ListItem.Episode,9) + !String.Contains(Container(10801).ListItem.Season,0)">$INFO[Container(10801).ListItem.Season,S0,]$INFO[Container(10801).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10801).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10801).ListItem.Episode,10) + !String.Contains(Container(10801).ListItem.Season,0)">$INFO[Container(10801).ListItem.Season,S0,]$INFO[Container(10801).ListItem.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10801).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10801).ListItem.Episode,9) + !String.Contains(Container(10801).ListItem.Season,0)">$INFO[Container(10801).ListItem.Season,S,]$INFO[Container(10801).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10801).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10801).ListItem.Episode,10) + !String.Contains(Container(10801).ListItem.Season,0)">$INFO[Container(10801).ListItem.Season,S,]$INFO[Container(10801).ListItem.Episode,E,]</value>
+		<value condition="String.Contains(Container(10801).ListItem.Season,0)">$INFO[Container(10801).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEContainer10901">
-		<value condition="Integer.IsLessOrEqual(Container(10901).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10901).ListItem.Episode,9) + !String.Contains(Container(10901).ListItem.Episode,s)">$INFO[Container(10901).ListItem.Season,S0,]$INFO[Container(10901).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(Container(10901).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10901).ListItem.Episode,10) + !String.Contains(Container(10901).ListItem.Episode,s)">$INFO[Container(10901).ListItem.Season,S0,]$INFO[Container(10901).ListItem.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10901).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10901).ListItem.Episode,9) + !String.Contains(Container(10901).ListItem.Episode,s)">$INFO[Container(10901).ListItem.Season,S,]$INFO[Container(10901).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(10901).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10901).ListItem.Episode,10) + !String.Contains(Container(10901).ListItem.Episode,s)">$INFO[Container(10901).ListItem.Season,S,]$INFO[Container(10901).ListItem.Episode,E,]</value>
-		<value condition="String.Contains(Container(10901).ListItem.Episode,s)">$INFO[Container(10901).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10901).ListItem.Season,9) + Integer.IsLessOrEqual(Container(10901).ListItem.Episode,9) + !String.Contains(Container(10901).ListItem.Season,0)">$INFO[Container(10901).ListItem.Season,S0,]$INFO[Container(10901).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(Container(10901).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(10901).ListItem.Episode,10) + !String.Contains(Container(10901).ListItem.Season,0)">$INFO[Container(10901).ListItem.Season,S0,]$INFO[Container(10901).ListItem.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10901).ListItem.Season,10) + Integer.IsLessOrEqual(Container(10901).ListItem.Episode,9) + !String.Contains(Container(10901).ListItem.Season,0)">$INFO[Container(10901).ListItem.Season,S,]$INFO[Container(10901).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(10901).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(10901).ListItem.Episode,10) + !String.Contains(Container(10901).ListItem.Season,0)">$INFO[Container(10901).ListItem.Season,S,]$INFO[Container(10901).ListItem.Episode,E,]</value>
+		<value condition="String.Contains(Container(10901).ListItem.Season,0)">$INFO[Container(10901).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEContainer101001">
-		<value condition="Integer.IsLessOrEqual(Container(101001).ListItem.Season,9) + Integer.IsLessOrEqual(Container(101001).ListItem.Episode,9) + !String.Contains(Container(101001).ListItem.Episode,s)">$INFO[Container(101001).ListItem.Season,S0,]$INFO[Container(101001).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(Container(101001).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(101001).ListItem.Episode,10) + !String.Contains(Container(101001).ListItem.Episode,s)">$INFO[Container(101001).ListItem.Season,S0,]$INFO[Container(101001).ListItem.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(101001).ListItem.Season,10) + Integer.IsLessOrEqual(Container(101001).ListItem.Episode,9) + !String.Contains(Container(101001).ListItem.Episode,s)">$INFO[Container(101001).ListItem.Season,S,]$INFO[Container(101001).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(101001).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(101001).ListItem.Episode,10) + !String.Contains(Container(101001).ListItem.Episode,s)">$INFO[Container(101001).ListItem.Season,S,]$INFO[Container(101001).ListItem.Episode,E,]</value>
-		<value condition="String.Contains(Container(101001).ListItem.Episode,s)">$INFO[Container(101001).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(101001).ListItem.Season,9) + Integer.IsLessOrEqual(Container(101001).ListItem.Episode,9) + !String.Contains(Container(101001).ListItem.Season,0)">$INFO[Container(101001).ListItem.Season,S0,]$INFO[Container(101001).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(Container(101001).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(101001).ListItem.Episode,10) + !String.Contains(Container(101001).ListItem.Season,0)">$INFO[Container(101001).ListItem.Season,S0,]$INFO[Container(101001).ListItem.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(101001).ListItem.Season,10) + Integer.IsLessOrEqual(Container(101001).ListItem.Episode,9) + !String.Contains(Container(101001).ListItem.Season,0)">$INFO[Container(101001).ListItem.Season,S,]$INFO[Container(101001).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(101001).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(101001).ListItem.Episode,10) + !String.Contains(Container(101001).ListItem.Season,0)">$INFO[Container(101001).ListItem.Season,S,]$INFO[Container(101001).ListItem.Episode,E,]</value>
+		<value condition="String.Contains(Container(101001).ListItem.Season,0)">$INFO[Container(101001).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEContainer101101">
-		<value condition="Integer.IsLessOrEqual(Container(101101).ListItem.Season,9) + Integer.IsLessOrEqual(Container(101101).ListItem.Episode,9) + !String.Contains(Container(101101).ListItem.Episode,s)">$INFO[Container(101101).ListItem.Season,S0,]$INFO[Container(101101).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsLessOrEqual(Container(101101).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(101101).ListItem.Episode,10) + !String.Contains(Container(101101).ListItem.Episode,s)">$INFO[Container(101101).ListItem.Season,S0,]$INFO[Container(101101).ListItem.Episode,E,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(101101).ListItem.Season,10) + Integer.IsLessOrEqual(Container(101101).ListItem.Episode,9) + !String.Contains(Container(101101).ListItem.Episode,s)">$INFO[Container(101101).ListItem.Season,S,]$INFO[Container(101101).ListItem.Episode,E0,]</value>
-		<value condition="Integer.IsGreaterOrEqual(Container(101101).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(101101).ListItem.Episode,10) + !String.Contains(Container(101101).ListItem.Episode,s)">$INFO[Container(101101).ListItem.Season,S,]$INFO[Container(101101).ListItem.Episode,E,]</value>
-		<value condition="String.Contains(Container(101101).ListItem.Episode,s)">$INFO[Container(101101).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="Integer.IsLessOrEqual(Container(101101).ListItem.Season,9) + Integer.IsLessOrEqual(Container(101101).ListItem.Episode,9) + !String.Contains(Container(101101).ListItem.Season,0)">$INFO[Container(101101).ListItem.Season,S0,]$INFO[Container(101101).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsLessOrEqual(Container(101101).ListItem.Season,9) + Integer.IsGreaterOrEqual(Container(101101).ListItem.Episode,10) + !String.Contains(Container(101101).ListItem.Season,0)">$INFO[Container(101101).ListItem.Season,S0,]$INFO[Container(101101).ListItem.Episode,E,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(101101).ListItem.Season,10) + Integer.IsLessOrEqual(Container(101101).ListItem.Episode,9) + !String.Contains(Container(101101).ListItem.Season,0)">$INFO[Container(101101).ListItem.Season,S,]$INFO[Container(101101).ListItem.Episode,E0,]</value>
+		<value condition="Integer.IsGreaterOrEqual(Container(101101).ListItem.Season,10) + Integer.IsGreaterOrEqual(Container(101101).ListItem.Episode,10) + !String.Contains(Container(101101).ListItem.Season,0)">$INFO[Container(101101).ListItem.Season,S,]$INFO[Container(101101).ListItem.Episode,E,]</value>
+		<value condition="String.Contains(Container(101101).ListItem.Season,0)">$INFO[Container(101101).ListItem.Episode,[UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<variable name="SEListView">
-		<value condition="!String.Contains(ListItem.Episode,s)">$INFO[ListItem.Season,$LOCALIZE[20373] , &#8226; ]$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
-		<value condition="String.Contains(ListItem.Episode,s)">$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="!String.Contains(ListItem.Season,0)">$INFO[ListItem.Season,$LOCALIZE[20373] , &#8226; ]$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
+		<value condition="String.Contains(ListItem.Season,0)">$INFO[ListItem.Episode,$LOCALIZE[20359] [UPPERCASE],[/UPPERCASE]]</value>
 	</variable>
 	
 	<!-- Subtitle download label -->

@@ -909,7 +909,7 @@
 				<label>$INFO[Skin.AspectRatio]</label>
 				<visible>!String.IsEmpty(Skin.AspectRatio)</visible>
 			</control>
-		
+			
 		</control>
 
 	</controls>
