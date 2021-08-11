@@ -2,7 +2,7 @@
 
 ---
 
-**_v0.0.2_**
+**_v0.0.1_**
 
 _Restore_
 - Restored view to episodes left to watch
