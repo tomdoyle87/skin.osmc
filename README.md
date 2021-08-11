@@ -1,15 +1,15 @@
-# skin.osmc
+# classic-like-skin.osmc
 
-The default skin for OSMC.
+The classic like skin for OSMC, based on the latest Matrix OSMC Skin.
 
-For further information, check out the wiki here: https://osmc.tv/wiki/general/the-osmc-skin/
+This is in **WIP**, Please look at my Classic-Skin in stead: https://github.com/tomdoyle87/skin.osmc-classic/releases
 
-## This skin is shipped with official releases of OSMC (https://osmc.tv/download/).
-
-Install from GitHub on other platforms - check for the newest release here: https://github.com/osmc/skin.osmc/releases
+## This skin is not supported by the OSMC team. if you have problems; please raise a github issue.
 
 Original skin: Andy Morton (https://github.com/BobCratchett)
 
 Original design: Simon Brunton (https://simonbrunton.com/)
 
 Skinner: Julian Michel (https://github.com/Ch1llb0/skin.osmc)
+
+Maintainer (This skin): Tom Doyle (https://github.com/tomdoyle87/skin.osmc-classic)
