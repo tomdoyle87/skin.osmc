@@ -12,11 +12,11 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en">The Classic skin for OSMC.</summary>
-		<description lang="en">Original skin: Andy Morton[CR]Original design: Simon Brunton[CR]Skinner: Julian Michel</description>
+		<description lang="en">Original skin: Andy Morton[CR]Original design: Simon Brunton[CR]Skinner: Julian Michel[CR]Maintainer (This skin): Tom Doyle</description>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B]Improved[/B][CR]- add videos and music root directory to home menu entry and submenu customization dialog[CR]- add picture and addon browser directory to home menu entry and submenu customization dialog</news>
+		<news>[B]Restored[/B][CR]- View Changed to episodes left to watch[CR][CR] [B]Improved[/B][CR]- add videos and music root directory to home menu entry and submenu customization dialog[CR]- add picture and addon browser directory to home menu entry and submenu customization dialog</news>
 	</extension>
 </addon>
