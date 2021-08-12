@@ -1,4 +1,4 @@
-# classic-like-skin.osmc
+# skin.osmc-classic-like
 
 The classic like skin for OSMC, based on the latest Matrix OSMC Skin.
 
