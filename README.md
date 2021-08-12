@@ -1,8 +1,8 @@
 # skin.osmc-classic-like
 
-The classic like skin for OSMC, based on the latest Matrix OSMC Skin.
+The classic like skin for OSMC, based on the latest Matrix OSMC Skin. Has all the great improvments of the [OSMC Skin](https://github.com/Ch1llb0/skin.osmc), but with a classic like style. 
 
-This is in **WIP**, Please look at my Classic-Skin in stead: https://github.com/tomdoyle87/skin.osmc-classic/releases
+If you are looking for the Kodi v18 on v19, Please take look at Classic-Skin instead: https://github.com/tomdoyle87/skin.osmc-classic/tree/matrix-osmc-classic
 
 ## This skin is not supported by the OSMC team. if you have problems; please raise a github issue.
 
