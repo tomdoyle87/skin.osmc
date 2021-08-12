@@ -1,0 +1,14 @@
+addon.xml
+README.md
+Changelog.md
+xml/Variables.xml
+xml/Includes.xml
+Variables_Colours.xml
+language/resource.language.en_gb/strings.po
+shortcuts/31091-1.DATA.xml
+shortcuts/mainmenu.DATA.xml
+media/Textures.xbt
+media/common/overlay.png
+media/common/overlaybottom.png
+media/common/overlayleft.png
+
