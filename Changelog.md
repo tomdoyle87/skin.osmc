@@ -6,8 +6,11 @@
 
 _Restore_
 - Restored view to episodes left to watch
-- Restore OSMC Blue as default Color/Theme
-- Restore MyOSMC to Mainmenu
+- Restored OSMC Blue as default Color/Theme
+- Restored MyOSMC to Mainmenu
+- Restored single overlay
+
+___
 
 **Changes to the OSMC skin**
 
