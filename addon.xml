@@ -12,7 +12,7 @@
 	<extension point="xbmc.addon.metadata">
 		<platform>all</platform>
 		<summary lang="en">The default skin for OSMC.</summary>
-		<description lang="en">Original skin: Andy Morton[CR]Original design: Simon Brunton[CR]Skinner: Julian Michel</description>
+		<description lang="en">Original skin: Andy Morton[CR]Original design: Simon Brunton[CR]Skinner: Julian Michel[CR]Maintainer (This skin): Tom Doyle</description>
 		<assets>
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
