@@ -1,3 +1,24 @@
+**Changes to the OSMC Classic-Like skin**
+
+---
+
+**_v0.0.2_**
+
+Due to changes in the upstream skin, the restores in v0.0.1 needed to be restored again. 
+
+---
+
+**_v0.0.1_**
+
+_Restore_
+- Restored view to episodes left to watch
+- Restored OSMC Blue as default Color/Theme
+- Restored MyOSMC to Mainmenu
+- Restored single overlay
+
+___
+
+
 **Changes to the OSMC skin**
 
 ---
