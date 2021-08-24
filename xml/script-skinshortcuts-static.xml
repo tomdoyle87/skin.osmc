@@ -98,6 +98,7 @@
 			<property name="hasSubmenu">False</property>
 		</item>
 		<item id="7">
+		        <property name="id">$NUMBER[7]</property>
 			<label>$LOCALIZE[31091]</label>
 			<label2>$LOCALIZE[31397]</label2>
 			<icon>DefaultOSMC.png</icon>
