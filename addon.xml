@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.osmc" version="19.1.0" name="OSMC Skin" provider-name="OSMC">
+<addon id="skin.osmc-classic-like" version="0.0.2" name="OSMC Classic Like Skin" provider-name="OSMC">
 	<requires>
 		<import addon="xbmc.gui" version="5.15.0"/>
 	</requires>
@@ -17,6 +17,6 @@
 			<icon>resources/icon.png</icon>
 			<fanart>resources/fanart.jpg</fanart>
 		</assets>
-		<news>[B]New[/B][CR][CR]- add ENABLE option for new skinshortcuts version[CR][B]Improved[/B][CR]- improve background overlay colour management of new skin design[CR]- streamline secondary information and widget detail labels[CR]- improve weather widget[CR][CR][B]Fixed[/B][CR]- fix skinshortcuts management dialog</news>
+		<news>[B]Restored[/B][CR]- View changed to episodes left to watch[CR]- OSMC Blue default Colour/Theme[CR]- MyOSMC to mainmenu[CR]- Single overlay[CR][CR][B]New[/B][CR][CR]- add ENABLE option for new skinshortcuts version[CR][B]Improved[/B][CR]- improve background overlay colour management of new skin design[CR]- streamline secondary information and widget detail labels[CR]- improve weather widget[CR][CR][B]Fixed[/B][CR]- fix skinshortcuts management dialog</news>
 	</extension>
 </addon>
