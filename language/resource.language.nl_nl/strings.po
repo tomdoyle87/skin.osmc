@@ -1178,8 +1178,8 @@ msgid "The skin's default colour options"
 msgstr "Standaard kleurinstellingen van de skin"
 
 msgctxt "#31290"
-msgid "Default colour sets shipped with the skin (default: OSMC-Light blue)[CR]Every set contains compatible colours for the background overlay and texts."
-msgstr "Standaard kleurensets geleverd met de skin (standaard: OSMC-Lichtblauw)[CR]Elke set bevat compatibele kleuren voor de achtergrond overlay en teksten."
+msgid "Default colour sets shipped with the skin (default: OSMC Blue)[CR]Every set contains compatible colours for the background overlay and texts."
+msgstr "Standaard kleurensets geleverd met de skin (standaard: OSMC Blauw)[CR]Elke set bevat compatibele kleuren voor de achtergrond overlay en teksten."
 
 msgctxt "#31291"
 msgid "The opacity of the coloured background overlay of windows, dialogs and menus (default: High)[CR]Options available: Low, Medium, High, Highest"
