@@ -1179,7 +1179,7 @@ msgstr "Výchozí nastavení barevného vzhledu"
 
 msgctxt "#31290"
 msgid "Default colour sets shipped with the skin (default: OSMC Blue)[CR]Every set contains compatible colours for the background overlay and texts."
-msgstr "Výchozí sady barev dodávané se vzhledem (výchozí: OSMC modrá)[CR] Každá sada obsahuje kompatibilní barvy pro překrytí pozadí a texty."
+msgstr "Výchozí sady barev dodávané se vzhledem (výchozí: OSMC Modrá)[CR] Každá sada obsahuje kompatibilní barvy pro překrytí pozadí a texty."
 
 msgctxt "#31291"
 msgid "The opacity of the coloured background overlay of windows, dialogs and menus (default: High)[CR]Options available: Low, Medium, High, Highest"
