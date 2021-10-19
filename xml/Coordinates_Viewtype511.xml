@@ -557,18 +557,18 @@
 					<visible>String.IsEmpty(Control.GetLabel(5110))</visible>
 					<control type="label">
 						<left>32</left>
-						<top>0</top>
+						<top>12</top>
 						<width>1018</width>
 						<height>120</height>
 						<font>Font72-bold</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[Label1]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
 						<scrollspeed>120</scrollspeed>
 					</control>
 					<control type="image">
 						<left>32</left>
-						<top>0</top>
+						<top>12</top>
 						<width>1018</width>
 						<height>120</height>
 						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus120]</texture>
@@ -609,7 +609,7 @@
 				<!-- Collection -->
 				<control type="image">
 					<left>0</left>
-					<top>41</top>
+					<top>61</top>
 					<width>22</width>
 					<height>22</height>
 					<texture>views/OverlayCollection.png</texture>
@@ -620,7 +620,7 @@
 				<!-- Watched status -->
 				<control type="image">
 					<left>0</left>
-					<top>41</top>
+					<top>61</top>
 					<width>22</width>
 					<height>22</height>
 					<texture>$VAR[StatusOverlay]</texture>
@@ -641,18 +641,18 @@
 					<visible>String.IsEmpty(Control.GetLabel(5110))</visible>
 					<control type="label">
 						<left>32</left>
-						<top>0</top>
+						<top>12</top>
 						<width>1658</width>
 						<height>120</height>
 						<font>Font72-bold</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[Label1]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
 						<scrollspeed>120</scrollspeed>
 					</control>
 					<control type="image">
 						<left>32</left>
-						<top>0</top>
+						<top>12</top>
 						<width>1658</width>
 						<height>120</height>
 						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus120]</texture>
@@ -693,7 +693,7 @@
 				<!-- Collection -->
 				<control type="image">
 					<left>0</left>
-					<top>41</top>
+					<top>61</top>
 					<width>22</width>
 					<height>22</height>
 					<texture>views/OverlayCollection.png</texture>
@@ -704,7 +704,7 @@
 				<!-- Watched status -->
 				<control type="image">
 					<left>0</left>
-					<top>41</top>
+					<top>61</top>
 					<width>22</width>
 					<height>22</height>
 					<texture>$VAR[StatusOverlay]</texture>
@@ -725,18 +725,18 @@
 					<visible>String.IsEmpty(Control.GetLabel(5110))</visible>
 					<control type="label">
 						<left>32</left>
-						<top>0</top>
+						<top>12</top>
 						<width>1658</width>
 						<height>120</height>
 						<font>Font72-bold</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[Label1]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
 						<scrollspeed>120</scrollspeed>
 					</control>
 					<control type="image">
 						<left>32</left>
-						<top>0</top>
+						<top>12</top>
 						<width>1658</width>
 						<height>120</height>
 						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus120]</texture>
@@ -777,7 +777,7 @@
 				<!-- Collection -->
 				<control type="image">
 					<left>0</left>
-					<top>41</top>
+					<top>61</top>
 					<width>22</width>
 					<height>22</height>
 					<texture>views/OverlayCollection.png</texture>
@@ -788,7 +788,7 @@
 				<!-- Watched status -->
 				<control type="image">
 					<left>0</left>
-					<top>41</top>
+					<top>61</top>
 					<width>22</width>
 					<height>22</height>
 					<texture>$VAR[StatusOverlay]</texture>
@@ -809,18 +809,18 @@
 					<visible>String.IsEmpty(Control.GetLabel(5110))</visible>
 					<control type="label">
 						<left>32</left>
-						<top>0</top>
+						<top>12</top>
 						<width>538</width>
 						<height>120</height>
 						<font>Font72-bold</font>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[Label1]</label>
 						<textcolor>$VAR[TextColorFO]</textcolor>
 						<scroll>True</scroll>
 						<scrollspeed>120</scrollspeed>
 					</control>
 					<control type="image">
 						<left>32</left>
-						<top>0</top>
+						<top>12</top>
 						<width>538</width>
 						<height>120</height>
 						<texture colordiffuse="$VAR[TextColorFO]">$VAR[focus120]</texture>
@@ -861,7 +861,7 @@
 				<!-- Collection -->
 				<control type="image">
 					<left>0</left>
-					<top>41</top>
+					<top>61</top>
 					<width>22</width>
 					<height>22</height>
 					<texture>views/OverlayCollection.png</texture>
@@ -872,7 +872,7 @@
 				<!-- Watched status -->
 				<control type="image">
 					<left>0</left>
-					<top>41</top>
+					<top>61</top>
 					<width>22</width>
 					<height>22</height>
 					<texture>$VAR[StatusOverlay]</texture>
