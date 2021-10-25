@@ -10,6 +10,6 @@ Original skin: Andy Morton (https://github.com/BobCratchett)
 
 Original design: Simon Brunton (https://simonbrunton.com/)
 
-Skinner: Julian Michel (https://github.com/Ch1llb0/skin.osmc)
+OSMC Skinner: Julian Michel (https://github.com/Ch1llb0/skin.osmc)
 
-Maintainer (This skin): Tom Doyle (https://github.com/tomdoyle87/skin.osmc-classic)
+Skinner (This skin): Tom Doyle (https://github.com/tomdoyle87/skin.osmc-classic)
